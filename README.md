@@ -1,2 +1,2 @@
-# bug-report-crawler
-A bug report crawler tool written in Java.
+# issue-crawler
+A crawler for issue extraction information from many issue tracking systems.
