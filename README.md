@@ -1,2 +1,2 @@
-# issue-crawler
-A crawler for issue extraction information from many issue tracking systems.
+# Bug Report Crawler
+A crawler for bug extraction information from many issue tracking systems.
