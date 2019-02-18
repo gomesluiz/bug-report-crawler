@@ -6,6 +6,7 @@ import br.unicamp.ic.crawler.domain.bugzilla.BZReportCrawlerInXml;
 import br.unicamp.ic.crawler.domain.jira.JiraReportCrawlerInXml;
 import br.unicamp.ic.crawler.domain.jira.JiraHistoryParserInHtml;
 import br.unicamp.ic.crawler.domain.jira.JiraReportParserInXml;
+import br.unicamp.ic.crawler.domain.meta.Project;
 import br.unicamp.ic.crawler.persistence.ReportRepositoryFromFile;
 import br.unicamp.ic.crawler.persistence.ReportRepository;
 

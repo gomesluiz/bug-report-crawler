@@ -12,9 +12,9 @@ import br.unicamp.ic.crawler.domain.core.IssueActivityEntry;
 import br.unicamp.ic.crawler.domain.core.IssueEntry;
 import br.unicamp.ic.crawler.domain.core.ReportPasser;
 import br.unicamp.ic.crawler.domain.core.LoggerObserver;
-import br.unicamp.ic.crawler.domain.core.Project;
 import br.unicamp.ic.crawler.domain.core.Report;
 import br.unicamp.ic.crawler.domain.core.Subject;
+import br.unicamp.ic.crawler.domain.meta.Project;
 
 public class ReportRepositoryFromFile implements ReportRepository {
 
@@ -106,10 +106,10 @@ public class ReportRepositoryFromFile implements ReportRepository {
 	}
 
 	private File[] getReportFiles() {
-		File folder = new File(project.getLocalReportFolder());
+		File folder = new File(project.getReportPath());
 		File[] files = new File[] {};
 		if (folder.exists()) {
-			files = folder.listFiles((dir, name) -> name.endsWith(project.getReportFileExtension()));
+			files = folder.listFiles((dir, name) -> name.endsWith(project.getReportFormat()));
 		}
 		return files;
 	}

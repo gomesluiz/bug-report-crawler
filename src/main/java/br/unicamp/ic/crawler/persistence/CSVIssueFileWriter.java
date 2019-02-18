@@ -9,8 +9,8 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 
 import br.unicamp.ic.crawler.domain.core.IssueActivityEntry;
-import br.unicamp.ic.crawler.domain.core.Project;
 import br.unicamp.ic.crawler.domain.core.Report;
+import br.unicamp.ic.crawler.domain.meta.Project;
 
 /**
  * The <code>CSVIssueFileWriter</code> class implements a file writer which uses
@@ -55,7 +55,7 @@ public class CSVIssueFileWriter implements IssueFileWriter {
 		CSVPrinter printer1 = null, printer2 = null;
 		CSVFormat format = CSVFormat.EXCEL;
 		try {
-			String path = project.getLocalReportFolder();
+			String path = project.getReportPath();
 			path = path.replace("xml", "csv");
 			File folder = new File(path);
 			if (!folder.exists()) {

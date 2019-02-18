@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 import br.unicamp.ic.crawler.domain.core.filters.ReportFilter;
+import br.unicamp.ic.crawler.domain.meta.Project;
 import br.unicamp.ic.crawler.persistence.IssueFileWriter;
 import br.unicamp.ic.crawler.persistence.ReportRepository;
 
@@ -48,7 +49,7 @@ public abstract class ReportCrawler {
 	 */
 	public final void getAll() {
 		try {
-			File folder = new File(project.getLocalReportFolder());
+			File folder = new File(project.getReportPath());
 			int min = project.getFirstReportNumber();
 			int max = project.getLastReportNumber();
 
@@ -75,7 +76,7 @@ public abstract class ReportCrawler {
 		try {
 			subject.setMessage("Start " + project.getName() + " !");
 
-			File folder = new File(project.getLocalReportFolder());
+			File folder = new File(project.getReportPath());
 			int min = project.getFirstReportNumber();
 			int max = project.getLastReportNumber();
 

@@ -72,7 +72,7 @@ public class BZIssueEntry implements IssueEntry {
 	@Override
 	public String getResolved() {
 		String result = this.getUpdated();
-
+	  
 		if (history != null) {
 			for (IssueActivityEntry activity : history) {
 				if (activity.getAdded().equals(ISSUE_STATUS_RESOLVED)) {

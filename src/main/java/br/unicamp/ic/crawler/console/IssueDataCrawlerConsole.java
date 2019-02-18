@@ -8,10 +8,10 @@ import org.apache.logging.log4j.Logger;
 
 import br.unicamp.ic.crawler.domain.core.CrawlerFactory;
 import br.unicamp.ic.crawler.domain.core.ReportCrawler;
-import br.unicamp.ic.crawler.domain.core.Project;
 import br.unicamp.ic.crawler.domain.core.filters.IssueFilterByResolution;
 import br.unicamp.ic.crawler.domain.core.filters.IssueFilterByStatus;
 import br.unicamp.ic.crawler.domain.core.filters.IssueFilterOutBySeverity;
+import br.unicamp.ic.crawler.domain.meta.Project;
 import br.unicamp.ic.crawler.persistence.CSVIssueFileWriter;
 import br.unicamp.ic.crawler.persistence.CSVOutputFormatter;
 import br.unicamp.ic.crawler.persistence.CSVRawIssueFormatter;
@@ -36,7 +36,7 @@ public class IssueDataCrawlerConsole {
 
 		Logger logger = LogManager.getRootLogger();
 		CSVOutputFormatter formatter = new CSVRawIssueFormatter();
-		IssueFileWriter output = new CSVIssueFileWriter("r2", formatter);
+		IssueFileWriter output = new CSVIssueFileWriter("20190201_eclipse", formatter);
 
 		for (Project project : projects) {
 			ReportCrawler crawler = CrawlerFactory.getInstance(project);

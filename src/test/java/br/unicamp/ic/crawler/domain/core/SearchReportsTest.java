@@ -12,6 +12,7 @@ import br.unicamp.ic.crawler.domain.bugzilla.BZReportCrawlerInXml;
 import br.unicamp.ic.crawler.domain.core.filters.IssueFilterByResolution;
 import br.unicamp.ic.crawler.domain.core.filters.IssueFilterByStatus;
 import br.unicamp.ic.crawler.domain.core.filters.IssueNoFilter;
+import br.unicamp.ic.crawler.domain.meta.Project;
 import br.unicamp.ic.crawler.persistence.ReportRepository;
 import br.unicamp.ic.crawler.persistence.ReportRepositoryFromMemory;
 

@@ -31,8 +31,8 @@ public class CSVRawIssueFormatter implements CSVOutputFormatter {
 					, "reporter_name"
 					, "resolution_category"
 					, "resolution_code"
-					, "status_type"
 					, "status_category"
+					, "status_code"
 					, "update_date"
 					, "quantity_of_votes"
 					, "quantity_of_comments"
@@ -83,8 +83,6 @@ public class CSVRawIssueFormatter implements CSVOutputFormatter {
 		record.add(report.getResolutionCode());
 		record.add(report.getStatus());
 		record.add(report.getStatusCode());
-		//record.add(report.getType());
-		//record.add(report.getTypeCode());
 		record.add(report.getUpdated());
 		record.add(report.getVotes());
 		record.add(report.getQuantityOfComments());

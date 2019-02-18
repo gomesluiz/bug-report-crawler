@@ -2,8 +2,8 @@ package br.unicamp.ic.crawler.persistence;
 
 import java.util.List;
 
-import br.unicamp.ic.crawler.domain.core.Project;
 import br.unicamp.ic.crawler.domain.core.Report;
+import br.unicamp.ic.crawler.domain.meta.Project;
 
 /**
  * <code>IssueFileWriter</code> is the interface for all file issues writers.
