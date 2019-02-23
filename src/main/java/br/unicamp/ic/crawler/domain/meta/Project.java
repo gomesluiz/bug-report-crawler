@@ -177,7 +177,7 @@ public class Project {
   
   @Override
   public String toString() {
-    return(String.format("name: %s", this.name));
+    return(String.format("name: %s, mask: %s", this.name, this.getReportMask()));
   }
 
 }

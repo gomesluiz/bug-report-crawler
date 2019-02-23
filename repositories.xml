@@ -5,16 +5,17 @@
 		<bts>bugzilla</bts>
 		<enable>true</enable>
 		<report>
-			<url>https://bugs.eclipse.org/bugs/show_bug.cgi?ctype=xml&amp;id=%d
-			</url>
+			<url>https://bugs.eclipse.org/bugs/show_bug.cgi?ctype=xml&amp;id=%d</url>
 			<format>xml</format>
 			<first>1</first>
 			<last>530583</last>
-			<path>/Users/luiz/Workspace/issue-crawler/data/eclipse/xml/</path>
+			<path>/Users/luiz/Workspace/doctorate/data/eclipse/xml/</path>
+			<mask>ECLIPSE-%d</mask>
 			<history>
 				<url>https://bugs.eclipse.org/bugs/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/Users/luiz/Workspace/issue-crawler/data/eclipse/xml/</path>
+				<path>/Users/luiz/Workspace/doctorate/data/eclipse/xml/</path>
+				<mask>ECLIPSE-%d</mask>
 			</history>
 		</report>
 	</project>
@@ -28,10 +29,12 @@
 			<first>1</first>
 			<last>45000</last>
 			<path>/Users/luiz/Workspace/issue-crawler/data/winehq/xml/</path>
+			<mask>WINEHQ-%d</mask>
 			<history>
 				<url>https://bugs.winehq.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
 				<path>/Users/luiz/Workspace/issue-crawler/data/winehq/xml/</path>
+				<mask>WINEHQ-%d</mask>
 			</history>
 		</report>
 	</project>
@@ -45,31 +48,33 @@
 			<format>xml</format>
 			<first>1</first>
 			<last>104780</last>
-			<path>/Users/luiz/Workspace/issue-crawler/data/freedesktop/xml/
-			</path>
+			<path>/Users/luiz/Workspace/issue-crawler/data/freedesktop/xml/</path>
+			<mask>FREEDESKTOP-%d</mask>
 			<history>
 				<url>https://bugs.freedesktop.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/Users/luiz/Workspace/issue-crawler/data/freedesktop/xml/
-				</path>
+				<path>/Users/luiz/Workspace/issue-crawler/data/freedesktop/xml/</path>
+				<mask>FREEDESKTOP-%d</mask>
 			</history>
 		</report>
 	</project>
 	<project>
 		<name>netbeans</name>
 		<bts>bugzilla</bts>
-		<enable>false</enable>
+		<enable>true</enable>
 		<report>
 			<url>https://netbeans.org/bugzilla/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>
 			<format>xml</format>
 			<first>1</first>
 			<last>300000</last>
-			<path>/Users/luiz/Workspace/issue-crawler/data/netbeans/xml/</path>
+			<path>/Users/luiz/Workspace/doctorate/data/netbeans/xml/</path>
+			<mask>NETBEANS-%d</mask>
 			<history>
 				<url>https://netbeans.org/bugzilla/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/Users/luiz/Workspace/issue-crawler/data/netbeans/xml/</path>
+				<path>/Users/luiz/Workspace/doctorate/data/netbeans/xml/</path>
+				<mask>NETBEANS-%d</mask>
 			</history>
 		</report>
 	</project>
@@ -84,10 +89,12 @@
 			<first>1</first>
 			<last>793083</last>
 			<path>/Users/luiz/Workspace/issue-crawler/data/gnome/xml/</path>
+			<mask>GNOME-%d</mask>
 			<history>
 				<url>https://bugzilla.gnome.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
 				<path>/Users/luiz/Workspace/issue-crawler/data/gnome/xml/</path>
+				<mask>GNOME-%d</mask>
 			</history>
 		</report>
 	</project>
@@ -102,10 +109,12 @@
 			<first>1</first>
 			<last>84157</last>
 			<path>/Users/luiz/Workspace/issue-crawler/data/gcc/xml/</path>
+			<mask>GCC-%d</mask>
 			<history>
 				<url>https://gcc.gnu.org/bugzilla/show_activity.cgi?id=%d</url>
 				<format>html</format>
 				<path>/Users/luiz/Workspace/issue-crawler/data/gcc/xml/</path>
+				<mask>GCC-%d</mask>
 			</history>
 		</report>
 	</project>
@@ -119,17 +128,19 @@
 			<first>1</first>
 			<last>62067</last>
 			<path>/Users/luiz/Workspace/issue-crawler/data/ooo/xml/</path>
+			<mask>OOO-%d</mask>
 			<history>
 				<url>https://bz.apache.org/ooo/show_activity.cgi?id=%d</url>
 				<format>html</format>
 				<path>/Users/luiz/Workspace/issue-crawler/data/ooo/xml/</path>
+				<mask>OOO-%d</mask>
 			</history>
 		</report>
 	</project>
 	<project>
 		<name>mozilla</name>
 		<bts>bugzilla</bts>
-		<enable>false</enable>
+		<enable>true</enable>
 		<report>
 			<url>https://bugzilla.mozilla.org/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>
@@ -137,10 +148,12 @@
 			<first>1</first>
 			<last>1000000</last>
 			<path>/Users/luiz/Workspace/issue-crawler/data/mozilla/xml/</path>
+			<mask>MOZILLA-%d</mask>
 			<history>
 				<url>https://bugzilla.mozilla.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
 				<path>/Users/luiz/Workspace/issue-crawler/data/mozilla/xml/</path>
+				<mask>MOZILLA-%d</mask>
 			</history>
 		</report>
 	</project>
@@ -155,10 +168,12 @@
 			<first>1</first>
 			<last>198745</last>
 			<path>/Users/luiz/Workspace/issue-crawler/data/kernel/xml/</path>
+			<mask>KERNEL-%d</mask>
 			<history>
 				<url>https://bugzilla.kernel.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
 				<path>/Users/luiz/Workspace/issue-crawler/data/kernel/xml/</path>
+				<mask>KERNEL-%d</mask>
 			</history>
 		</report>
 	</project>
@@ -173,11 +188,13 @@
 			<first>1</first>
 			<last>12129</last>
 			<path>/Users/luiz/Workspace/issue-crawler/data/hibernate/xml/</path>
+			<mask>HHH-%d</mask>
 			<history>
 				<url>https://hibernate.atlassian.net/browse/%s?page=com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel
 				</url>
 				<format>html</format>
 				<path>/Users/luiz/Workspace/issue-crawler/data/hibernate/xml/</path>
+				<mask>HHH-%d</mask>
 			</history>
 		</report>
 	</project>

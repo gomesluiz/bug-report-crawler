@@ -15,13 +15,13 @@ import br.unicamp.ic.crawler.domain.meta.Project;
  *
  * @author Luiz Alberto
  * @since 2016-01-02
- *        https://hibernate.atlassian.net/si/jira.issueviews:issue-xml/HHH-12279/HHH-12279.xml
+ *        
  */
 public class IssueDataDownloaderConsole {
 
   public static void main(final String[] args) throws FileNotFoundException {
 
-    FileReader fileReader = new FileReader("setup.xml");
+    FileReader fileReader = new FileReader("repositories.xml");
     XStream xstream = new XStream();
     xstream.alias("projects", List.class);
     xstream.alias("project", Project.class);
@@ -30,19 +30,15 @@ public class IssueDataDownloaderConsole {
     List<Project> projects = (List<Project>) xstream.fromXML(fileReader);
 
     for (Project project : projects) {
-      if (project.isEnable()) {
-        System.out.println(project.toString());
-      }
-			Thread th = new Thread(new Runnable() {
+      Thread th = new Thread(new Runnable() {
 
-				@Override
-				public void run() {
-					ReportCrawler crawler = CrawlerFactory.getInstance(project);
-					crawler.getAll(25);
-				}
-			});
-			th.start();
-
+        @Override
+        public void run() {
+          ReportCrawler crawler = CrawlerFactory.getInstance(project);
+          crawler.getAll(25);
+        }
+      });
+      th.start();
     }
   }
 }

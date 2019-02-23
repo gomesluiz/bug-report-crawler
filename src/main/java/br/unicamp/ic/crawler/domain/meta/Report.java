@@ -13,13 +13,15 @@ public class Report {
 
   private final History history;
 
-  public Report(String url, String format, int first, int last, String path, String mask, History history) {
+  public Report(String url, String format, int first, int last, String path
+      , String mask, History history) {
     super();
     this.url = url;
     this.format = format;
     this.first = first;
     this.last = last;
     this.path = path;
+    this.mask = mask;
     this.history = history;
   }
 
