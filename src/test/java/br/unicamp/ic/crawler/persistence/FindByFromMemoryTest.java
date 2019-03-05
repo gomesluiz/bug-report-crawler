@@ -9,6 +9,7 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import br.unicamp.ic.crawler.domain.core.Report;
@@ -44,7 +45,7 @@ public class FindByFromMemoryTest {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	@Ignore
 	public final void findByABugReportResolvedIn155Days() {
 		ReportRepository repository = new ReportRepositoryFromMemory();
 		Report issue = repository.findBy("CORE_GRAVEYARD-13271");
@@ -57,7 +58,7 @@ public class FindByFromMemoryTest {
 		assertEquals(155, issue.getDaysToResolve());
 	}
 
-	@Test
+	@Ignore
 	public final void findByABugReportResolvedInZeroDays() {
 		ReportRepository repository = new ReportRepositoryFromMemory();
 		Report issue = repository.findBy("JDT-14582");
@@ -69,7 +70,7 @@ public class FindByFromMemoryTest {
 
 		assertEquals(0, issue.getDaysToResolve());
 	}
-	@Test
+	@Ignore
 	public final void findByABugReportResolvedInNoDays() {
 		ReportRepository repository = new ReportRepositoryFromMemory();
 		Report issue = repository.findBy("WINE-9981");

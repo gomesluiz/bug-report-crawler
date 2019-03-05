@@ -10,7 +10,7 @@ import br.unicamp.ic.crawler.persistence.IssueFileWriter;
 import br.unicamp.ic.crawler.persistence.ReportRepository;
 
 /**
- * The <code>IssueCrawler</code> abstract class offers template methods to down-
+ * The <code>ReportCrawler</code> abstract class offers template methods to down-
  * loads one or several issues from Bug Tracking System specified by an URL and
  * stores them into disk.
  * 

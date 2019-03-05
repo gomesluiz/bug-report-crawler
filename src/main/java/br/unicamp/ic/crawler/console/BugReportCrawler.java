@@ -6,8 +6,9 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import com.thoughtworks.xstream.XStream;
 
@@ -28,22 +29,27 @@ import br.unicamp.ic.crawler.persistence.IssueFileWriter;
  * @author Luiz Alberto
  * @since 2016-01-02
  */
-public class IssueDataCrawlerConsole {
+public class BugReportCrawler {
 
   public static void main(final String[] args) throws FileNotFoundException {
 
     FileReader fileReader = new FileReader("repositories.xml");
     XStream xstream = new XStream();
+    xstream.allowTypesByWildcard(new String[] {
+        "br.unicamp.ic.**"
+    });
+    
     xstream.alias("projects", List.class);
     xstream.alias("project", Project.class);
     xstream.autodetectAnnotations(true);
     @SuppressWarnings("unchecked")
     List<Project> projects = (List<Project>) xstream.fromXML(fileReader);
     
-    Logger logger = LogManager.getRootLogger();
+    Logger logger = LogManager.getLogger(BugReportCrawler.class);
+    PropertyConfigurator.configure("log4j.properties");
+    
     CSVOutputFormatter formatter = new CSVRawIssueFormatter();
     String current = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
-    logger.trace("Start");
     for (Project project : projects) {
       logger.trace(project.getName());
       if (project.isEnable()) {
