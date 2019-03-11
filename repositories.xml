@@ -3,7 +3,8 @@
 	<project>
 		<name>eclipse</name>
 		<bts>bugzilla</bts>
-		<enable>true</enable>
+		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
+		<enable>false</enable>
 		<report>
 			<url>https://bugs.eclipse.org/bugs/show_bug.cgi?ctype=xml&amp;id=%d</url>
 			<format>xml</format>
@@ -22,6 +23,7 @@
 	<project>
 		<name>winehq</name>
 		<bts>bugzilla</bts>
+		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
 		<enable>false</enable>
 		<report>
 			<url>https://bugs.winehq.org/show_bug.cgi?ctype=xml&amp;id=%d</url>
@@ -41,6 +43,7 @@
 	<project>
 		<name>freedesktop</name>
 		<bts>bugzilla</bts>
+		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
 		<enable>false</enable>
 		<report>
 			<url>https://bugs.freedesktop.org/show_bug.cgi?ctype=xml&amp;id=%d
@@ -61,7 +64,8 @@
 	<project>
 		<name>netbeans</name>
 		<bts>bugzilla</bts>
-		<enable>true</enable>
+		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
+		<enable>false</enable>
 		<report>
 			<url>https://netbeans.org/bugzilla/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>
@@ -81,6 +85,7 @@
 	<project>
 		<name>gnome</name>
 		<bts>bugzilla</bts>
+		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
 		<enable>false</enable>
 		<report>
 			<url>https://bugzilla.gnome.org/show_bug.cgi?ctype=xml&amp;id=%d
@@ -101,6 +106,7 @@
 	<project>
 		<name>gcc</name>
 		<bts>bugzilla</bts>
+		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
 		<enable>false</enable>
 		<report>
 			<url>https://gcc.gnu.org/bugzilla/show_bug.cgi?ctype=xml&amp;id=%d
@@ -121,6 +127,7 @@
 	<project>
 		<name>ooo</name>
 		<bts>bugzilla</bts>
+		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
 		<enable>false</enable>
 		<report>
 			<url>https://bz.apache.org/ooo/show_bug.cgi?ctype=xml&amp;id=%d</url>
@@ -140,7 +147,8 @@
 	<project>
 		<name>mozilla</name>
 		<bts>bugzilla</bts>
-		<enable>true</enable>
+		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
+		<enable>false</enable>
 		<report>
 			<url>https://bugzilla.mozilla.org/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>
@@ -160,7 +168,8 @@
 	<project>
 		<name>kernel</name>
 		<bts>bugzilla</bts>
-		<enable>false</enable>
+		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
+		<enable>true</enable>
 		<report>
 			<url>https://bugzilla.kernel.org/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>
@@ -180,6 +189,7 @@
 	<project>
 		<name>hhh</name>
 		<bts>jira</bts>
+		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
 		<enable>false</enable>
 		<report>
 			<url>https://hibernate.atlassian.net/si/jira.issueviews:issue-xml/%s/%s.xml

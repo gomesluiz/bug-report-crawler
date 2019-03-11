@@ -13,6 +13,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 public class Project {
   private String name;
   private String bts;
+  private String output;
   private boolean enable;
 
   private Report report;
@@ -20,6 +21,8 @@ public class Project {
   /**
    * 
    * @param name
+   * @param bts                    
+   * @param output TODO
    * @param remoteIssueUrl
    * @param localIssuePath
    * @param issueFileFormat
@@ -29,14 +32,15 @@ public class Project {
    * @param localNameMask
    * @param firstIssue
    * @param lastIssue
-   * @param bts                    TODO
    */
-  public Project(String name, String remoteIssueUrl, String localIssuePath
-      , String issueFileFormat, String remoteIssueHistoryUrl, String localIssueHistoryPath
+  public Project(String name, String bts, String output
+      , String remoteIssueUrl, String localIssuePath, String issueFileFormat
+      , String remoteIssueHistoryUrl, String localIssueHistoryPath
       , String issueHistoryFileFormat, String localNameMask
-      , int firstIssue, int lastIssue, String bts) {
+      , int firstIssue, int lastIssue) {
     this.name = name;
     this.bts = bts;
+    this.output = output;
     this.enable = true;
     History history = new History(remoteIssueHistoryUrl, issueHistoryFileFormat
         , localIssueHistoryPath, localNameMask);
@@ -52,6 +56,14 @@ public class Project {
     return this.name;
   }
 
+  /**
+   * 
+   * @return the output folder 
+   */
+  public String getOutput() {
+	  return this.output;
+  }
+  
   /**
    * @return The report URL.
    */

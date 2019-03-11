@@ -55,8 +55,8 @@ public class CSVIssueFileWriter implements IssueFileWriter {
 		CSVPrinter printer1 = null, printer2 = null;
 		CSVFormat format = CSVFormat.EXCEL;
 		try {
-			String path = project.getReportPath();
-			path = path.replace("xml", "csv");
+			String path = project.getOutput();
+			//path = path.replace("xml", "csv");
 			File folder = new File(path);
 			if (!folder.exists()) {
 				folder.mkdirs();
