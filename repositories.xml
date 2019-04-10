@@ -4,7 +4,7 @@
 		<name>eclipse</name>
 		<bts>bugzilla</bts>
 		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
-		<enable>false</enable>
+		<enable>true</enable>
 		<report>
 			<url>https://bugs.eclipse.org/bugs/show_bug.cgi?ctype=xml&amp;id=%d</url>
 			<format>xml</format>
@@ -24,7 +24,7 @@
 		<name>winehq</name>
 		<bts>bugzilla</bts>
 		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
-		<enable>false</enable>
+		<enable>true</enable>
 		<report>
 			<url>https://bugs.winehq.org/show_bug.cgi?ctype=xml&amp;id=%d</url>
 			<format>xml</format>
@@ -44,7 +44,7 @@
 		<name>freedesktop</name>
 		<bts>bugzilla</bts>
 		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
-		<enable>false</enable>
+		<enable>true</enable>
 		<report>
 			<url>https://bugs.freedesktop.org/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>
@@ -65,7 +65,7 @@
 		<name>netbeans</name>
 		<bts>bugzilla</bts>
 		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
-		<enable>false</enable>
+		<enable>true</enable>
 		<report>
 			<url>https://netbeans.org/bugzilla/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>
@@ -86,7 +86,7 @@
 		<name>gnome</name>
 		<bts>bugzilla</bts>
 		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
-		<enable>false</enable>
+		<enable>true</enable>
 		<report>
 			<url>https://bugzilla.gnome.org/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>
@@ -107,7 +107,7 @@
 		<name>gcc</name>
 		<bts>bugzilla</bts>
 		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
-		<enable>false</enable>
+		<enable>true</enable>
 		<report>
 			<url>https://gcc.gnu.org/bugzilla/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>
@@ -128,7 +128,7 @@
 		<name>ooo</name>
 		<bts>bugzilla</bts>
 		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
-		<enable>false</enable>
+		<enable>true</enable>
 		<report>
 			<url>https://bz.apache.org/ooo/show_bug.cgi?ctype=xml&amp;id=%d</url>
 			<format>xml</format>
@@ -148,7 +148,7 @@
 		<name>mozilla</name>
 		<bts>bugzilla</bts>
 		<output>/Users/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
-		<enable>false</enable>
+		<enable>true</enable>
 		<report>
 			<url>https://bugzilla.mozilla.org/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>

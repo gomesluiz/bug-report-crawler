@@ -49,7 +49,8 @@ public class Project {
         history);
   }
 
-  /**
+  
+/**
    * @return the project name.
    */
   public String getName() {

@@ -120,7 +120,7 @@ public class BZIssueEntry implements IssueEntry {
 
   @Override
   public String getVotes() {
-    return bug.getVotes();
+    return bug.getVotes() == ""? "0":bug.getVotes();
   }
 
   @Override

@@ -65,11 +65,13 @@ public class CSVRawIssueFormatter implements CSVOutputFormatter {
 		description = description.replaceAll("\\&.*?\\;", "")
 				.replaceAll("<.*?>", "")
 				.replaceAll("\"", "")
-				.replaceAll(",", "");
+				.replaceAll(",", "")
+				.replaceAll(";", "");
 		summary = summary.replaceAll("\\&.*?\\;", "")
 				.replaceAll("<.*?>", "")
 				.replaceAll("\"", "")
-				.replaceAll(",", "");
+				.replaceAll(",", "")
+				.replaceAll(";", "");
 		
 		record.add(report.getKey());
 		record.add(report.getCreated());

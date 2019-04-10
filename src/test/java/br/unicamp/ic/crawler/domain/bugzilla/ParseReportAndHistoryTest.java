@@ -54,21 +54,21 @@ public class ParseReportAndHistoryTest {
 		String xml = ReportRepositoryFromMemory.reports.get(5);	
 		ReportPasser parser = new BZReportParserInXml();
 		IssueEntry entry = (IssueEntry) parser.parse(xml);
-		assertEquals("PLATFORM-77", entry.getKey());
-		assertEquals("2001-10-10", entry.getCreated());
-		assertEquals("2002-05-23", entry.getUpdated());
-		assertEquals("2002-05-23", entry.getResolved());
-		assertEquals(225, entry.getDaysToResolve());
+		assertEquals("WINE-10518", entry.getKey());
+		assertEquals("2007-11-20", entry.getCreated());
+		assertEquals("2009-08-07", entry.getUpdated());
+		assertEquals("2009-08-07", entry.getResolved());
+		assertEquals(626, entry.getDaysToResolve());
 		assertEquals("", entry.getType());
 		assertEquals("normal", entry.getSeverity());
-		assertEquals("RESOLVED", entry.getStatus());
-		assertEquals("dj.houghton", entry.getReporter());
-		assertEquals("James_Moody", entry.getAssignee());
+		assertEquals("CLOSED", entry.getStatus());
+		assertEquals("epimetreus", entry.getReporter());
+		assertEquals("wine-bugs", entry.getAssignee());
 		
-		assertEquals("Team", entry.getComponent());
-		assertEquals("PLATFORM", entry.getProduct());
+		assertEquals("directx-dsound", entry.getComponent());
+		assertEquals("WINE", entry.getProduct());
 		
-		assertEquals(3, entry.getComments().size());
+		assertEquals(14, entry.getComments().size());
 	}
 	
 	@Test

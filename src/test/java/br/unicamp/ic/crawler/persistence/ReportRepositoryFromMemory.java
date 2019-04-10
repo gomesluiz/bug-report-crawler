@@ -14,7 +14,7 @@ import br.unicamp.ic.crawler.domain.core.ReportPasser;
 import br.unicamp.ic.crawler.persistence.ReportRepository;
 
 public class ReportRepositoryFromMemory implements ReportRepository {
-
+ 
 	public static List<String> reports = Arrays.asList(
 			"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\n"
 					+ "<!DOCTYPE bugzilla SYSTEM \"https://bugs.eclipse.org/bugs/page.cgi?id=bugzilla.dtd\">\n" + "\n"
@@ -1227,49 +1227,53 @@ public class ReportRepositoryFromMemory implements ReportRepository {
 					+ "    <bug_when>2007-01-09 12:14:40 +0000</bug_when>\n" + "    <thetext>\n" + "\n"
 					+ "*** This issue has been marked as a duplicate of 91993 ***</thetext>\n" + "  </long_desc>\n"
 					+ "      \n" + "      \n" + "\n" + "    </bug>\n" + "\n" + "</bugzilla>\n" + "",
+					
 					"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\n" + 
-					"<!DOCTYPE bugzilla SYSTEM \"https://bugs.eclipse.org/bugs/page.cgi?id=bugzilla.dtd\">\n" + 
+					"<!DOCTYPE bugzilla SYSTEM \"https://bugs.winehq.org/page.cgi?id=bugzilla.dtd\">\n" + 
 					"\n" + 
-					"<bugzilla version=\"5.0.3\"\n" + 
-					"          urlbase=\"https://bugs.eclipse.org/bugs/\"\n" + 
+					"<bugzilla version=\"4.4.12\"\n" + 
+					"          urlbase=\"https://bugs.winehq.org/\"\n" + 
 					"          \n" + 
-					"          maintainer=\"webmaster@eclipse.org\"\n" + 
+					"          maintainer=\"wine-bugs@winehq.org\"\n" + 
 					">\n" + 
 					"\n" + 
 					"    <bug>\n" + 
-					"          <bug_id>77</bug_id>\n" + 
+					"          <bug_id>10518</bug_id>\n" + 
 					"          \n" + 
-					"          <creation_ts>2001-10-10 21:36:03 -0400</creation_ts>\n" + 
-					"          <short_desc>DCR: Need &quot;Expand All&quot; in comparison editor (1GE50QW)</short_desc>\n" + 
-					"          <delta_ts>2002-05-23 21:20:36 -0400</delta_ts>\n" + 
+					"          <creation_ts>2007-11-20 16:23:00 -0600</creation_ts>\n" + 
+					"          <short_desc>Alpha Centauri crashes on launch with ALSA sound</short_desc>\n" + 
+					"          <delta_ts>2009-08-07 12:04:33 -0500</delta_ts>\n" + 
 					"          <reporter_accessible>1</reporter_accessible>\n" + 
 					"          <cclist_accessible>1</cclist_accessible>\n" + 
-					"          <classification_id>2</classification_id>\n" + 
-					"          <classification>Eclipse</classification>\n" + 
-					"          <product>Platform</product>\n" + 
-					"          <component>Team</component>\n" + 
-					"          <version>2.0</version>\n" + 
-					"          <rep_platform>All</rep_platform>\n" + 
-					"          <op_sys>All</op_sys>\n" + 
-					"          <bug_status>RESOLVED</bug_status>\n" + 
+					"          <classification_id>1</classification_id>\n" + 
+					"          <classification>Unclassified</classification>\n" + 
+					"          <product>Wine</product>\n" + 
+					"          <component>directx-dsound</component>\n" + 
+					"          <version>unspecified</version>\n" + 
+					"          <rep_platform>Other</rep_platform>\n" + 
+					"          <op_sys>other</op_sys>\n" + 
+					"          <bug_status>CLOSED</bug_status>\n" + 
 					"          <resolution>FIXED</resolution>\n" + 
 					"          \n" + 
 					"          \n" + 
 					"          <bug_file_loc></bug_file_loc>\n" + 
 					"          <status_whiteboard></status_whiteboard>\n" + 
 					"          <keywords></keywords>\n" + 
-					"          <priority>P3</priority>\n" + 
+					"          <priority>P2</priority>\n" + 
 					"          <bug_severity>normal</bug_severity>\n" + 
-					"          <target_milestone>2.0 M6</target_milestone>\n" + 
+					"          <target_milestone>---</target_milestone>\n" + 
 					"          \n" + 
 					"          \n" + 
 					"          <everconfirmed>1</everconfirmed>\n" + 
-					"          <reporter name=\"DJ Houghton\">dj.houghton</reporter>\n" + 
-					"          <assigned_to name=\"James Moody\">James_Moody</assigned_to>\n" + 
-					"          \n" + 
-					"          \n" + 
-					"          \n" + 
-					"          <votes>0</votes>\n" + 
+					"          <reporter name=\"Kai Moonbourn\">epimetreus</reporter>\n" + 
+					"          <assigned_to name=\"Mr. Bugs\">wine-bugs</assigned_to>\n" + 
+					"          <cc>corey.burger</cc>\n" + 
+					"    \n" + 
+					"    <cc>dank</cc>\n" + 
+					"          <cf_regression_sha1sum></cf_regression_sha1sum>\n" + 
+					"          <cf_fixedby_sha1sum></cf_fixedby_sha1sum>\n" + 
+					"          <cf_distribution>---</cf_distribution>\n" + 
+					"          <cf_staged_patchset></cf_staged_patchset>\n" + 
 					"\n" + 
 					"      \n" + 
 					"\n" + 
@@ -1278,47 +1282,477 @@ public class ReportRepositoryFromMemory implements ReportRepository {
 					"      \n" + 
 					"\n" + 
 					"          <comment_sort_order>oldest_to_newest</comment_sort_order>  \n" + 
-					"    \n" + 
-					"    <long_desc isprivate=\"0\" >\n" + 
-					"      <commentid>83</commentid>\n" + 
-					"      <comment_count>0</comment_count>\n" + 
-					"      <who name=\"DJ Houghton\">dj.houghton</who>\n" + 
-					"      <bug_when>2001-10-10 21:36:03 -0400</bug_when>\n" + 
-					"      <thetext>When you compare a Java project with the team stream version,\n" + 
-					"	    the resulting editor should have an &quot;Expand All...&quot; menu option\n" + 
-					"	    (like the Catchup/Release view) so you can quickly drill down\n" + 
-					"	    through folders to get to your changes.\n" + 
+					"          <long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>71730</commentid>\n" + 
+					"    <comment_count>0</comment_count>\n" + 
+					"    <who name=\"Kai Moonbourn\">epimetreus</who>\n" + 
+					"    <bug_when>2007-11-20 16:23:46 -0600</bug_when>\n" + 
+					"    <thetext>If I enable ALSA, but not OSS, in winecfg, and try to launch SMAC, it crashes after showing the opening logo; attached is the console output.</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>71813</commentid>\n" + 
+					"    <comment_count>1</comment_count>\n" + 
+					"    <who name=\"Lei Zhang\">thestig</who>\n" + 
+					"    <bug_when>2007-11-21 18:49:57 -0600</bug_when>\n" + 
+					"    <thetext>You didn&apos;t attach the console output.\n" + 
 					"\n" + 
-					"      NOTES:\n" + 
+					"Can you reproduce the problem with the demo?\n" + 
+					"http://www.firaxis.com/downloads/Demo/smac_demo1_1.exe</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>71958</commentid>\n" + 
+					"    <comment_count>2</comment_count>\n" + 
+					"    <who name=\"Austin English\">austinenglish</who>\n" + 
+					"    <bug_when>2007-11-23 02:53:46 -0600</bug_when>\n" + 
+					"    <thetext>Does it crash or hang? The demo is hanging for me using alsa or oss.</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>71980</commentid>\n" + 
+					"    <comment_count>3</comment_count>\n" + 
+					"      <attachid>9299</attachid>\n" + 
+					"    <who name=\"Kai Moonbourn\">epimetreus</who>\n" + 
+					"    <bug_when>2007-11-23 07:10:57 -0600</bug_when>\n" + 
+					"    <thetext>Created attachment 9299\n" + 
+					"Console output\n" + 
 					"\n" + 
-					"      KM (5/22/01 3:51:02 PM)\n" + 
-					"	    Is this us or compare framework?\n" + 
+					"Okay, I thought I attached it last time, but I guess not. This is with a build of wine updated as of 5 minutes ago.</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>74143</commentid>\n" + 
+					"    <comment_count>4</comment_count>\n" + 
+					"    <who name=\"Corey Burger\">corey.burger</who>\n" + 
+					"    <bug_when>2007-12-15 18:50:59 -0600</bug_when>\n" + 
+					"    <thetext>I suspect I am seeing the same issue here. I am running .51 on Ubuntu 7.10. Attaching my dump.</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>74146</commentid>\n" + 
+					"    <comment_count>5</comment_count>\n" + 
+					"      <attachid>9648</attachid>\n" + 
+					"    <who name=\"Corey Burger\">corey.burger</who>\n" + 
+					"    <bug_when>2007-12-15 18:54:30 -0600</bug_when>\n" + 
+					"    <thetext>Created attachment 9648\n" + 
+					"SMAC core dump</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>74151</commentid>\n" + 
+					"    <comment_count>6</comment_count>\n" + 
+					"    <who name=\"Dan Kegel\">dank</who>\n" + 
+					"    <bug_when>2007-12-15 19:38:42 -0600</bug_when>\n" + 
+					"    <thetext>Did this work with an earlier version of Wine?\n" + 
+					"Perhaps you could do a regression test to see\n" + 
+					"which patch caused the problem...</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>74152</commentid>\n" + 
+					"    <comment_count>7</comment_count>\n" + 
+					"    <who name=\"Vitaliy Margolen\">vitaliy-bugzilla</who>\n" + 
+					"    <bug_when>2007-12-15 20:19:39 -0600</bug_when>\n" + 
+					"    <thetext>Two reports - confirming.</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>74161</commentid>\n" + 
+					"    <comment_count>8</comment_count>\n" + 
+					"    <who name=\"Corey Burger\">corey.burger</who>\n" + 
+					"    <bug_when>2007-12-16 01:49:16 -0600</bug_when>\n" + 
+					"    <thetext>No, I have not tested this on earlier releases. I will also test to see if the 4.0 patch fixes the bug.</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>104537</commentid>\n" + 
+					"    <comment_count>9</comment_count>\n" + 
+					"    <who name=\"Austin English\">austinenglish</who>\n" + 
+					"    <bug_when>2008-06-03 14:54:16 -0500</bug_when>\n" + 
+					"    <thetext>Is this still an issue in 1.0-rc3?</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>119762</commentid>\n" + 
+					"    <comment_count>10</comment_count>\n" + 
+					"    <who name=\"Jeff Zaroyko\">jeffz</who>\n" + 
+					"    <bug_when>2008-09-09 18:29:39 -0500</bug_when>\n" + 
+					"    <thetext>(In reply to comment #9)\n" + 
+					"&gt; Is this still an issue in 1.0-rc3?\n" + 
+					"&gt; \n" + 
 					"\n" + 
-					"      AW (01.06.01 10:54:34)\n" + 
-					"	    It&apos;s you.</thetext>\n" + 
-					"    </long_desc>\n" + 
-					"    \n" + 
-					"    <long_desc isprivate=\"0\" >\n" + 
-					"      <commentid>6396</commentid>\n" + 
-					"      <comment_count>1</comment_count>\n" + 
-					"      <who name=\"DJ Houghton\">dj.houghton</who>\n" + 
-					"      <bug_when>2001-10-23 23:42:10 -0400</bug_when>\n" + 
-					"      <thetext>PRODUCT VERSION:0.109 JRE on WINNT</thetext>\n" + 
-					"    </long_desc>\n" + 
-					"    \n" + 
-					"    <long_desc isprivate=\"0\" >\n" + 
-					"      <commentid>45789</commentid>\n" + 
-					"      <comment_count>2</comment_count>\n" + 
-					"      <who name=\"Kevin McGuire\">Kevin_McGuire</who>\n" + 
-					"      <bug_when>2002-04-23 15:38:47 -0400</bug_when>\n" + 
-					"      <thetext>fixed some time ago</thetext>\n" + 
-					"    </long_desc>\n" + 
-					"    \n" + 
-					"</bug>\n" + 
+					"The demo installs, starts and I can create a new game. No crash with Wine 1.1.4.</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>141684</commentid>\n" + 
+					"    <comment_count>11</comment_count>\n" + 
+					"    <who name=\"Austin English\">austinenglish</who>\n" + 
+					"    <bug_when>2009-01-18 03:46:54 -0600</bug_when>\n" + 
+					"    <thetext>Removing deprecated CVS/GIT version tag. Please retest in current git. If the bug is still present in today&apos;s wine, but was not present in some earlier version of wine, please update version field to earliest known version of wine that had the bug. Thanks!</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>166797</commentid>\n" + 
+					"    <comment_count>12</comment_count>\n" + 
+					"    <who name=\"Austin English\">austinenglish</who>\n" + 
+					"    <bug_when>2009-07-21 12:30:53 -0500</bug_when>\n" + 
+					"    <thetext>Reported fixed.</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>169301</commentid>\n" + 
+					"    <comment_count>13</comment_count>\n" + 
+					"    <who name=\"Alexandre Julliard\">julliard</who>\n" + 
+					"    <bug_when>2009-08-07 12:04:33 -0500</bug_when>\n" + 
+					"    <thetext>Closing bugs fixed in 1.1.27.</thetext>\n" + 
+					"  </long_desc>\n" + 
+					"      \n" + 
+					"          <attachment\n" + 
+					"              isobsolete=\"0\"\n" + 
+					"              ispatch=\"0\"\n" + 
+					"              isprivate=\"0\"\n" + 
+					"          >\n" + 
+					"            <attachid>9299</attachid>\n" + 
+					"            <date>2007-11-23 07:10:00 -0600</date>\n" + 
+					"            <delta_ts>2007-12-15 20:18:01 -0600</delta_ts>\n" + 
+					"            <desc>Console output</desc>\n" + 
+					"            <filename>Text</filename>\n" + 
+					"            <type>text/plain</type>\n" + 
+					"            <size>7880</size>\n" + 
+					"            <attacher name=\"Kai Moonbourn\">epimetreus</attacher>\n" + 
+					"            \n" + 
+					"              <data encoding=\"base64\">Zml4bWU6d2luOkVudW1EaXNwbGF5RGV2aWNlc1cgKChudWxsKSwwLDB4MzRmM2JjLDB4MDAwMDAw\n" + 
+					"MDApLCBzdHViIQpmaXhtZTp4MTFkcnY6WDExRFJWX2Rlc2t0b3BfU2V0Q3VycmVudE1vZGUgQ2Fu\n" + 
+					"bm90IGNoYW5nZSBzY3JlZW4gQlBQIGZyb20gMzIgdG8gOAplcnI6b2xlOkNvR2V0Q2xhc3NPYmpl\n" + 
+					"Y3QgY2xhc3Mge2Q4ZjFlZWUwLWY2MzQtMTFjZi04NzAwLTAwYTAyNDVkOTE4Yn0gbm90IHJlZ2lz\n" + 
+					"dGVyZWQKZXJyOm9sZTpDb0dldENsYXNzT2JqZWN0IG5vIGNsYXNzIG9iamVjdCB7ZDhmMWVlZTAt\n" + 
+					"ZjYzNC0xMWNmLTg3MDAtMDBhMDI0NWQ5MThifSBjb3VsZCBiZSBjcmVhdGVkIGZvciBjb250ZXh0\n" + 
+					"IDB4MQplcnI6ZHNhbHNhOkRTREJfQ3JlYXRlTU1BUCBDYW4ndCBtYXAgc291bmQgZGV2aWNlIGZv\n" + 
+					"ciBkaXJlY3QgYWNjZXNzOiBGaWxlIGRlc2NyaXB0b3IgaW4gYmFkIHN0YXRlCmZpeG1lOmRzYWxz\n" + 
+					"YTpDaGVja1hSVU4gVW5oYW5kbGVkIHN0YXRlOiAwCndpbmU6IFVuaGFuZGxlZCBwYWdlIGZhdWx0\n" + 
+					"IG9uIHdyaXRlIGFjY2VzcyB0byAweDdjNjliMDAwIGF0IGFkZHJlc3MgMHhiN2NmYzI2ZCAodGhy\n" + 
+					"ZWFkIDAwMGYpLCBzdGFydGluZyBkZWJ1Z2dlci4uLgpVbmhhbmRsZWQgZXhjZXB0aW9uOiBwYWdl\n" + 
+					"IGZhdWx0IG9uIHdyaXRlIGFjY2VzcyB0byAweDdjNjliMDAwIGluIDMyLWJpdCBjb2RlICgweGI3\n" + 
+					"Y2ZjMjZkKS4KUmVnaXN0ZXIgZHVtcDoKIENTOjAwNzMgU1M6MDA3YiBEUzowMDdiIEVTOjAwN2Ig\n" + 
+					"RlM6MDAzMyBHUzowMDNiCiBFSVA6YjdjZmMyNmQgRVNQOjdjNjk5OGUwIEVCUDo3YzY5OThlOCBF\n" + 
+					"RkxBR1M6MDAwMTAyMTMoICAgLSAwMCAgICAgIC1SSUExQykKIEVBWDowMDAwMDAwMCBFQlg6N2U3\n" + 
+					"MTJjZmMgRUNYOjNmZmZmZmZlIEVEWDpmZmZmZmZmYgogRVNJOmZmZmZmZmZiIEVESTo3YzY5YjAw\n" + 
+					"MApTdGFjayBkdW1wOgoweDdjNjk5OGUwOiAgMTAwYjAwMjggMGZmZmZmZjYgMDAxODAwMDggN2U2\n" + 
+					"ZjViMmEKMHg3YzY5OThmMDogIDdjNjliMDAwIDAwMDAwMDAwIGZmZmZmZmZiIDdjNjk5OTk0CjB4\n" + 
+					"N2M2OTk5MDA6ICA3YzY5OTk5YyAwMDAwMDAwMCBmZmZmZmZmYiAwMDAwMDAwMAoweDdjNjk5OTEw\n" + 
+					"OiAgMDAwMDAwMDAgN2M2OTk5ZjggN2VmYTI0OWIgN2VmZTQ4NzQKMHg3YzY5OTkyMDogIGI3ZGNh\n" + 
+					"ZmY0IDdjNjk5OTY0IDdlODg4NTQ5IDdlOGVjNTQ4CjB4N2M2OTk5MzA6ICAwMDAwMDAwMiAwMDE4\n" + 
+					"MDJlNCAwMDAwNzJkOCAxMDAzOTdiZQpCYWNrdHJhY2U6Cj0+MSAweGI3Y2ZjMjZkIF9fR0lfbWVt\n" + 
+					"c2V0KzB4M2QoKSBpbiBsaWJjLnNvLjYgKDB4N2M2OTk4ZTgpCiAgMiAweDdlNmY1YjJhIERTT1VO\n" + 
+					"RF90aW1lcisweGE4YSh0aW1lcklEPTB4MSwgbXNnPTB4MCwgZHdVc2VyPTB4MTgwMDA4LCBkdzE9\n" + 
+					"MHgwLCBkdzI9MHgwKSBbL3NvdXJjZS93aW5lL2RsbHMvZHNvdW5kL21peGVyLmM6ODIzXSBpbiBk\n" + 
+					"c291bmQgKDB4MDAxODAwMDgpCiAgMyAweGJkNmRkNzFhICgweDAwMDAwMDAxKQogIDQgMHgwMDAw\n" + 
+					"MDAwMCAoMHgwMDAwMDAwMCkKMHhiN2NmYzI2ZCBfX0dJX21lbXNldCsweDNkIGluIGxpYmMuc28u\n" + 
+					"NjogcmVwZSBzdG9zbCAgICAlZXM6KCVlZGkpCk1vZHVsZXM6Ck1vZHVsZSAgQWRkcmVzcyAgICAg\n" + 
+					"ICAgICAgICAgICAgRGVidWcgaW5mbyAgICAgIE5hbWUgKDkzIG1vZHVsZXMpClBFICAgICAgICA0\n" + 
+					"MDAwMDAtICA5Y2MwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIHRlcnJhbgpQRSAgICAgIDEwMDAw\n" + 
+					"MDAwLTEwMGFmMDAwICAgICAgIERlZmVycmVkICAgICAgICBzb3VuZApFTEYgICAgIDdiZjAwMDAw\n" + 
+					"LTdiZjAzMDAwICAgICAgIERlZmVycmVkICAgICAgICA8d2luZS1sb2FkZXI+CkVMRiAgICAgN2M0\n" + 
+					"NWQwMDAtN2M1NGIwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIHdpbmVkM2Q8ZWxmPgogIFwtUEUg\n" + 
+					"IDdjNDcwMDAwLTdjNTRiMDAwICAgICAgIFwgICAgICAgICAgICAgICB3aW5lZDNkCkVMRiAgICAg\n" + 
+					"N2NhZTcwMDAtN2NiMTUwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxpYmNyeXB0LnNvLjEKRUxG\n" + 
+					"ICAgICA3Y2IxNTAwMC03Y2M1MzAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgbGliY3J5cHRvLnNv\n" + 
+					"LjAKRUxGICAgICA3Y2M1MzAwMC03Y2M5MzAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgbGlic3Ns\n" + 
+					"LnNvLjAKRUxGICAgICA3Y2M5MzAwMC03Y2NiYjAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgbGli\n" + 
+					"Y3Vwcy5zby4yCkVMRiAgICAgN2NjZDcwMDAtN2NjZWMwMDAgICAgICAgRGVmZXJyZWQgICAgICAg\n" + 
+					"IG1pZGltYXA8ZWxmPgogIFwtUEUgIDdjY2UwMDAwLTdjY2VjMDAwICAgICAgIFwgICAgICAgICAg\n" + 
+					"ICAgICBtaWRpbWFwCkVMRiAgICAgN2NjZWMwMDAtN2NkMTIwMDAgICAgICAgRGVmZXJyZWQgICAg\n" + 
+					"ICAgIG1zYWNtMzI8ZWxmPgogIFwtUEUgIDdjY2YwMDAwLTdjZDEyMDAwICAgICAgIFwgICAgICAg\n" + 
+					"ICAgICAgICBtc2FjbTMyCkVMRiAgICAgN2NkMTIwMDAtN2NkZDMwMDAgICAgICAgRGVmZXJyZWQg\n" + 
+					"ICAgICAgIGxpYmFzb3VuZC5zby4yCkVMRiAgICAgN2NkZDcwMDAtN2NkZWYwMDAgICAgICAgRGVm\n" + 
+					"ZXJyZWQgICAgICAgIG1zYWNtMzI8ZWxmPgogIFwtUEUgIDdjZGUwMDAwLTdjZGVmMDAwICAgICAg\n" + 
+					"IFwgICAgICAgICAgICAgICBtc2FjbTMyCkVMRiAgICAgN2NkZWYwMDAtN2NlMjUwMDAgICAgICAg\n" + 
+					"RGVmZXJyZWQgICAgICAgIHdpbmVhbHNhPGVsZj4KICBcLVBFICA3Y2UwMDAwMC03Y2UyNTAwMCAg\n" + 
+					"ICAgICBcICAgICAgICAgICAgICAgd2luZWFsc2EKRUxGICAgICA3Y2U4ZjAwMC03Y2VjMjAwMCAg\n" + 
+					"ICAgICBEZWZlcnJlZCAgICAgICAgdXh0aGVtZTxlbGY+CiAgXC1QRSAgN2NlYTAwMDAtN2NlYzIw\n" + 
+					"MDAgICAgICAgXCAgICAgICAgICAgICAgIHV4dGhlbWUKRUxGICAgICA3ZDFiYTAwMC03ZDFjMzAw\n" + 
+					"MCAgICAgICBEZWZlcnJlZCAgICAgICAgbGlieGN1cnNvci5zby4xCkVMRiAgICAgN2QxYzMwMDAt\n" + 
+					"N2QxZTEwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGltbTMyPGVsZj4KICBcLVBFICA3ZDFkMDAw\n" + 
+					"MC03ZDFlMTAwMCAgICAgICBcICAgICAgICAgICAgICAgaW1tMzIKRUxGICAgICA3ZDFlMTAwMC03\n" + 
+					"ZDFlOTAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgbGlieHJlbmRlci5zby4xCkVMRiAgICAgN2Q4\n" + 
+					"YzcwMDAtN2UyNWYwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxpYmdsY29yZS5zby4xCkVMRiAg\n" + 
+					"ICAgN2UyNWYwMDAtN2UyZjUwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxpYmdsLnNvLjEKRUxG\n" + 
+					"ICAgICA3ZTJmNTAwMC03ZTJmYTAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgbGlieGRtY3Auc28u\n" + 
+					"NgpFTEYgICAgIDdlMmZhMDAwLTdlMzExMDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJ4Y2Iu\n" + 
+					"c28uMQpFTEYgICAgIDdlMzExMDAwLTdlM2Y5MDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJ4\n" + 
+					"MTEuc28uNgpFTEYgICAgIDdlM2Y5MDAwLTdlNDA3MDAwICAgICAgIERlZmVycmVkICAgICAgICBs\n" + 
+					"aWJ4ZXh0LnNvLjYKRUxGICAgICA3ZTQwNzAwMC03ZTQxZjAwMCAgICAgICBEZWZlcnJlZCAgICAg\n" + 
+					"ICAgbGliaWNlLnNvLjYKRUxGICAgICA3ZTQxZjAwMC03ZTQyNzAwMCAgICAgICBEZWZlcnJlZCAg\n" + 
+					"ICAgICAgbGlic20uc28uNgpFTEYgICAgIDdlNDJhMDAwLTdlNDJmMDAwICAgICAgIERlZmVycmVk\n" + 
+					"ICAgICAgICBsaWJ4Zml4ZXMuc28uMwpFTEYgICAgIDdlNDJmMDAwLTdlNDMyMDAwICAgICAgIERl\n" + 
+					"ZmVycmVkICAgICAgICBpc284ODU5LTEuc28KRUxGICAgICA3ZTQzMzAwMC03ZTQzOTAwMCAgICAg\n" + 
+					"ICBEZWZlcnJlZCAgICAgICAgbGlieHJhbmRyLnNvLjIKRUxGICAgICA3ZTQzOTAwMC03ZTQzYzAw\n" + 
+					"MCAgICAgICBEZWZlcnJlZCAgICAgICAgbGlieGluZXJhbWEuc28uMQpFTEYgICAgIDdlNDQzMDAw\n" + 
+					"LTdlNGQ2MDAwICAgICAgIERlZmVycmVkICAgICAgICB3aW5leDExPGVsZj4KICBcLVBFICA3ZTQ1\n" + 
+					"MDAwMC03ZTRkNjAwMCAgICAgICBcICAgICAgICAgICAgICAgd2luZXgxMQpFTEYgICAgIDdlNGQ2\n" + 
+					"MDAwLTdlNGY2MDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJleHBhdC5zby4xCkVMRiAgICAg\n" + 
+					"N2U0ZjYwMDAtN2U1MjEwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxpYmZvbnRjb25maWcuc28u\n" + 
+					"MQpFTEYgICAgIDdlNTI1MDAwLTdlNTI4MDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJ4YXUu\n" + 
+					"c28uNgpFTEYgICAgIDdlNTI4MDAwLTdlNTJkMDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJ4\n" + 
+					"eGY4NnZtLnNvLjEKRUxGICAgICA3ZTUzZDAwMC03ZTU1MTAwMCAgICAgICBEZWZlcnJlZCAgICAg\n" + 
+					"ICAgbGliei5zby4xCkVMRiAgICAgN2U1NTEwMDAtN2U1YmUwMDAgICAgICAgRGVmZXJyZWQgICAg\n" + 
+					"ICAgIGxpYmZyZWV0eXBlLnNvLjYKRUxGICAgICA3ZTViZTAwMC03ZTVmMjAwMCAgICAgICBEZWZl\n" + 
+					"cnJlZCAgICAgICAgZHBsYXl4PGVsZj4KICBcLVBFICA3ZTVkMDAwMC03ZTVmMjAwMCAgICAgICBc\n" + 
+					"ICAgICAgICAgICAgICAgZHBsYXl4CkVMRiAgICAgN2U1ZjIwMDAtN2U2MjgwMDAgICAgICAgRGVm\n" + 
+					"ZXJyZWQgICAgICAgIHdpbnNwb29sPGVsZj4KICBcLVBFICA3ZTYwMDAwMC03ZTYyODAwMCAgICAg\n" + 
+					"ICBcICAgICAgICAgICAgICAgd2luc3Bvb2wKRUxGICAgICA3ZTYyODAwMC03ZTZjOTAwMCAgICAg\n" + 
+					"ICBEZWZlcnJlZCAgICAgICAgY29tZGxnMzI8ZWxmPgogIFwtUEUgIDdlNjMwMDAwLTdlNmM5MDAw\n" + 
+					"ICAgICAgIFwgICAgICAgICAgICAgICBjb21kbGczMgpFTEYgICAgIDdlNmM5MDAwLTdlNzE0MDAw\n" + 
+					"ICAgICAgIER3YXJmICAgICAgICAgICBkc291bmQ8ZWxmPgogIFwtUEUgIDdlNmQwMDAwLTdlNzE0\n" + 
+					"MDAwICAgICAgIFwgICAgICAgICAgICAgICBkc291bmQKRUxGICAgICA3ZTcxNDAwMC03ZTczYjAw\n" + 
+					"MCAgICAgICBEZWZlcnJlZCAgICAgICAgbXN2ZnczMjxlbGY+CiAgXC1QRSAgN2U3MjAwMDAtN2U3\n" + 
+					"M2IwMDAgICAgICAgXCAgICAgICAgICAgICAgIG1zdmZ3MzIKRUxGICAgICA3ZTczYjAwMC03ZTdj\n" + 
+					"OTAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgd2lubW08ZWxmPgogIFwtUEUgIDdlNzUwMDAwLTdl\n" + 
+					"N2M5MDAwICAgICAgIFwgICAgICAgICAgICAgICB3aW5tbQpFTEYgICAgIDdlN2M5MDAwLTdlN2Rj\n" + 
+					"MDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJyZXNvbHYuc28uMgpFTEYgICAgIDdlN2RjMDAw\n" + 
+					"LTdlN2ZhMDAwICAgICAgIERlZmVycmVkICAgICAgICBpcGhscGFwaTxlbGY+CiAgXC1QRSAgN2U3\n" + 
+					"ZTAwMDAtN2U3ZmEwMDAgICAgICAgXCAgICAgICAgICAgICAgIGlwaGxwYXBpCkVMRiAgICAgN2U3\n" + 
+					"ZmEwMDAtN2U4NTQwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIHJwY3J0NDxlbGY+CiAgXC1QRSAg\n" + 
+					"N2U4MTAwMDAtN2U4NTQwMDAgICAgICAgXCAgICAgICAgICAgICAgIHJwY3J0NApFTEYgICAgIDdl\n" + 
+					"ODU0MDAwLTdlOGY2MDAwICAgICAgIERlZmVycmVkICAgICAgICBvbGUzMjxlbGY+CiAgXC1QRSAg\n" + 
+					"N2U4NjAwMDAtN2U4ZjYwMDAgICAgICAgXCAgICAgICAgICAgICAgIG9sZTMyCkVMRiAgICAgN2U4\n" + 
+					"ZjYwMDAtN2U5NGIwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGRkcmF3PGVsZj4KICBcLVBFICA3\n" + 
+					"ZTkwMDAwMC03ZTk0YjAwMCAgICAgICBcICAgICAgICAgICAgICAgZGRyYXcKRUxGICAgICA3ZTk0\n" + 
+					"YjAwMC03ZWEwYjAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgY29tY3RsMzI8ZWxmPgogIFwtUEUg\n" + 
+					"IDdlOTUwMDAwLTdlYTBiMDAwICAgICAgIFwgICAgICAgICAgICAgICBjb21jdGwzMgpFTEYgICAg\n" + 
+					"IDdlYTBiMDAwLTdlYWE0MDAwICAgICAgIERlZmVycmVkICAgICAgICBnZGkzMjxlbGY+CiAgXC1Q\n" + 
+					"RSAgN2VhMjAwMDAtN2VhYTQwMDAgICAgICAgXCAgICAgICAgICAgICAgIGdkaTMyCkVMRiAgICAg\n" + 
+					"N2VhYTQwMDAtN2ViZTIwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIHVzZXIzMjxlbGY+CiAgXC1Q\n" + 
+					"RSAgN2VhYzAwMDAtN2ViZTIwMDAgICAgICAgXCAgICAgICAgICAgICAgIHVzZXIzMgpFTEYgICAg\n" + 
+					"IDdlYmUyMDAwLTdlYzNiMDAwICAgICAgIERlZmVycmVkICAgICAgICBzaGx3YXBpPGVsZj4KICBc\n" + 
+					"LVBFICA3ZWJmMDAwMC03ZWMzYjAwMCAgICAgICBcICAgICAgICAgICAgICAgc2hsd2FwaQpFTEYg\n" + 
+					"ICAgIDdlYzNiMDAwLTdlZDNlMDAwICAgICAgIERlZmVycmVkICAgICAgICBzaGVsbDMyPGVsZj4K\n" + 
+					"ICBcLVBFICA3ZWM1MDAwMC03ZWQzZTAwMCAgICAgICBcICAgICAgICAgICAgICAgc2hlbGwzMgpF\n" + 
+					"TEYgICAgIDdlZDNlMDAwLTdlZDg5MDAwICAgICAgIERlZmVycmVkICAgICAgICBhZHZhcGkzMjxl\n" + 
+					"bGY+CiAgXC1QRSAgN2VkNTAwMDAtN2VkODkwMDAgICAgICAgXCAgICAgICAgICAgICAgIGFkdmFw\n" + 
+					"aTMyCkVMRiAgICAgN2VkODkwMDAtN2VkOTQwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxpYm5z\n" + 
+					"c19maWxlcy5zby4yCkVMRiAgICAgN2VkOTQwMDAtN2VkOWUwMDAgICAgICAgRGVmZXJyZWQgICAg\n" + 
+					"ICAgIGxpYm5zc19uaXMuc28uMgpFTEYgICAgIDdlZDllMDAwLTdlZGI1MDAwICAgICAgIERlZmVy\n" + 
+					"cmVkICAgICAgICBsaWJuc2wuc28uMQpFTEYgICAgIDdlZGI1MDAwLTdlZGJlMDAwICAgICAgIERl\n" + 
+					"ZmVycmVkICAgICAgICBsaWJuc3NfY29tcGF0LnNvLjIKRUxGICAgICA3ZWRmMTAwMC03ZWYxYTAw\n" + 
+					"MCAgICAgICBEZWZlcnJlZCAgICAgICAga2VybmVsMzI8ZWxmPgogIFwtUEUgIDdlZTEwMDAwLTdl\n" + 
+					"ZjFhMDAwICAgICAgIFwgICAgICAgICAgICAgICBrZXJuZWwzMgpFTEYgICAgIDdlZjFhMDAwLTdl\n" + 
+					"ZjQxMDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJtLnNvLjYKRUxGICAgICA3ZWY1ZDAwMC03\n" + 
+					"ZjAwMDAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgbnRkbGw8ZWxmPgogIFwtUEUgIDdlZjcwMDAw\n" + 
+					"LTdmMDAwMDAwICAgICAgIFwgICAgICAgICAgICAgICBudGRsbApFTEYgICAgIGI3YzgwMDAwLWI3\n" + 
+					"YzgyMDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJudmlkaWEtdGxzLnNvLjEKRUxGICAgICBi\n" + 
+					"N2M4OTAwMC1iN2M4ZDAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgbGliZGwuc28uMgpFTEYgICAg\n" + 
+					"IGI3YzhkMDAwLWI3ZGNmMDAwICAgICAgIEV4cG9ydCAgICAgICAgICBsaWJjLnNvLjYKRUxGICAg\n" + 
+					"ICBiN2RjZjAwMC1iN2RlNjAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgbGlicHRocmVhZC5zby4w\n" + 
+					"CkVMRiAgICAgYjdkZTYwMDAtYjdkZTgwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxpYnhjYi14\n" + 
+					"bGliLnNvLjAKRUxGICAgICBiN2UwMjAwMC1iN2YxNjAwMCAgICAgICBEZWZlcnJlZCAgICAgICAg\n" + 
+					"bGlid2luZS5zby4xCkVMRiAgICAgYjdmMTcwMDAtYjdmMzQwMDAgICAgICAgRGVmZXJyZWQgICAg\n" + 
+					"ICAgIGxkLWxpbnV4LnNvLjIKVGhyZWFkczoKcHJvY2VzcyAgdGlkICAgICAgcHJpbyAoYWxsIGlk\n" + 
+					"OnMgYXJlIGluIGhleCkKMDAwMDAwMGQgKEQpIEM6XFByb2dyYW0gRmlsZXNcQWxwaGEgQ2VudGF1\n" + 
+					"cmlcdGVycmFuLmV4ZQogICAgICAgIDAwMDAwMDBmICAgMTUgPD09CiAgICAgICAgMDAwMDAwMGUg\n" + 
+					"ICAgMAowMDAwMDAwYQogICAgICAgIDAwMDAwMDBjICAgIDAKICAgICAgICAwMDAwMDAwYiAgICAw\n" + 
+					"CjAwMDAwMDA4CiAgICAgICAgMDAwMDAwMDkgICAgMApCYWNrdHJhY2U6Cj0+MSAweGI3Y2ZjMjZk\n" + 
+					"IF9fR0lfbWVtc2V0KzB4M2QoKSBpbiBsaWJjLnNvLjYgKDB4N2M2OTk4ZTgpCiAgMiAweDdlNmY1\n" + 
+					"YjJhIERTT1VORF90aW1lcisweGE4YSh0aW1lcklEPTB4MSwgbXNnPTB4MCwgZHdVc2VyPTB4MTgw\n" + 
+					"MDA4LCBkdzE9MHgwLCBkdzI9MHgwKSBbL3NvdXJjZS93aW5lL2RsbHMvZHNvdW5kL21peGVyLmM6\n" + 
+					"ODIzXSBpbiBkc291bmQgKDB4MDAxODAwMDgpCiAgMyAweGJkNmRkNzFhICgweDAwMDAwMDAxKQog\n" + 
+					"IDQgMHgwMDAwMDAwMCAoMHgwMDAwMDAwMCkKZXJyOm50ZGxsOlJ0bHBXYWl0Rm9yQ3JpdGljYWxT\n" + 
+					"ZWN0aW9uIHNlY3Rpb24gMHgxODAzMWMgImRzb3VuZC5jOiBEaXJlY3RTb3VuZERldmljZS5taXhs\n" + 
+					"b2NrIiB3YWl0IHRpbWVkIG91dCBpbiB0aHJlYWQgMDAwZSwgYmxvY2tlZCBieSAwMDBmLCByZXRy\n" + 
+					"eWluZyAoNjAgc2VjKQo=\n" + 
+					"</data>\n" + 
 					"\n" + 
-					"</bugzilla>\n" + 
-					"");
-	public static List<String> histories = Arrays.asList("<!DOCTYPE html>\n" + "<html lang=\"en\">\n" + "  <head>\n"
+					"          </attachment>\n" + 
+					"          <attachment\n" + 
+					"              isobsolete=\"0\"\n" + 
+					"              ispatch=\"0\"\n" + 
+					"              isprivate=\"0\"\n" + 
+					"          >\n" + 
+					"            <attachid>9648</attachid>\n" + 
+					"            <date>2007-12-15 18:54:00 -0600</date>\n" + 
+					"            <delta_ts>2007-12-15 20:17:27 -0600</delta_ts>\n" + 
+					"            <desc>SMAC core dump</desc>\n" + 
+					"            <filename>backtrace.txt</filename>\n" + 
+					"            <type>text/plain</type>\n" + 
+					"            <size>10605</size>\n" + 
+					"            <attacher name=\"Corey Burger\">corey.burger</attacher>\n" + 
+					"            \n" + 
+					"              <data encoding=\"base64\">Y29yZXlAY29yZXktbGFwdG9wOi9tZWRpYS9zZGExL1Byb2dyYW0gRmlsZXMvRmlyYXhpcyBHYW1l\n" + 
+					"cy9TaWQgTWVpZXIncyBBbHBoYSBDZW50YXVyaSQgd2luZSB0ZXJyYW4uZXhlIApmaXhtZTp3aW46\n" + 
+					"RW51bURpc3BsYXlEZXZpY2VzVyAoKG51bGwpLDAsMHgzNGYyYTgsMHgwMDAwMDAwMCksIHN0dWIh\n" + 
+					"CmZpeG1lOnhyYW5kcjpYMTFEUlZfWFJhbmRSX1NldEN1cnJlbnRNb2RlIENhbm5vdCBjaGFuZ2Ug\n" + 
+					"c2NyZWVuIEJQUCBmcm9tIDMyIHRvIDgKZml4bWU6Zm9udDpDcmVhdGVTY2FsYWJsZUZvbnRSZXNv\n" + 
+					"dXJjZUEgKDAsImFyaWFsbi5mb3QiLCJhcmlhbG4udHRmIiwiWjpcXG1lZGlhXFxzZGExXFxQcm9n\n" + 
+					"cmFtIEZpbGVzXFxGaXJheGlzIEdhbWVzXFxTaWQgTWVpZXIncyBBbHBoYSBDZW50YXVyaSIpOiBz\n" + 
+					"dHViCmZpeG1lOm50ZGxsOkZJTEVfR2V0TnRTdGF0dXMgQ29udmVydGluZyBlcnJubyAxOSB0byBT\n" + 
+					"VEFUVVNfVU5TVUNDRVNTRlVMCmVycjp2aXJ0dWFsOk50TWFwVmlld09mU2VjdGlvbiBtYXBfZmls\n" + 
+					"ZV9pbnRvX3ZpZXcgMHgxMGYwMDAwIDEwMDAgMDAwMDAwMDAwIGZhaWxlZApmaXhtZTpudGRsbDpG\n" + 
+					"SUxFX0dldE50U3RhdHVzIENvbnZlcnRpbmcgZXJybm8gMTkgdG8gU1RBVFVTX1VOU1VDQ0VTU0ZV\n" + 
+					"TAplcnI6dmlydHVhbDpOdE1hcFZpZXdPZlNlY3Rpb24gbWFwX2ZpbGVfaW50b192aWV3IDB4MTBm\n" + 
+					"MDAwMCAxMDAwIDAwMDAwMDAwMCBmYWlsZWQKZml4bWU6bnRkbGw6RklMRV9HZXROdFN0YXR1cyBD\n" + 
+					"b252ZXJ0aW5nIGVycm5vIDE5IHRvIFNUQVRVU19VTlNVQ0NFU1NGVUwKZXJyOnZpcnR1YWw6TnRN\n" + 
+					"YXBWaWV3T2ZTZWN0aW9uIG1hcF9maWxlX2ludG9fdmlldyAweDEwZjAwMDAgMTAwMCAwMDAwMDAw\n" + 
+					"MDAgZmFpbGVkCmZpeG1lOm50ZGxsOkZJTEVfR2V0TnRTdGF0dXMgQ29udmVydGluZyBlcnJubyAx\n" + 
+					"OSB0byBTVEFUVVNfVU5TVUNDRVNTRlVMCmVycjp2aXJ0dWFsOk50TWFwVmlld09mU2VjdGlvbiBt\n" + 
+					"YXBfZmlsZV9pbnRvX3ZpZXcgMHgxMGYwMDAwIDEwMDAgMDAwMDAwMDAwIGZhaWxlZApmaXhtZTpu\n" + 
+					"dGRsbDpGSUxFX0dldE50U3RhdHVzIENvbnZlcnRpbmcgZXJybm8gMTkgdG8gU1RBVFVTX1VOU1VD\n" + 
+					"Q0VTU0ZVTAplcnI6dmlydHVhbDpOdE1hcFZpZXdPZlNlY3Rpb24gbWFwX2ZpbGVfaW50b192aWV3\n" + 
+					"IDB4MTBmMDAwMCAxMDAwIDAwMDAwMDAwMCBmYWlsZWQKZml4bWU6bnRkbGw6RklMRV9HZXROdFN0\n" + 
+					"YXR1cyBDb252ZXJ0aW5nIGVycm5vIDE5IHRvIFNUQVRVU19VTlNVQ0NFU1NGVUwKZXJyOnZpcnR1\n" + 
+					"YWw6TnRNYXBWaWV3T2ZTZWN0aW9uIG1hcF9maWxlX2ludG9fdmlldyAweDEwZjAwMDAgMTAwMCAw\n" + 
+					"MDAwMDAwMDAgZmFpbGVkCmZpeG1lOm50ZGxsOkZJTEVfR2V0TnRTdGF0dXMgQ29udmVydGluZyBl\n" + 
+					"cnJubyAxOSB0byBTVEFUVVNfVU5TVUNDRVNTRlVMCmVycjp2aXJ0dWFsOk50TWFwVmlld09mU2Vj\n" + 
+					"dGlvbiBtYXBfZmlsZV9pbnRvX3ZpZXcgMHgxMGYwMDAwIDEwMDAgMDAwMDAwMDAwIGZhaWxlZApm\n" + 
+					"aXhtZTpudGRsbDpGSUxFX0dldE50U3RhdHVzIENvbnZlcnRpbmcgZXJybm8gMTkgdG8gU1RBVFVT\n" + 
+					"X1VOU1VDQ0VTU0ZVTAplcnI6dmlydHVhbDpOdE1hcFZpZXdPZlNlY3Rpb24gbWFwX2ZpbGVfaW50\n" + 
+					"b192aWV3IDB4MTBmMDAwMCAxMDAwIDAwMDAwMDAwMCBmYWlsZWQKZml4bWU6bnRkbGw6RklMRV9H\n" + 
+					"ZXROdFN0YXR1cyBDb252ZXJ0aW5nIGVycm5vIDE5IHRvIFNUQVRVU19VTlNVQ0NFU1NGVUwKZXJy\n" + 
+					"OnZpcnR1YWw6TnRNYXBWaWV3T2ZTZWN0aW9uIG1hcF9maWxlX2ludG9fdmlldyAweDEwZjAwMDAg\n" + 
+					"MTAwMCAwMDAwMDAwMDAgZmFpbGVkCmZpeG1lOm50ZGxsOkZJTEVfR2V0TnRTdGF0dXMgQ29udmVy\n" + 
+					"dGluZyBlcnJubyAxOSB0byBTVEFUVVNfVU5TVUNDRVNTRlVMCmVycjp2aXJ0dWFsOk50TWFwVmll\n" + 
+					"d09mU2VjdGlvbiBtYXBfZmlsZV9pbnRvX3ZpZXcgMHgxMGYwMDAwIDEwMDAgMDAwMDAwMDAwIGZh\n" + 
+					"aWxlZApmaXhtZTpudGRsbDpGSUxFX0dldE50U3RhdHVzIENvbnZlcnRpbmcgZXJybm8gMTkgdG8g\n" + 
+					"U1RBVFVTX1VOU1VDQ0VTU0ZVTAplcnI6dmlydHVhbDpOdE1hcFZpZXdPZlNlY3Rpb24gbWFwX2Zp\n" + 
+					"bGVfaW50b192aWV3IDB4MTBmMDAwMCAxMDAwIDAwMDAwMDAwMCBmYWlsZWQKd2luZTogVW5oYW5k\n" + 
+					"bGVkIHBhZ2UgZmF1bHQgb24gd3JpdGUgYWNjZXNzIHRvIDB4MDAwMDAwMDAgYXQgYWRkcmVzcyAw\n" + 
+					"eDY0YmZhMyAodGhyZWFkIDAwMDkpLCBzdGFydGluZyBkZWJ1Z2dlci4uLgpVbmhhbmRsZWQgZXhj\n" + 
+					"ZXB0aW9uOiBwYWdlIGZhdWx0IG9uIHdyaXRlIGFjY2VzcyB0byAweDAwMDAwMDAwIGluIDMyLWJp\n" + 
+					"dCBjb2RlICgweDAwNjRiZmEzKS4KUmVnaXN0ZXIgZHVtcDoKIENTOjAwNzMgU1M6MDA3YiBEUzow\n" + 
+					"MDdiIEVTOjAwN2IgRlM6MDAzMyBHUzowMDNiCiBFSVA6MDA2NGJmYTMgRVNQOjAwMzRlYjc0IEVC\n" + 
+					"UDowMDM0ZWI3YyBFRkxBR1M6MDAwMTAyMTYoICAgLSAwMCAgICAgIC1SSUFQMSkKIEVBWDowMDZm\n" + 
+					"MDRmNCBFQlg6MDAwMDAwMDAgRUNYOjAwMDAwMGMwIEVEWDowMDAwMDAwMAogRVNJOjAwNmYwMWY0\n" + 
+					"IEVESTowMDAwMDAwMApTdGFjayBkdW1wOgoweDAwMzRlYjc0OiAgN2VjNjU0ZTAgN2ZmZGYwMDAg\n" + 
+					"MDAzNGZkOTAgMDA0MjRlN2IKMHgwMDM0ZWI4NDogIDAwMDAwMDAwIDAwNmYwMWY0IDAwMDAwMzAw\n" + 
+					"IDdmZmRmMDAwCjB4MDAzNGViOTQ6ICA3ZWM2NTRlMCAwMDAwMDAwMCAwMDAwMDAwMiAwMDAwMDAw\n" + 
+					"MgoweDAwMzRlYmE0OiAgMDAwMDAwMDIgMDAwMDAwMDIgMDAwMDAwMDIgMDAwMDAwMDIKMHgwMDM0\n" + 
+					"ZWJiNDogIDAwMDAwMDAyIDAwMDAwMDAyIDAwMDAwMDAwIDAwMzRlYjAwCjB4MDAzNGViYzQ6ICAw\n" + 
+					"MDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMCAwMDAwMDAwMApCYWNrdHJhY2U6Cj0+MSAweDAwNjRi\n" + 
+					"ZmEzIGluIHRlcnJhbiAoKzB4MjRiZmEzKSAoMHgwMDM0ZWI3YykKICAyIDB4MDA0MjRlN2IgaW4g\n" + 
+					"dGVycmFuICgrMHgyNGU3YikgKDB4MDAzNGZkOTApCiAgMyAweDAwNDVhNzZjIGluIHRlcnJhbiAo\n" + 
+					"KzB4NWE3NmMpICgweDAwMzRmZGU0KQogIDQgMHgwMDU4MDM4ZCBpbiB0ZXJyYW4gKCsweDE4MDM4\n" + 
+					"ZCkgKDB4MDAzNGZlMDQpCiAgNSAweDAwNTIyODU3IGluIHRlcnJhbiAoKzB4MTIyODU3KSAoMHgw\n" + 
+					"MDM0ZmU3OCkKICA2IDB4MDA2NGRkMDYgaW4gdGVycmFuICgrMHgyNGRkMDYpICgweDAwMzRmZjA4\n" + 
+					"KQogIDcgMHg3Yjg3NTlmZSBpbiBrZXJuZWwzMiAoKzB4NTU5ZmUpICgweDAwMzRmZmU4KQogIDgg\n" + 
+					"MHhiN2UyNDhmNyB3aW5lX3N3aXRjaF90b19zdGFjaysweDE3KCkgaW4gbGlid2luZS5zby4xICgw\n" + 
+					"eDAwMDAwMDAwKQoweDAwNjRiZmEzOiByZXBlIG1vdnNsICAoJWVzaSksJWVzOiglZWRpKQpNb2R1\n" + 
+					"bGVzOgpNb2R1bGUgIEFkZHJlc3MgICAgICAgICAgICAgICAgIERlYnVnIGluZm8gICAgICBOYW1l\n" + 
+					"ICgxMDUgbW9kdWxlcykKUEUgICAgICAgIDQwMDAwMC0gIDllNDAwMCAgICAgICBFeHBvcnQgICAg\n" + 
+					"ICAgICAgdGVycmFuClBFICAgICAgMTAwMDAwMDAtMTAwYTAwMDAgICAgICAgRGVmZXJyZWQgICAg\n" + 
+					"ICAgIHNvdW5kCkVMRiAgICAgNzg5NTMwMDAtNzhhNDAwMDAgICAgICAgRGVmZXJyZWQgICAgICAg\n" + 
+					"IHdpbmVkM2Q8ZWxmPgogIFwtUEUgIDc4OTcwMDAwLTc4YTQwMDAwICAgICAgIFwgICAgICAgICAg\n" + 
+					"ICAgICB3aW5lZDNkCkVMRiAgICAgN2I4MDAwMDAtN2I5MmIwMDAgICAgICAgRXhwb3J0ICAgICAg\n" + 
+					"ICAgIGtlcm5lbDMyPGVsZj4KICBcLVBFICA3YjgyMDAwMC03YjkyYjAwMCAgICAgICBcICAgICAg\n" + 
+					"ICAgICAgICAga2VybmVsMzIKRUxGICAgICA3YjliNzAwMC03YmEwODAwMCAgICAgICBEZWZlcnJl\n" + 
+					"ZCAgICAgICAgbGliZ2NyeXB0LnNvLjExCkVMRiAgICAgN2JhMDgwMDAtN2JhNzgwMDAgICAgICAg\n" + 
+					"RGVmZXJyZWQgICAgICAgIGxpYmdudXRscy5zby4xMwpFTEYgICAgIDdiYTc4MDAwLTdiYjAwMDAw\n" + 
+					"ICAgICAgIERlZmVycmVkICAgICAgICBsaWJrcmI1LnNvLjMKRUxGICAgICA3YmMwMDAwMC03YmNh\n" + 
+					"MzAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgbnRkbGw8ZWxmPgogIFwtUEUgIDdiYzEwMDAwLTdi\n" + 
+					"Y2EzMDAwICAgICAgIFwgICAgICAgICAgICAgICBudGRsbApFTEYgICAgIDdiY2QyMDAwLTdiZDAw\n" + 
+					"MDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJjcnlwdC5zby4xCkVMRiAgICAgN2JmMDAwMDAt\n" + 
+					"N2JmMDMwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIDx3aW5lLWxvYWRlcj4KRUxGICAgICA3YmYw\n" + 
+					"YTAwMC03YmYxYTAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgbGlidGFzbjEuc28uMwpFTEYgICAg\n" + 
+					"IDdiZjFhMDAwLTdiZjNmMDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJrNWNyeXB0by5zby4z\n" + 
+					"CkVMRiAgICAgN2JmM2YwMDAtN2JmNjgwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxpYmdzc2Fw\n" + 
+					"aV9rcmI1LnNvLjIKRUxGICAgICA3YmY2ODAwMC03YmY5ZDAwMCAgICAgICBEZWZlcnJlZCAgICAg\n" + 
+					"ICAgbGliY3Vwcy5zby4yCkVMRiAgICAgN2JmOWQwMDAtN2JmYzQwMDAgICAgICAgRGVmZXJyZWQg\n" + 
+					"ICAgICAgIG1zYWNtMzI8ZWxmPgogIFwtUEUgIDdiZmIwMDAwLTdiZmM0MDAwICAgICAgIFwgICAg\n" + 
+					"ICAgICAgICAgICBtc2FjbTMyCkVMRiAgICAgN2JmYzQwMDAtN2MwMDAwMDAgICAgICAgRGVmZXJy\n" + 
+					"ZWQgICAgICAgIHdpbmVvc3M8ZWxmPgogIFwtUEUgIDdiZmQwMDAwLTdjMDAwMDAwICAgICAgIFwg\n" + 
+					"ICAgICAgICAgICAgICB3aW5lb3NzCkVMRiAgICAgN2MwYjIwMDAtN2MwYjYwMDAgICAgICAgRGVm\n" + 
+					"ZXJyZWQgICAgICAgIGxpYmdwZy1lcnJvci5zby4wCkVMRiAgICAgN2MwYjYwMDAtN2MwY2IwMDAg\n" + 
+					"ICAgICAgRGVmZXJyZWQgICAgICAgIG1pZGltYXA8ZWxmPgogIFwtUEUgIDdjMGMwMDAwLTdjMGNi\n" + 
+					"MDAwICAgICAgIFwgICAgICAgICAgICAgICBtaWRpbWFwCkVMRiAgICAgN2MwY2IwMDAtN2MwZTMw\n" + 
+					"MDAgICAgICAgRGVmZXJyZWQgICAgICAgIG1zYWNtMzI8ZWxmPgogIFwtUEUgIDdjMGQwMDAwLTdj\n" + 
+					"MGUzMDAwICAgICAgIFwgICAgICAgICAgICAgICBtc2FjbTMyCkVMRiAgICAgN2MwZTMwMDAtN2Mx\n" + 
+					"YTkwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxpYmFzb3VuZC5zby4yCkVMRiAgICAgN2MxYjYw\n" + 
+					"MDAtN2MxZWMwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIHdpbmVhbHNhPGVsZj4KICBcLVBFICA3\n" + 
+					"YzFjMDAwMC03YzFlYzAwMCAgICAgICBcICAgICAgICAgICAgICAgd2luZWFsc2EKRUxGICAgICA3\n" + 
+					"YzIxYzAwMC03YzIxZTAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgbGlia2V5dXRpbHMuc28uMQpF\n" + 
+					"TEYgICAgIDdjMjNlMDAwLTdjMjcwMDAwICAgICAgIERlZmVycmVkICAgICAgICB1eHRoZW1lPGVs\n" + 
+					"Zj4KICBcLVBFICA3YzI1MDAwMC03YzI3MDAwMCAgICAgICBcICAgICAgICAgICAgICAgdXh0aGVt\n" + 
+					"ZQpFTEYgICAgIDdjMjcwMDAwLTdjMjc5MDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJ4Y3Vy\n" + 
+					"c29yLnNvLjEKRUxGICAgICA3YzI3OTAwMC03YzI5NzAwMCAgICAgICBEZWZlcnJlZCAgICAgICAg\n" + 
+					"aW1tMzI8ZWxmPgogIFwtUEUgIDdjMjgwMDAwLTdjMjk3MDAwICAgICAgIFwgICAgICAgICAgICAg\n" + 
+					"ICBpbW0zMgpFTEYgICAgIDdjMjk3MDAwLTdjMjlkMDAwICAgICAgIERlZmVycmVkICAgICAgICBs\n" + 
+					"aWJ4cmFuZHIuc28uMgpFTEYgICAgIDdjMjlkMDAwLTdjMmE1MDAwICAgICAgIERlZmVycmVkICAg\n" + 
+					"ICAgICBsaWJrcmI1c3VwcG9ydC5zby4wCkVMRiAgICAgN2MyYTUwMDAtN2MyYTgwMDAgICAgICAg\n" + 
+					"RGVmZXJyZWQgICAgICAgIGxpYmNvbV9lcnIuc28uMgpFTEYgICAgIDdlMGFhMDAwLTdlMmYzMDAw\n" + 
+					"ICAgICAgIERlZmVycmVkICAgICAgICBpOTE1X2RyaS5zbwpFTEYgICAgIDdlMmYzMDAwLTdlMmZk\n" + 
+					"MDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJkcm0uc28uMgpFTEYgICAgIDdlMmZkMDAwLTdl\n" + 
+					"MzAyMDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJ4Zml4ZXMuc28uMwpFTEYgICAgIDdlMzAy\n" + 
+					"MDAwLTdlMzA1MDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJ4ZGFtYWdlLnNvLjEKRUxGICAg\n" + 
+					"ICA3ZTMwNTAwMC03ZTM2NjAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgbGliZ2wuc28uMQpFTEYg\n" + 
+					"ICAgIDdlMzY2MDAwLTdlMzZiMDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJ4ZG1jcC5zby42\n" + 
+					"CkVMRiAgICAgN2UzNmIwMDAtN2UzNmUwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxpYnhhdS5z\n" + 
+					"by42CkVMRiAgICAgN2UzNmUwMDAtN2U0NWYwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxpYngx\n" + 
+					"MS5zby42CkVMRiAgICAgN2U0NWYwMDAtN2U0NmQwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxp\n" + 
+					"YnhleHQuc28uNgpFTEYgICAgIDdlNDZkMDAwLTdlNDcyMDAwICAgICAgIERlZmVycmVkICAgICAg\n" + 
+					"ICBsaWJ4eGY4NnZtLnNvLjEKRUxGICAgICA3ZTQ3MjAwMC03ZTQ4YTAwMCAgICAgICBEZWZlcnJl\n" + 
+					"ZCAgICAgICAgbGliaWNlLnNvLjYKRUxGICAgICA3ZTQ4YTAwMC03ZTQ5MjAwMCAgICAgICBEZWZl\n" + 
+					"cnJlZCAgICAgICAgbGlic20uc28uNgpFTEYgICAgIDdlNDkyMDAwLTdlNDk1MDAwICAgICAgIERl\n" + 
+					"ZmVycmVkICAgICAgICBsaWJ4Y29tcG9zaXRlLnNvLjEKRUxGICAgICA3ZTQ5NTAwMC03ZTQ5ZDAw\n" + 
+					"MCAgICAgICBEZWZlcnJlZCAgICAgICAgbGlieHJlbmRlci5zby4xCkVMRiAgICAgN2U0OWYwMDAt\n" + 
+					"N2U1MmMwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIHdpbmV4MTE8ZWxmPgogIFwtUEUgIDdlNGIw\n" + 
+					"MDAwLTdlNTJjMDAwICAgICAgIFwgICAgICAgICAgICAgICB3aW5leDExCkVMRiAgICAgN2U1OWMw\n" + 
+					"MDAtN2U1YmMwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxpYmV4cGF0LnNvLjEKRUxGICAgICA3\n" + 
+					"ZTViYzAwMC03ZTVlNzAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgbGliZm9udGNvbmZpZy5zby4x\n" + 
+					"CkVMRiAgICAgN2U1ZjQwMDAtN2U2MDkwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxpYnouc28u\n" + 
+					"MQpFTEYgICAgIDdlNjA5MDAwLTdlNjc5MDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJmcmVl\n" + 
+					"dHlwZS5zby42CkVMRiAgICAgN2U2NzkwMDAtN2U2YWQwMDAgICAgICAgRGVmZXJyZWQgICAgICAg\n" + 
+					"IGRwbGF5eDxlbGY+CiAgXC1QRSAgN2U2ODAwMDAtN2U2YWQwMDAgICAgICAgXCAgICAgICAgICAg\n" + 
+					"ICAgIGRwbGF5eApFTEYgICAgIDdlNmFkMDAwLTdlNmUyMDAwICAgICAgIERlZmVycmVkICAgICAg\n" + 
+					"ICB3aW5zcG9vbDxlbGY+CiAgXC1QRSAgN2U2YzAwMDAtN2U2ZTIwMDAgICAgICAgXCAgICAgICAg\n" + 
+					"ICAgICAgIHdpbnNwb29sCkVMRiAgICAgN2U2ZTIwMDAtN2U3ODQwMDAgICAgICAgRGVmZXJyZWQg\n" + 
+					"ICAgICAgIGNvbWRsZzMyPGVsZj4KICBcLVBFICA3ZTZmMDAwMC03ZTc4NDAwMCAgICAgICBcICAg\n" + 
+					"ICAgICAgICAgICAgY29tZGxnMzIKRUxGICAgICA3ZTc4NDAwMC03ZTdjZTAwMCAgICAgICBEZWZl\n" + 
+					"cnJlZCAgICAgICAgZHNvdW5kPGVsZj4KICBcLVBFICA3ZTc5MDAwMC03ZTdjZTAwMCAgICAgICBc\n" + 
+					"ICAgICAgICAgICAgICAgZHNvdW5kCkVMRiAgICAgN2U3Y2UwMDAtN2U3ZTIwMDAgICAgICAgRGVm\n" + 
+					"ZXJyZWQgICAgICAgIGx6MzI8ZWxmPgogIFwtUEUgIDdlN2QwMDAwLTdlN2UyMDAwICAgICAgIFwg\n" + 
+					"ICAgICAgICAgICAgICBsejMyCkVMRiAgICAgN2U3ZTIwMDAtN2U3ZmMwMDAgICAgICAgRGVmZXJy\n" + 
+					"ZWQgICAgICAgIHZlcnNpb248ZWxmPgogIFwtUEUgIDdlN2YwMDAwLTdlN2ZjMDAwICAgICAgIFwg\n" + 
+					"ICAgICAgICAgICAgICB2ZXJzaW9uCkVMRiAgICAgN2U3ZmMwMDAtN2U4MjMwMDAgICAgICAgRGVm\n" + 
+					"ZXJyZWQgICAgICAgIG1zdmZ3MzI8ZWxmPgogIFwtUEUgIDdlODAwMDAwLTdlODIzMDAwICAgICAg\n" + 
+					"IFwgICAgICAgICAgICAgICBtc3ZmdzMyCkVMRiAgICAgN2U4MjMwMDAtN2U4YjEwMDAgICAgICAg\n" + 
+					"RGVmZXJyZWQgICAgICAgIHdpbm1tPGVsZj4KICBcLVBFICA3ZTgzMDAwMC03ZThiMTAwMCAgICAg\n" + 
+					"ICBcICAgICAgICAgICAgICAgd2lubW0KRUxGICAgICA3ZThiMTAwMC03ZThjNDAwMCAgICAgICBE\n" + 
+					"ZWZlcnJlZCAgICAgICAgbGlicmVzb2x2LnNvLjIKRUxGICAgICA3ZThkMTAwMC03ZThlZjAwMCAg\n" + 
+					"ICAgICBEZWZlcnJlZCAgICAgICAgaXBobHBhcGk8ZWxmPgogIFwtUEUgIDdlOGUwMDAwLTdlOGVm\n" + 
+					"MDAwICAgICAgIFwgICAgICAgICAgICAgICBpcGhscGFwaQpFTEYgICAgIDdlOGVmMDAwLTdlOTRi\n" + 
+					"MDAwICAgICAgIERlZmVycmVkICAgICAgICBycGNydDQ8ZWxmPgogIFwtUEUgIDdlOTAwMDAwLTdl\n" + 
+					"OTRiMDAwICAgICAgIFwgICAgICAgICAgICAgICBycGNydDQKRUxGICAgICA3ZTk0YjAwMC03ZTll\n" + 
+					"ZTAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgb2xlMzI8ZWxmPgogIFwtUEUgIDdlOTYwMDAwLTdl\n" + 
+					"OWVlMDAwICAgICAgIFwgICAgICAgICAgICAgICBvbGUzMgpFTEYgICAgIDdlOWVlMDAwLTdlYTQ0\n" + 
+					"MDAwICAgICAgIERlZmVycmVkICAgICAgICBkZHJhdzxlbGY+CiAgXC1QRSAgN2VhMDAwMDAtN2Vh\n" + 
+					"NDQwMDAgICAgICAgXCAgICAgICAgICAgICAgIGRkcmF3CkVMRiAgICAgN2VhNDQwMDAtN2ViMDIw\n" + 
+					"MDAgICAgICAgRGVmZXJyZWQgICAgICAgIGNvbWN0bDMyPGVsZj4KICBcLVBFICA3ZWE1MDAwMC03\n" + 
+					"ZWIwMjAwMCAgICAgICBcICAgICAgICAgICAgICAgY29tY3RsMzIKRUxGICAgICA3ZWIwMjAwMC03\n" + 
+					"ZWI0ZTAwMCAgICAgICBEZWZlcnJlZCAgICAgICAgYWR2YXBpMzI8ZWxmPgogIFwtUEUgIDdlYjEw\n" + 
+					"MDAwLTdlYjRlMDAwICAgICAgIFwgICAgICAgICAgICAgICBhZHZhcGkzMgpFTEYgICAgIDdlYjRl\n" + 
+					"MDAwLTdlYmU3MDAwICAgICAgIERlZmVycmVkICAgICAgICBnZGkzMjxlbGY+CiAgXC1QRSAgN2Vi\n" + 
+					"NjAwMDAtN2ViZTcwMDAgICAgICAgXCAgICAgICAgICAgICAgIGdkaTMyCkVMRiAgICAgN2ViZTcw\n" + 
+					"MDAtN2VkMjQwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIHVzZXIzMjxlbGY+CiAgXC1QRSAgN2Vj\n" + 
+					"MDAwMDAtN2VkMjQwMDAgICAgICAgXCAgICAgICAgICAgICAgIHVzZXIzMgpFTEYgICAgIDdlZDI0\n" + 
+					"MDAwLTdlZDdkMDAwICAgICAgIERlZmVycmVkICAgICAgICBzaGx3YXBpPGVsZj4KICBcLVBFICA3\n" + 
+					"ZWQzMDAwMC03ZWQ3ZDAwMCAgICAgICBcICAgICAgICAgICAgICAgc2hsd2FwaQpFTEYgICAgIDdl\n" + 
+					"ZDdkMDAwLTdlZTgyMDAwICAgICAgIERlZmVycmVkICAgICAgICBzaGVsbDMyPGVsZj4KICBcLVBF\n" + 
+					"ICA3ZWQ5MDAwMC03ZWU4MjAwMCAgICAgICBcICAgICAgICAgICAgICAgc2hlbGwzMgpFTEYgICAg\n" + 
+					"IDdlZmExMDAwLTdlZmFjMDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJuc3NfZmlsZXMuc28u\n" + 
+					"MgpFTEYgICAgIDdlZmFjMDAwLTdlZmI2MDAwICAgICAgIERlZmVycmVkICAgICAgICBsaWJuc3Nf\n" + 
+					"bmlzLnNvLjIKRUxGICAgICA3ZWZiNjAwMC03ZWZjZTAwMCAgICAgICBEZWZlcnJlZCAgICAgICAg\n" + 
+					"bGlibnNsLnNvLjEKRUxGICAgICA3ZWZjZTAwMC03ZWZmMzAwMCAgICAgICBEZWZlcnJlZCAgICAg\n" + 
+					"ICAgbGlibS5zby42CkVMRiAgICAgN2VmZjcwMDAtN2YwMDAwMDAgICAgICAgRGVmZXJyZWQgICAg\n" + 
+					"ICAgIGxpYm5zc19jb21wYXQuc28uMgpFTEYgICAgIGI3Y2E5MDAwLWI3Y2FkMDAwICAgICAgIERl\n" + 
+					"ZmVycmVkICAgICAgICBsaWJkbC5zby4yCkVMRiAgICAgYjdjYWQwMDAtYjdkZjcwMDAgICAgICAg\n" + 
+					"RGVmZXJyZWQgICAgICAgIGxpYmMuc28uNgpFTEYgICAgIGI3ZGY4MDAwLWI3ZTEwMDAwICAgICAg\n" + 
+					"IERlZmVycmVkICAgICAgICBsaWJwdGhyZWFkLnNvLjAKRUxGICAgICBiN2UxZDAwMC1iN2YzMTAw\n" + 
+					"MCAgICAgICBFeHBvcnQgICAgICAgICAgbGlid2luZS5zby4xCkVMRiAgICAgYjdmMzMwMDAtYjdm\n" + 
+					"NGYwMDAgICAgICAgRGVmZXJyZWQgICAgICAgIGxkLWxpbnV4LnNvLjIKVGhyZWFkczoKcHJvY2Vz\n" + 
+					"cyAgdGlkICAgICAgcHJpbyAoYWxsIGlkOnMgYXJlIGluIGhleCkKMDAwMDAwMGEgCiAgICAgICAg\n" + 
+					"MDAwMDAwMGMgICAgMAogICAgICAgIDAwMDAwMDBiICAgIDAKMDAwMDAwMDggKEQpIFo6XG1lZGlh\n" + 
+					"XHNkYTFcUHJvZ3JhbSBGaWxlc1xGaXJheGlzIEdhbWVzXFNpZCBNZWllcidzIEFscGhhIENlbnRh\n" + 
+					"dXJpXHRlcnJhbi5leGUKICAgICAgICAwMDAwMDAwZSAgICAwCiAgICAgICAgMDAwMDAwMGQgICAx\n" + 
+					"NQogICAgICAgIDAwMDAwMDA5ICAgIDAgPD09CkJhY2t0cmFjZToKPT4xIDB4MDA2NGJmYTMgaW4g\n" + 
+					"dGVycmFuICgrMHgyNGJmYTMpICgweDAwMzRlYjdjKQogIDIgMHgwMDQyNGU3YiBpbiB0ZXJyYW4g\n" + 
+					"KCsweDI0ZTdiKSAoMHgwMDM0ZmQ5MCkKICAzIDB4MDA0NWE3NmMgaW4gdGVycmFuICgrMHg1YTc2\n" + 
+					"YykgKDB4MDAzNGZkZTQpCiAgNCAweDAwNTgwMzhkIGluIHRlcnJhbiAoKzB4MTgwMzhkKSAoMHgw\n" + 
+					"MDM0ZmUwNCkKICA1IDB4MDA1MjI4NTcgaW4gdGVycmFuICgrMHgxMjI4NTcpICgweDAwMzRmZTc4\n" + 
+					"KQogIDYgMHgwMDY0ZGQwNiBpbiB0ZXJyYW4gKCsweDI0ZGQwNikgKDB4MDAzNGZmMDgpCiAgNyAw\n" + 
+					"eDdiODc1OWZlIGluIGtlcm5lbDMyICgrMHg1NTlmZSkgKDB4MDAzNGZmZTgpCiAgOCAweGI3ZTI0\n" + 
+					"OGY3IHdpbmVfc3dpdGNoX3RvX3N0YWNrKzB4MTcoKSBpbiBsaWJ3aW5lLnNvLjEgKDB4MDAwMDAw\n" + 
+					"MDApCmNvcmV5QGNvcmV5LWxhcHRvcDovbWVkaWEvc2RhMS9Qcm9ncmFtIEZpbGVzL0ZpcmF4aXMg\n" + 
+					"R2FtZXMvU2lkIE1laWVyJ3MgQWxwaGEgQ2VudGF1cmkkIGNkIC9tZWRpYS9zZGExL1Byb2dyYW1c\n" + 
+					"IEZpbGVzL0luCkluZm9ncmFtZXMgSW50ZXJhY3RpdmUvICAgICAgICAgICAgICAgICBJbnRlbC8K\n" + 
+					"SW5zdGFsbFNoaWVsZCBJbnN0YWxsYXRpb24gSW5mb3JtYXRpb24vIEludGVybmV0IEV4cGxvcmVy\n" + 
+					"LwoK\n" + 
+					"</data>\n" + 
+					"\n" + 
+					"          </attachment>\n" + 
+					"      \n" + 
+					"\n" + 
+					"    </bug>\n" + 
+					"\n" + 
+					"</bugzilla>\n" 
+					
+					
+					);
+	public static List<String> histories = Arrays.asList(
+			"<!DOCTYPE html>\n" + "<html lang=\"en\">\n" + "  <head>\n"
 			+ "    <title>Changes made to bug 14582</title>\n" + "\n"
 			+ "      <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n" + "\n"
 			+ "<link href=\"data/assets/fe6bc1a55c6a92f0fa05c7b94e8ccf3e.css?1511975182\" rel=\"stylesheet\" type=\"text/css\">\n"
@@ -1477,6 +1911,7 @@ public class ReportRepositoryFromMemory implements ReportRepository {
 			+ "  <li><a href=\"http://www.eclipse.org/legal/copyright.php\">Copyright Agent</a></li>\n" + "</ul>\n"
 			+ "  </li>\n" + "\n" + "  \n" + "\n" + "\n" + "\n" + "\n" + "  \n" + "</ul>\n" + "\n"
 			+ "      <div class=\"outro\"></div>\n" + "    </div>\n" + "\n" + "  </body>\n" + "</html>\n" + "",
+			
 			"<!DOCTYPE html>\n" + "<html lang=\"en\">\n" + "  <head>\n" + "    <title>Changes made to bug 1</title>\n"
 					+ "\n" + "      <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n" + "\n"
 					+ "<link href=\"data/assets/fe6bc1a55c6a92f0fa05c7b94e8ccf3e.css?1511975182\" rel=\"stylesheet\" type=\"text/css\">\n"
@@ -1708,6 +2143,7 @@ public class ReportRepositoryFromMemory implements ReportRepository {
 					+ "  <li><a href=\"http://www.eclipse.org/legal/copyright.php\">Copyright Agent</a></li>\n"
 					+ "</ul>\n" + "  </li>\n" + "\n" + "  \n" + "\n" + "\n" + "\n" + "\n" + "  \n" + "</ul>\n" + "\n"
 					+ "      <div class=\"outro\"></div>\n" + "    </div>\n" + "\n" + "  </body>\n" + "</html>\n" + "",
+					
 			"<!DOCTYPE html>\n" + "<html lang=\"en\">\n" + "  <head>\n" + "      <meta charset=\"UTF-8\">\n"
 					+ "<meta property=\"og:type\" content=\"website\">\n"
 					+ "<meta property=\"og:image\" content=\"https://bugzilla.mozilla.org/extensions/OpenGraph/web/moz-social-bw-rgb-1200x1200.png\">\n"
@@ -1874,6 +2310,7 @@ public class ReportRepositoryFromMemory implements ReportRepository {
 					+ "   title=\"RESOLVED FIXED - Processing instruction getTarget method returns incorrect value\"\n"
 					+ "   href=\"show_bug.cgi?id=13271\">Back to bug 13271</a>\n" + "  </p>\n" + "</div> \n"
 					+ "</main> \n" + "</div> \n" + "\n" + "\n" + "</body>\n" + "</html>\n" + "",
+					
 			"<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n"
 					+ "                      \"http://www.w3.org/TR/html4/loose.dtd\">\n" + "<html lang=\"en\">\n"
 					+ "  <head>\n" + "    <title>WineHQ Bugzilla &ndash; Changes made to bug 9981</title>\n" + "\n"
@@ -2161,6 +2598,7 @@ public class ReportRepositoryFromMemory implements ReportRepository {
 					+ "    <a href=\"http://www.codeweavers.com/\"><img src=\"images/cw_logo_sm.png\" alt=\"CodeWeavers\"\n"
 					+ "    title=\"CodeWeavers - Run Windows applications and games on Mac and Linux\"></a>\n"
 					+ "</div>\n" + "\n" + "</body>\n" + "</html>\n" + "",
+					
 			"<!DOCTYPE html>\n" + "<html lang=\"en\">\n" + "  <head>\n"
 					+ "    <title>Changes made to bug 92086</title>\n" + "\n"
 					+ "      <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n" + "\n" + "\n"
@@ -2328,7 +2766,614 @@ public class ReportRepositoryFromMemory implements ReportRepository {
 					+ "<!-- Begin SiteCatalyst code -->\n"
 					+ "<script language=\"JavaScript\" src=\"//netbeans.org/images_www/js/s_code_remote.js\" type=\"text/javascript\"></script>\n"
 					+ "<!-- End SiteCatalyst code -->\n" + "\n" + "<!-- INCLUDED CODE END -->\n" + "\n" + "\n"
-					+ "</body>\n" + "</html>\n" + "");
+					+ "</body>\n" + "</html>\n",
+					"<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n" + 
+					"                      \"http://www.w3.org/TR/html4/loose.dtd\">\n" + 
+					"<html lang=\"en\">\n" + 
+					"  <head>\n" + 
+					"    <title>WineHQ Bugzilla &ndash; Changes made to bug 10518</title>\n" + 
+					"\n" + 
+					"      <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n" + 
+					"\n" + 
+					"\n" + 
+					"<link rel=\"Top\" href=\"https://bugs.winehq.org/\">\n" + 
+					"\n" + 
+					"  \n" + 
+					"\n" + 
+					"\n" + 
+					"  \n" + 
+					"    <link rel=\"Show\" title=\"Dependency Tree\"\n" + 
+					"          href=\"showdependencytree.cgi?id=10518&amp;hide_resolved=1\">\n" + 
+					"\n" + 
+					"      <link rel=\"Show\" title=\"Bug Activity\"\n" + 
+					"            href=\"show_activity.cgi?id=10518\">\n" + 
+					"      <link rel=\"Show\" title=\"Printer-Friendly Version\"\n" + 
+					"            href=\"show_bug.cgi?format=multiple&amp;id=10518\">\n" + 
+					"\n" + 
+					"\n" + 
+					"\n" + 
+					"    \n" + 
+					"    <link href=\"skins/standard/global.css?1392815001\"\n" + 
+					"          rel=\"alternate stylesheet\" \n" + 
+					"          title=\"Classic\"><link href=\"skins/standard/global.css?1392815001\" rel=\"stylesheet\"\n" + 
+					"        type=\"text/css\" ><!--[if lte IE 7]>\n" + 
+					"      \n" + 
+					"\n" + 
+					"\n" + 
+					"  <link href=\"skins/standard/IE-fixes.css?1392815001\" rel=\"stylesheet\"\n" + 
+					"        type=\"text/css\" >\n" + 
+					"<![endif]-->\n" + 
+					"\n" + 
+					"    \n" + 
+					"\n" + 
+					"    \n" + 
+					"\n" + 
+					"    <link href=\"skins/custom/global.css?1228840611\" rel=\"stylesheet\"\n" + 
+					"        type=\"text/css\" >\n" + 
+					"\n" + 
+					"    \n" + 
+					"<script type=\"text/javascript\" src=\"js/yui/yahoo-dom-event/yahoo-dom-event.js?1386766312\"></script><script type=\"text/javascript\" src=\"js/yui/cookie/cookie-min.js?1386766312\"></script><script type=\"text/javascript\" src=\"js/global.js?1392815001\"></script>\n" + 
+					"\n" + 
+					"    <script type=\"text/javascript\">\n" + 
+					"    <!--\n" + 
+					"        YAHOO.namespace('bugzilla');\n" + 
+					"        YAHOO.util.Event.addListener = function (el, sType, fn, obj, overrideContext) {\n" + 
+					"               if ( (\"onpagehide\" in window || YAHOO.env.ua.gecko) && sType === \"unload\") { sType = \"pagehide\"; };\n" + 
+					"               var capture = ((sType == \"focusin\" || sType == \"focusout\") && !YAHOO.env.ua.ie) ? true : false;\n" + 
+					"               return this._addListener(el, this._getType(sType), fn, obj, overrideContext, capture);\n" + 
+					"         };\n" + 
+					"        if ( \"onpagehide\" in window || YAHOO.env.ua.gecko) {\n" + 
+					"            YAHOO.util.Event._simpleRemove(window, \"unload\", \n" + 
+					"                                           YAHOO.util.Event._unload);\n" + 
+					"        }\n" + 
+					"        \n" + 
+					"        function unhide_language_selector() { \n" + 
+					"            YAHOO.util.Dom.removeClass(\n" + 
+					"                'lang_links_container', 'bz_default_hidden'\n" + 
+					"            ); \n" + 
+					"        } \n" + 
+					"        YAHOO.util.Event.onDOMReady(unhide_language_selector);\n" + 
+					"\n" + 
+					"        \n" + 
+					"        var BUGZILLA = {\n" + 
+					"            param: {\n" + 
+					"                cookiepath: '\\/',\n" + 
+					"                maxusermatches: 1000\n" + 
+					"            },\n" + 
+					"            constant: {\n" + 
+					"                COMMENT_COLS: 80\n" + 
+					"            },\n" + 
+					"            string: {\n" + 
+					"                \n" + 
+					"\n" + 
+					"                attach_desc_required:\n" + 
+					"                    'You must enter a Description for this attachment.',\n" + 
+					"                component_required:\n" + 
+					"                    'You must select a Component for this bug.',\n" + 
+					"                description_required:\n" + 
+					"                    'You must enter a Description for this bug.',\n" + 
+					"                short_desc_required:\n" + 
+					"                    'You must enter a Summary for this bug.',\n" + 
+					"                version_required:\n" + 
+					"                    'You must select a Version for this bug.'\n" + 
+					"            }\n" + 
+					"        };\n" + 
+					"\n" + 
+					"    // -->\n" + 
+					"    </script>\n" + 
+					"\n" + 
+					"\n" + 
+					"    \n" + 
+					"\n" + 
+					"    \n" + 
+					"    <link rel=\"search\" type=\"application/opensearchdescription+xml\"\n" + 
+					"                       title=\"WineHQ Bugzilla\" href=\"./search_plugin.cgi\">\n" + 
+					"    <link rel=\"stylesheet\" href=\"styles.css\" type=\"text/css\" media=\"screen\">\n" + 
+					"    <script language=\"JavaScript\" src=\"jquery.js\" type=\"text/javascript\"></script>\n" + 
+					"    <script language=\"JavaScript\" src=\"utils.js\" type=\"text/javascript\"></script>\n" + 
+					"    <link rel=\"icon\" type=\"image/png\" href=\"images/winehq_logo_16.png\">\n" + 
+					"    <link rel=\"shortcut icon\" type=\"image/png\" href=\"images/winehq_logo_16.png\">\n" + 
+					"  </head>\n" + 
+					"\n" + 
+					"\n" + 
+					"\n" + 
+					"  <body onload=\"\"\n" + 
+					"        class=\"bugs-winehq-org yui-skin-sam\">\n" + 
+					"\n" + 
+					"\n" + 
+					"<!-- <div id=\"banner\"></div> -->\n" + 
+					"\n" + 
+					"<div id=\"logo_glass\"><a href=\"/\"><img src=\"images/winehq_logo_glass_sm.png\" alt=\"\"></a></div>\n" + 
+					"<div id=\"logo_text\"><a href=\"/\"><img src=\"images/winehq_logo_text.png\" alt=\"WineHQ\" title=\"WineHQ\"></a></div>\n" + 
+					"\n" + 
+					"<div id=\"logo_blurb\">\n" + 
+					"  Bug Tracking Database &ndash; Activity log for bug 10518: Alpha Centauri crashes on launch with ALSA sound\n" + 
+					"</div>\n" + 
+					"\n" + 
+					"<div id=\"search_box\">\n" + 
+					"  <form action=\"//www.winehq.org/search\" id=\"cse-search-box\" style=\"margin: 0; padding: 0;\">\n" + 
+					"    <span style=\"color: #ffffff;\">Search:</span> <input type=\"text\" name=\"q\" size=\"20\">\n" + 
+					"  </form>\n" + 
+					"</div>\n" + 
+					"\n" + 
+					"<div id=\"tabs\">\n" + 
+					"    <ul>\n" + 
+					"        <li><a href=\"//www.winehq.org/\">WineHQ</a></li>\n" + 
+					"        <li><a href=\"http://wiki.winehq.org/\">Wiki</a></li>\n" + 
+					"        <li><a href=\"//appdb.winehq.org/\">AppDB</a></li>\n" + 
+					"        <li class=\"s\"><a href=\"//bugs.winehq.org/\">Bugzilla</a></li>\n" + 
+					"        <li><a href=\"//forum.winehq.org/\">Forums</a></li>\n" + 
+					"    </ul>\n" + 
+					"</div>\n" + 
+					"\n" + 
+					"<!-- Start SideBar -->\n" + 
+					"<div id=\"sidebar\"><!--<ul>\n" + 
+					"        <li class=\"top\"><p>Bugzilla Menu</p></li>\n" + 
+					"        <li><p><a href=\"index.cgi\">Intro</a></p></li>\n" + 
+					"        <li><p><a href=\"enter_bug.cgi\">Enter Bug</a></p></li>\n" + 
+					"        <li><p><a href=\"query.cgi\">Query Bugs</a></p></li>\n" + 
+					"        <li><p><a href=\"report.cgi\">Reports</a></p></li><li class=\"bot\"></li>\n" + 
+					"    </ul>\n" + 
+					"<ul>\n" + 
+					"        <li class=\"top\"><p>\n" + 
+					"    <a class=\"menu_title_link\" \n" + 
+					"       href=\"page.cgi?id=quicksearch.html\">Find Bugs</a></p></li>\n" + 
+					"        <li><p><form class=\"quicksearch\" action=\"buglist.cgi\" method=\"get\"\n" + 
+					"        onsubmit=\"if (this.quicksearch.value == '')\n" + 
+					"                  { alert('Please enter one or more search terms first.');\n" + 
+					"                    return false; } return true;\">\n" + 
+					"    <input type=\"hidden\" id=\"no_redirect\" name=\"no_redirect\" value=\"0\">\n" + 
+					"    <script type=\"text/javascript\">\n" + 
+					"      if (history && history.replaceState) {\n" + 
+					"        var no_redirect = document.getElementById(\"no_redirect\");\n" + 
+					"        no_redirect.value = 1;\n" + 
+					"      }\n" + 
+					"    </script>\n" + 
+					"    <input class=\"txt\" size=\"8\"\n" + 
+					"           type=\"text\" id=\"quicksearch\" name=\"quicksearch\"\n" + 
+					"           title=\"Quick Search\" value=\"\">\n" + 
+					"    <input class=\"btn\" type=\"submit\" value=\"Find\" id=\"find\"></form>\n" + 
+					"        </p></li><li class=\"bot\"></li>\n" + 
+					"    </ul>\n" + 
+					"-->\n" + 
+					"<ul>\n" + 
+					"        <li class=\"top\"><p>Task Lists</p></li>\n" + 
+					"    <li><p><a href=\"buglist.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=NEEDINFO&amp;bug_status=STAGED&amp;product=Wine&amp;target_milestone=2.0.0&amp;order=bugs.bug_severity\">Wine 2.0</a></p></li>\n" + 
+					"    <li><p><a href=\"buglist.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=NEEDINFO&amp;bug_status=STAGED&amp;product=Wine&amp;keywords=regression&amp;columnlist=bug_severity,priority,bug_status,cf_regression_sha1sum,short_desc&amp;keywords_type=anywords\">Regressions</a></p></li>\n" + 
+					"    <li><p><a href=\"buglist.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_status=NEEDINFO&amp;bug_status=STAGED&amp;product=Wine&amp;keywords=download&amp;keywords_type=anywords\">With download</a></p></li><li class=\"bot\"></li>\n" + 
+					"    </ul>\n" + 
+					"\n" + 
+					"<ul>\n" + 
+					"        <li class=\"top\"><p>Bug Lists</p></li> \n" + 
+					"    <li><p><a href=\"buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=REOPENED&cmdtype=doit&order=Bug+Number\" class=menuItem>Available</a></p></li>\n" + 
+					"    <li><p><a href=\"buglist.cgi?bug_status=ASSIGNED\" class=menuItem>Assigned</a></p></li>\n" + 
+					"    <li><p><a href=\"buglist.cgi?bug_status=NEEDINFO\" class=menuItem>NeedInfo</a></p></li>\n" + 
+					"    <li><p><a href=\"buglist.cgi?bug_status=STAGED\" class=menuItem>Staged</a></p></li>\n" + 
+					"    <li><p><a href=\"buglist.cgi?bug_status=RESOLVED\" class=menuItem>Resolved</a></p></li><li class=\"bot\"></li>\n" + 
+					"    </ul>\n" + 
+					"</div>\n" + 
+					"<!-- End SideBar -->\n" + 
+					"\n" + 
+					"<div id=\"main_content\">\n" + 
+					"\n" + 
+					"  <div class=\"rbox\">\n" + 
+					"  <b class=\"rtop\"><b class=\"r1\"></b><b class=\"r2\"></b><b class=\"r3\"></b><b class=\"r4\"></b></b>\n" + 
+					"    <div class=\"content\" style=\"padding: 20px 20px 10px 80px\">\n" + 
+					"    <!-- Start Content -->\n" + 
+					"\n" + 
+					"<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" id=\"titles\" style=\"background-color: maroon; margin-top: 10px;\">\n" + 
+					"<tr>\n" + 
+					"    <td id=\"title\">\n" + 
+					"      <p>\n" + 
+					"        &nbsp;Bugzilla\n" + 
+					"      </p>\n" + 
+					"    </td>\n" + 
+					"\n" + 
+					"    <td id=\"subtitle\">\n" + 
+					"      <p class=\"subheader\">\n" + 
+					"        &nbsp;\n" + 
+					"      </p>\n" + 
+					"    </td>\n" + 
+					"\n" + 
+					"</tr>\n" + 
+					"</table>\n" + 
+					"\n" + 
+					"<table id=\"lang_links_container\" cellpadding=\"0\" cellspacing=\"0\"\n" + 
+					"       class=\"bz_default_hidden\"><tr><td>\n" + 
+					"</td></tr></table>\n" + 
+					"\n" + 
+					"<div id=\"header\"><ul class=\"links\">\n" + 
+					"  <li><a href=\"./\">Intro</a></li>\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"enter_bug.cgi\">New</a></li>\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"describecomponents.cgi\">Browse</a></li>\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"query.cgi\">Search</a></li>\n" + 
+					"\n" + 
+					"  <li class=\"form\">\n" + 
+					"    <span class=\"separator\">| </span><form class=\"quicksearch\" action=\"buglist.cgi\" method=\"get\"\n" + 
+					"        onsubmit=\"if (this.quicksearch.value == '')\n" + 
+					"                  { alert('Please enter one or more search terms first.');\n" + 
+					"                    return false; } return true;\">\n" + 
+					"    <input type=\"hidden\" id=\"no_redirect_top\" name=\"no_redirect\" value=\"0\">\n" + 
+					"    <script type=\"text/javascript\">\n" + 
+					"      if (history && history.replaceState) {\n" + 
+					"        var no_redirect = document.getElementById(\"no_redirect_top\");\n" + 
+					"        no_redirect.value = 1;\n" + 
+					"      }\n" + 
+					"    </script>\n" + 
+					"    <input class=\"txt\" \n" + 
+					"           type=\"text\" id=\"quicksearch_top\" name=\"quicksearch\"\n" + 
+					"           title=\"Quick Search\" value=\"\">\n" + 
+					"    <input class=\"btn\" type=\"submit\" value=\"Find\" id=\"find_top\"></form>  <a href=\"page.cgi?id=quicksearch.html\" title=\"Quicksearch Help\">[?]</a></li>\n" + 
+					"\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"report.cgi\">Reports</a></li>\n" + 
+					"\n" + 
+					"  <li></li>\n" + 
+					"\n" + 
+					"  \n" + 
+					"    \n" + 
+					"      <li id=\"new_account_container_top\">\n" + 
+					"        <span class=\"separator\">| </span>\n" + 
+					"        <a href=\"createaccount.cgi\">New&nbsp;Account</a>\n" + 
+					"      </li>\n" + 
+					"\n" + 
+					"    <li id=\"mini_login_container_top\">\n" + 
+					"  <span class=\"separator\">| </span>\n" + 
+					"  <a id=\"login_link_top\" href=\"show_activity.cgi?id=10518&amp;GoAheadAndLogIn=1\"\n" + 
+					"     onclick=\"return show_mini_login_form('_top')\">Log In</a>\n" + 
+					"\n" + 
+					"  \n" + 
+					"  <form action=\"show_activity.cgi?id=10518\" method=\"POST\" \n" + 
+					"        class=\"mini_login bz_default_hidden\"\n" + 
+					"        id=\"mini_login_top\"\n" + 
+					"        onsubmit=\"return check_mini_login_fields( '_top' );\"\n" + 
+					"  >\n" + 
+					"    <input id=\"Bugzilla_login_top\" \n" + 
+					"           class=\"bz_login\"\n" + 
+					"           name=\"Bugzilla_login\"\n" + 
+					"           title=\"Login\"\n" + 
+					"           onfocus=\"mini_login_on_focus('_top')\"\n" + 
+					"    >\n" + 
+					"    <input class=\"bz_password\" \n" + 
+					"           id=\"Bugzilla_password_top\" \n" + 
+					"           name=\"Bugzilla_password\"\n" + 
+					"           type=\"password\"\n" + 
+					"           title=\"Password\"\n" + 
+					"    >\n" + 
+					"    <input class=\"bz_password bz_default_hidden bz_mini_login_help\" type=\"text\" \n" + 
+					"           id=\"Bugzilla_password_dummy_top\" value=\"password\"\n" + 
+					"           title=\"Password\"\n" + 
+					"           onfocus=\"mini_login_on_focus('_top')\"\n" + 
+					"    >\n" + 
+					"      <input type=\"checkbox\" id=\"Bugzilla_remember_top\" \n" + 
+					"             name=\"Bugzilla_remember\" value=\"on\" class=\"bz_remember\"\n" + 
+					"                 checked>\n" + 
+					"      <label for=\"Bugzilla_remember_top\">Remember</label>\n" + 
+					"    <input type=\"hidden\" name=\"Bugzilla_login_token\"\n" + 
+					"           value=\"\">\n" + 
+					"    <input type=\"submit\" name=\"GoAheadAndLogIn\" value=\"Log in\"\n" + 
+					"            id=\"log_in_top\">\n" + 
+					"    <script type=\"text/javascript\">\n" + 
+					"      mini_login_constants = {\n" + 
+					"          \"login\" : \"login\",\n" + 
+					"          \"warning\" : \"You must set the login and password before logging in.\"\n" + 
+					"      };\n" + 
+					"      \n" + 
+					"      if (YAHOO.env.ua.gecko || YAHOO.env.ua.ie || YAHOO.env.ua.opera) {\n" + 
+					"          YAHOO.util.Event.onDOMReady(function() {\n" + 
+					"              init_mini_login_form('_top');\n" + 
+					"          });\n" + 
+					"      }\n" + 
+					"      else {\n" + 
+					"          YAHOO.util.Event.on(window, 'load', function () {\n" + 
+					"              window.setTimeout(function() {\n" + 
+					"                  init_mini_login_form('_top');\n" + 
+					"              }, 200);\n" + 
+					"          });\n" + 
+					"    }\n" + 
+					"    </script>\n" + 
+					"    <a href=\"#\" onclick=\"return hide_mini_login_form('_top')\">[x]</a>\n" + 
+					"  </form>\n" + 
+					"</li>\n" + 
+					"<li id=\"forgot_container_top\">\n" + 
+					"  <span class=\"separator\">| </span>\n" + 
+					"  <a id=\"forgot_link_top\" href=\"show_activity.cgi?id=10518&amp;GoAheadAndLogIn=1#forgot\"\n" + 
+					"     onclick=\"return show_forgot_form('_top')\">Forgot Password</a>\n" + 
+					"  <form action=\"token.cgi\" method=\"post\" id=\"forgot_form_top\"\n" + 
+					"        class=\"mini_forgot bz_default_hidden\">\n" + 
+					"    <label for=\"login_top\">Login:</label>\n" + 
+					"    <input type=\"text\" name=\"loginname\" size=\"20\" id=\"login_top\">\n" + 
+					"    <input id=\"forgot_button_top\" value=\"Reset Password\" \n" + 
+					"           type=\"submit\">\n" + 
+					"    <input type=\"hidden\" name=\"a\" value=\"reqpw\">\n" + 
+					"    <input type=\"hidden\" id=\"token_top\" name=\"token\" value=\"1517705202-MwT5YEib3xfElO2wyvf1n0UFLmKF-mJAJwZol7vcduY\">\n" + 
+					"    <a href=\"#\" onclick=\"return hide_forgot_form('_top')\">[x]</a>\n" + 
+					"  </form>\n" + 
+					"</li>\n" + 
+					"</ul>\n" + 
+					"</div> \n" + 
+					"\n" + 
+					"\n" + 
+					"<div id=\"bugzilla-body\">\n" + 
+					"\n" + 
+					"<p><a class=\"bz_bug_link \n" + 
+					"          bz_status_CLOSED  bz_closed\"\n" + 
+					"   title=\"CLOSED FIXED - Alpha Centauri crashes on launch with ALSA sound\"\n" + 
+					"   href=\"show_bug.cgi?id=10518\">Back to bug 10518</a>\n" + 
+					"</p>\n" + 
+					"<table border cellpadding=\"4\">\n" + 
+					"    <tr>\n" + 
+					"      <th>Who</th>\n" + 
+					"      <th>When</th>\n" + 
+					"      <th>What</th>\n" + 
+					"      <th>Removed</th>\n" + 
+					"      <th>Added</th>\n" + 
+					"    </tr>\n" + 
+					"\n" + 
+					"      <tr>\n" + 
+					"        <td rowspan=\"1\" valign=\"top\">corey.burger\n" + 
+					"        </td>\n" + 
+					"        <td rowspan=\"1\" valign=\"top\">2007-12-15 18:50:59 CST\n" + 
+					"        </td>\n" + 
+					"            <td>\n" + 
+					"                CC\n" + 
+					"            </td><td>\n" + 
+					"  </td><td>corey.burger\n" + 
+					"  </td>\n" + 
+					"      </tr>\n" + 
+					"      <tr>\n" + 
+					"        <td rowspan=\"1\" valign=\"top\">dank\n" + 
+					"        </td>\n" + 
+					"        <td rowspan=\"1\" valign=\"top\">2007-12-15 19:38:42 CST\n" + 
+					"        </td>\n" + 
+					"            <td>\n" + 
+					"                CC\n" + 
+					"            </td><td>\n" + 
+					"  </td><td>dank\n" + 
+					"  </td>\n" + 
+					"      </tr>\n" + 
+					"      <tr>\n" + 
+					"        <td rowspan=\"2\" valign=\"top\">vitaliy-bugzilla\n" + 
+					"        </td>\n" + 
+					"        <td rowspan=\"2\" valign=\"top\">2007-12-15 20:17:27 CST\n" + 
+					"        </td>\n" + 
+					"            <td>\n" + 
+					"                <a href=\"attachment.cgi?id=9648\">\n" + 
+					"                Attachment #9648</a>\n" + 
+					"                Attachment mime type\n" + 
+					"            </td><td>application/octet-stream\n" + 
+					"  </td><td>text/plain\n" + 
+					"  </td></tr><tr>\n" + 
+					"            <td>\n" + 
+					"                <a href=\"attachment.cgi?id=9648\">\n" + 
+					"                Attachment #9648</a>\n" + 
+					"                Attachment filename\n" + 
+					"            </td><td>smaccoredump\n" + 
+					"  </td><td>backtrace.txt\n" + 
+					"  </td>\n" + 
+					"      </tr>\n" + 
+					"      <tr>\n" + 
+					"        <td rowspan=\"1\" valign=\"top\">vitaliy-bugzilla\n" + 
+					"        </td>\n" + 
+					"        <td rowspan=\"1\" valign=\"top\">2007-12-15 20:18:01 CST\n" + 
+					"        </td>\n" + 
+					"            <td>\n" + 
+					"                <a href=\"attachment.cgi?id=9299\">\n" + 
+					"                Attachment #9299</a>\n" + 
+					"                Attachment mime type\n" + 
+					"            </td><td>application/octet-stream\n" + 
+					"  </td><td>text/plain\n" + 
+					"  </td>\n" + 
+					"      </tr>\n" + 
+					"      <tr>\n" + 
+					"        <td rowspan=\"2\" valign=\"top\">vitaliy-bugzilla\n" + 
+					"        </td>\n" + 
+					"        <td rowspan=\"2\" valign=\"top\">2007-12-15 20:19:39 CST\n" + 
+					"        </td>\n" + 
+					"            <td>\n" + 
+					"                Status\n" + 
+					"            </td><td>UNCONFIRMED\n" + 
+					"  </td><td>NEW\n" + 
+					"  </td></tr><tr>\n" + 
+					"            <td>\n" + 
+					"                Ever confirmed\n" + 
+					"            </td><td>0\n" + 
+					"  </td><td>1\n" + 
+					"  </td>\n" + 
+					"      </tr>\n" + 
+					"      <tr>\n" + 
+					"        <td rowspan=\"1\" valign=\"top\">austinenglish\n" + 
+					"        </td>\n" + 
+					"        <td rowspan=\"1\" valign=\"top\">2009-01-18 03:46:54 CST\n" + 
+					"        </td>\n" + 
+					"            <td>\n" + 
+					"                Version\n" + 
+					"            </td><td>CVS/GIT\n" + 
+					"  </td><td>unspecified\n" + 
+					"  </td>\n" + 
+					"      </tr>\n" + 
+					"      <tr>\n" + 
+					"        <td rowspan=\"2\" valign=\"top\">austinenglish\n" + 
+					"        </td>\n" + 
+					"        <td rowspan=\"2\" valign=\"top\">2009-07-21 12:30:53 CDT\n" + 
+					"        </td>\n" + 
+					"            <td>\n" + 
+					"                Status\n" + 
+					"            </td><td>NEW\n" + 
+					"  </td><td>RESOLVED\n" + 
+					"  </td></tr><tr>\n" + 
+					"            <td>\n" + 
+					"                Resolution\n" + 
+					"            </td><td>---\n" + 
+					"  </td><td>FIXED\n" + 
+					"  </td>\n" + 
+					"      </tr>\n" + 
+					"      <tr>\n" + 
+					"        <td rowspan=\"1\" valign=\"top\">julliard\n" + 
+					"        </td>\n" + 
+					"        <td rowspan=\"1\" valign=\"top\">2009-08-07 12:04:33 CDT\n" + 
+					"        </td>\n" + 
+					"            <td>\n" + 
+					"                Status\n" + 
+					"            </td><td>RESOLVED\n" + 
+					"  </td><td>CLOSED\n" + 
+					"  </td>\n" + 
+					"      </tr>\n" + 
+					"  </table>\n" + 
+					"\n" + 
+					"  <p><a class=\"bz_bug_link \n" + 
+					"          bz_status_CLOSED  bz_closed\"\n" + 
+					"   title=\"CLOSED FIXED - Alpha Centauri crashes on launch with ALSA sound\"\n" + 
+					"   href=\"show_bug.cgi?id=10518\">Back to bug 10518</a>\n" + 
+					"  </p>\n" + 
+					"</div>\n" + 
+					"\n" + 
+					"\n" + 
+					"\n" + 
+					"<div id=\"footer\">\n" + 
+					"  <div class=\"intro\"></div>\n" + 
+					"\n" + 
+					"\n" + 
+					"\n" + 
+					"\n" + 
+					"<ul id=\"useful-links\">\n" + 
+					"  <li id=\"links-actions\"><ul class=\"links\">\n" + 
+					"  <li><a href=\"./\">Intro</a></li>\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"enter_bug.cgi\">New</a></li>\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"describecomponents.cgi\">Browse</a></li>\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"query.cgi\">Search</a></li>\n" + 
+					"\n" + 
+					"  <li class=\"form\">\n" + 
+					"    <span class=\"separator\">| </span><form class=\"quicksearch\" action=\"buglist.cgi\" method=\"get\"\n" + 
+					"        onsubmit=\"if (this.quicksearch.value == '')\n" + 
+					"                  { alert('Please enter one or more search terms first.');\n" + 
+					"                    return false; } return true;\">\n" + 
+					"    <input type=\"hidden\" id=\"no_redirect_bottom\" name=\"no_redirect\" value=\"0\">\n" + 
+					"    <script type=\"text/javascript\">\n" + 
+					"      if (history && history.replaceState) {\n" + 
+					"        var no_redirect = document.getElementById(\"no_redirect_bottom\");\n" + 
+					"        no_redirect.value = 1;\n" + 
+					"      }\n" + 
+					"    </script>\n" + 
+					"    <input class=\"txt\" \n" + 
+					"           type=\"text\" id=\"quicksearch_bottom\" name=\"quicksearch\"\n" + 
+					"           title=\"Quick Search\" value=\"\">\n" + 
+					"    <input class=\"btn\" type=\"submit\" value=\"Find\" id=\"find_bottom\"></form>  <a href=\"page.cgi?id=quicksearch.html\" title=\"Quicksearch Help\">[?]</a></li>\n" + 
+					"\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"report.cgi\">Reports</a></li>\n" + 
+					"\n" + 
+					"  <li></li>\n" + 
+					"\n" + 
+					"  \n" + 
+					"    \n" + 
+					"      <li id=\"new_account_container_bottom\">\n" + 
+					"        <span class=\"separator\">| </span>\n" + 
+					"        <a href=\"createaccount.cgi\">New&nbsp;Account</a>\n" + 
+					"      </li>\n" + 
+					"\n" + 
+					"    <li id=\"mini_login_container_bottom\">\n" + 
+					"  <span class=\"separator\">| </span>\n" + 
+					"  <a id=\"login_link_bottom\" href=\"show_activity.cgi?id=10518&amp;GoAheadAndLogIn=1\"\n" + 
+					"     onclick=\"return show_mini_login_form('_bottom')\">Log In</a>\n" + 
+					"\n" + 
+					"  \n" + 
+					"  <form action=\"show_activity.cgi?id=10518\" method=\"POST\" \n" + 
+					"        class=\"mini_login bz_default_hidden\"\n" + 
+					"        id=\"mini_login_bottom\"\n" + 
+					"        onsubmit=\"return check_mini_login_fields( '_bottom' );\"\n" + 
+					"  >\n" + 
+					"    <input id=\"Bugzilla_login_bottom\" \n" + 
+					"           class=\"bz_login\"\n" + 
+					"           name=\"Bugzilla_login\"\n" + 
+					"           title=\"Login\"\n" + 
+					"           onfocus=\"mini_login_on_focus('_bottom')\"\n" + 
+					"    >\n" + 
+					"    <input class=\"bz_password\" \n" + 
+					"           id=\"Bugzilla_password_bottom\" \n" + 
+					"           name=\"Bugzilla_password\"\n" + 
+					"           type=\"password\"\n" + 
+					"           title=\"Password\"\n" + 
+					"    >\n" + 
+					"    <input class=\"bz_password bz_default_hidden bz_mini_login_help\" type=\"text\" \n" + 
+					"           id=\"Bugzilla_password_dummy_bottom\" value=\"password\"\n" + 
+					"           title=\"Password\"\n" + 
+					"           onfocus=\"mini_login_on_focus('_bottom')\"\n" + 
+					"    >\n" + 
+					"      <input type=\"checkbox\" id=\"Bugzilla_remember_bottom\" \n" + 
+					"             name=\"Bugzilla_remember\" value=\"on\" class=\"bz_remember\"\n" + 
+					"                 checked>\n" + 
+					"      <label for=\"Bugzilla_remember_bottom\">Remember</label>\n" + 
+					"    <input type=\"hidden\" name=\"Bugzilla_login_token\"\n" + 
+					"           value=\"\">\n" + 
+					"    <input type=\"submit\" name=\"GoAheadAndLogIn\" value=\"Log in\"\n" + 
+					"            id=\"log_in_bottom\">\n" + 
+					"    <script type=\"text/javascript\">\n" + 
+					"      mini_login_constants = {\n" + 
+					"          \"login\" : \"login\",\n" + 
+					"          \"warning\" : \"You must set the login and password before logging in.\"\n" + 
+					"      };\n" + 
+					"      \n" + 
+					"      if (YAHOO.env.ua.gecko || YAHOO.env.ua.ie || YAHOO.env.ua.opera) {\n" + 
+					"          YAHOO.util.Event.onDOMReady(function() {\n" + 
+					"              init_mini_login_form('_bottom');\n" + 
+					"          });\n" + 
+					"      }\n" + 
+					"      else {\n" + 
+					"          YAHOO.util.Event.on(window, 'load', function () {\n" + 
+					"              window.setTimeout(function() {\n" + 
+					"                  init_mini_login_form('_bottom');\n" + 
+					"              }, 200);\n" + 
+					"          });\n" + 
+					"    }\n" + 
+					"    </script>\n" + 
+					"    <a href=\"#\" onclick=\"return hide_mini_login_form('_bottom')\">[x]</a>\n" + 
+					"  </form>\n" + 
+					"</li>\n" + 
+					"<li id=\"forgot_container_bottom\">\n" + 
+					"  <span class=\"separator\">| </span>\n" + 
+					"  <a id=\"forgot_link_bottom\" href=\"show_activity.cgi?id=10518&amp;GoAheadAndLogIn=1#forgot\"\n" + 
+					"     onclick=\"return show_forgot_form('_bottom')\">Forgot Password</a>\n" + 
+					"  <form action=\"token.cgi\" method=\"post\" id=\"forgot_form_bottom\"\n" + 
+					"        class=\"mini_forgot bz_default_hidden\">\n" + 
+					"    <label for=\"login_bottom\">Login:</label>\n" + 
+					"    <input type=\"text\" name=\"loginname\" size=\"20\" id=\"login_bottom\">\n" + 
+					"    <input id=\"forgot_button_bottom\" value=\"Reset Password\" \n" + 
+					"           type=\"submit\">\n" + 
+					"    <input type=\"hidden\" name=\"a\" value=\"reqpw\">\n" + 
+					"    <input type=\"hidden\" id=\"token_bottom\" name=\"token\" value=\"1517705202-MwT5YEib3xfElO2wyvf1n0UFLmKF-mJAJwZol7vcduY\">\n" + 
+					"    <a href=\"#\" onclick=\"return hide_forgot_form('_bottom')\">[x]</a>\n" + 
+					"  </form>\n" + 
+					"</li>\n" + 
+					"</ul>\n" + 
+					"  </li>\n" + 
+					"\n" + 
+					"<!--    \n" + 
+					"  \n" + 
+					"    \n" + 
+					"-->\n" + 
+					"\n" + 
+					"\n" + 
+					"  \n" + 
+					"</ul>\n" + 
+					"\n" + 
+					"  <div class=\"outro\"></div>\n" + 
+					"</div>\n" + 
+					"\n" + 
+					"\n" + 
+					"    <!-- End Content -->\n" + 
+					"    </div>\n" + 
+					"  <b class=\"rbottom\"><b class=\"r4\"></b><b class=\"r3\"></b><b class=\"r2\"></b><b class=\"r1\"></b></b>\n" + 
+					"  </div>\n" + 
+					"\n" + 
+					"</div>\n" + 
+					"\n" + 
+					"<div id=\"cwfooter\">\n" + 
+					"    Hosted By\n" + 
+					"    <a href=\"http://www.codeweavers.com/\"><img src=\"images/cw_logo_sm.png\" alt=\"CodeWeavers\"\n" + 
+					"    title=\"CodeWeavers - Run Windows applications and games on Mac and Linux\"></a>\n" + 
+					"</div>\n" + 
+					"\n" + 
+					"</body>\n" + 
+					"</html>\n");
 
 	private static ArrayList<Report> issues = new ArrayList<Report>();
 
