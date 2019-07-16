@@ -22,11 +22,10 @@ public class BZReportCrawlerInXml extends ReportCrawler {
 	/**
 	 * Constructs a IssueJiraExtraxtor instance.
 	 * 
-	 * @param project
-	 *            TODO
+	 * @param project 
+	 *        An instance of Project class.
 	 * @param repository
-	 * 
-	 *            TODO
+	 * 		  An instance of Repository class.
 	 */
 	public BZReportCrawlerInXml(Project project, ReportRepository repository) {
 		super();

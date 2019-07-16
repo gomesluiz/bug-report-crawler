@@ -52,14 +52,14 @@ public class SearchReportsTest {
 	public final void searchReportsWithNoFilter() {
 
 		List<Report> reports = crawler.search(new IssueNoFilter());
-		assertEquals(6, reports.size());
+		assertEquals(12, reports.size());
 	}
 
 	@Test
 	public final void searchReportsWithFilterStatusResolved() {
 
 		List<Report> reports = crawler.search(new IssueFilterByStatus("Resolved"));
-		assertEquals(3, reports.size());
+		assertEquals(6, reports.size());
 	}
 
 	@Test
@@ -73,21 +73,21 @@ public class SearchReportsTest {
 	public final void searchReportsWithFilterStatusClosed() {
 
 		List<Report> reports = crawler.search(new IssueFilterByStatus("Closed"));
-		assertEquals(3, reports.size());
+		assertEquals(6, reports.size());
 	}
 
 	@Test
 	public final void searchReportsWithFilterStatusResolvedOrClosed() {
 
 		List<Report> reports = crawler.search(new IssueFilterByStatus("Resolved", "Closed"));
-		assertEquals(6, reports.size());
+		assertEquals(12, reports.size());
 	}
 
 	@Test
 	public final void searchReportsWithFilterResolutionFixed() {
 
 		List<Report> reports = crawler.search(new IssueFilterByResolution("Fixed"));
-		assertEquals(5, reports.size());
+		assertEquals(10, reports.size());
 	}
 
 	@Test

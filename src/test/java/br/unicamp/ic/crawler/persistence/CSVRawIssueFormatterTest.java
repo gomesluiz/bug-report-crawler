@@ -3,17 +3,13 @@ package br.unicamp.ic.crawler.persistence;
 import java.util.List;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import br.unicamp.ic.crawler.domain.bugzilla.BZReportCrawlerInXml;
-import br.unicamp.ic.crawler.domain.bugzilla.BZReportParserInXml;
-import br.unicamp.ic.crawler.domain.core.IssueEntry;
 import br.unicamp.ic.crawler.domain.core.Report;
 import br.unicamp.ic.crawler.domain.core.ReportCrawler;
-import br.unicamp.ic.crawler.domain.core.ReportPasser;
 import br.unicamp.ic.crawler.domain.core.filters.IssueNoFilter;
 import br.unicamp.ic.crawler.domain.meta.Project;
 
