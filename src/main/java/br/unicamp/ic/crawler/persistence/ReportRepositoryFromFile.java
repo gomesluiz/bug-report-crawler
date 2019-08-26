@@ -100,7 +100,8 @@ public class ReportRepositoryFromFile implements ReportRepository {
 
 			activities = historyParser.parse(contents);
 		} catch (Exception e) {
-			System.err.println("FileResource: cannot access :" + project.formatLocalIssueHistoryFileName(key));
+			System.err.println("FileResource: cannot access :" 
+				+ project.formatLocalIssueHistoryFileName(key));
 		}
 		return activities;
 	}

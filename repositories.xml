@@ -50,7 +50,7 @@
 			</url>
 			<format>xml</format>
 			<first>1</first>
-			<last>104780</last>
+			<last>530583</last>
 			<path>/home/luiz/Workspace/bug-reports-files/data/freedesktop/xml/</path>
 			<mask>FREEDESKTOP-%d</mask>
 			<history>
@@ -71,7 +71,7 @@
 			</url>
 			<format>xml</format>
 			<first>1</first>
-			<last>300000</last>
+			<last>530583</last>
 			<path>/home/luiz/Workspace/bug-reports-files/data/netbeans/xml/</path>
 			<mask>NETBEANS-%d</mask>
 			<history>
@@ -92,7 +92,7 @@
 			</url>
 			<format>xml</format>
 			<first>1</first>
-			<last>793083</last>
+			<last>530583</last>
 			<path>/home/luiz/Workspace/bug-reports-files/data/gnome/xml/</path>
 			<mask>GNOME-%d</mask>
 			<history>
@@ -125,22 +125,22 @@
 		</report>
 	</project>
 	<project>
-		<name>ooo</name>
+		<name>libreoffice</name>
 		<bts>bugzilla</bts>
 		<output>/home/luiz/Workspace/bug-reports-files/datasets/</output>
 		<enable>false</enable>
 		<report>
-			<url>https://bz.apache.org/ooo/show_bug.cgi?ctype=xml&amp;id=%d</url>
+			<url>https://bugs.documentfoundation.org/?ctype=xml&amp;id=%d</url>
 			<format>xml</format>
 			<first>1</first>
-			<last>62067</last>
+			<last>530583</last>
 			<path>/home/luiz/Workspace/bug-reports-files/data/ooo/xml/</path>
-			<mask>OOO-%d</mask>
+			<mask>LIBREOFFICE-%d</mask>
 			<history>
-				<url>https://bz.apache.org/ooo/show_activity.cgi?id=%d</url>
+				<url>https://bugs.documentfoundation.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
 				<path>/home/luiz/Workspace/bug-reports-files/data/ooo/html/</path>
-				<mask>OOO-%d</mask>
+				<mask>LIBREOFFICE-%d</mask>
 			</history>
 		</report>
 	</project>
@@ -154,7 +154,7 @@
 			</url>
 			<format>xml</format>
 			<first>1</first>
-			<last>1000000</last>
+			<last>530583</last>
 			<path>/home/luiz/Workspace/bug-reports-files/data/mozilla/xml/</path>
 			<mask>MOZILLA-%d</mask>
 			<history>
@@ -175,7 +175,7 @@
 			</url>
 			<format>xml</format>
 			<first>1</first>
-			<last>198745</last>
+			<last>530583</last>
 			<path>/home/luiz/Workspace/bug-reports-files/data/kernel/xml/</path>
 			<mask>KERNEL-%d</mask>
 			<history>

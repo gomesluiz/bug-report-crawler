@@ -141,14 +141,14 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>br.unicamp.ic.crawler.console.BugReportDownloader</mainClass>
+							<mainClass>br.unicamp.ic.crawler.console.BugReportCrawler</mainClass>
 						</manifest>
 						<manifestEntries>
 							<Class-Path>.</Class-Path>
 						</manifestEntries>
 					</archive>
  
-					<finalName>product/bug-report-downloader</finalName>
+					<finalName>product/bug-report-crawler</finalName>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -162,5 +162,4 @@
 			</plugin>
 		</plugins>
 	</reporting>
-
 </project>

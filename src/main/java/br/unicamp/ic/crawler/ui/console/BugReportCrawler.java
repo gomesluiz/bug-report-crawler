@@ -1,4 +1,4 @@
-package br.unicamp.ic.crawler.console;
+package br.unicamp.ic.crawler.ui.console;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

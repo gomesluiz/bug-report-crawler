@@ -77,9 +77,9 @@ public class CSVIssueFileWriter implements IssueFileWriter {
 			for (Report issue : issues) {
 				printer1.printRecord(issueformatter.format(issue));
 				for (IssueActivityEntry activity : issue.getActivities()) {
-					if (activity.getWhat().toLowerCase().contains("severity")) {
+					//if (activity.getWhat().toLowerCase().contains("severity")) {
 						printer2.printRecord(issueformatter.format(issue.getKey(), activity));
-					}
+					//}
 				}
 			}
 
