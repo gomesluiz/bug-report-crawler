@@ -3,19 +3,19 @@
 	<project>
 		<name>eclipse</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/bug-reports-files/datasets/</output>
-		<enable>true</enable>
+		<output>/home/luiz/Workspace/bug-report-datasets/</output>
+		<enable>false</enable>
 		<report>
 			<url>https://bugs.eclipse.org/bugs/show_bug.cgi?ctype=xml&amp;id=%d</url>
 			<format>xml</format>
 			<first>1</first>
 			<last>530583</last>
-			<path>/home/luiz/Workspace/bug-reports-files/data/eclipse/xml/</path>
+			<path>/home/luiz/Workspace/bug-report-datasets/datasets/eclipse/xml/</path>
 			<mask>ECLIPSE-%d</mask>
 			<history>
 				<url>https://bugs.eclipse.org/bugs/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-reports-files/data/eclipse/html/</path>
+				<path>/home/luiz/Workspace/bug-report-datasets/datasets/eclipse/html/</path>
 				<mask>ECLIPSE-%d</mask>
 			</history>
 		</report>
@@ -23,19 +23,19 @@
 	<project>
 		<name>winehq</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/bug-reports-files/datasets/</output>
+		<output>/home/luiz/Workspace/bug-report-datasets/datasets/</output>
 		<enable>true</enable>
 		<report>
 			<url>https://bugs.winehq.org/show_bug.cgi?ctype=xml&amp;id=%d</url>
 			<format>xml</format>
 			<first>1</first>
 			<last>45000</last>
-			<path>/home/luiz/Workspace/bug-reports-files/data/winehq/xml/</path>
+			<path>/home/luiz/Workspace/bug-report-datasets/datasets/winehq/xml/</path>
 			<mask>WINEHQ-%d</mask>
 			<history>
 				<url>https://bugs.winehq.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-reports-files/data/winehq/html/</path>
+				<path>/home/luiz/Workspace/bug-report-datasets/datasets/winehq/html/</path>
 				<mask>WINEHQ-%d</mask>
 			</history>
 		</report>
@@ -43,7 +43,7 @@
 	<project>
 		<name>freedesktop</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/bug-reports-files/datasets/</output>
+		<output>/home/luiz/Workspace/bug-report-datasets/datasets/</output>
 		<enable>true</enable>
 		<report>
 			<url>https://bugs.freedesktop.org/show_bug.cgi?ctype=xml&amp;id=%d
@@ -51,12 +51,12 @@
 			<format>xml</format>
 			<first>1</first>
 			<last>530583</last>
-			<path>/home/luiz/Workspace/bug-reports-files/data/freedesktop/xml/</path>
+			<path>/home/luiz/Workspace/bug-report-datasets/datasets/freedesktop/xml/</path>
 			<mask>FREEDESKTOP-%d</mask>
 			<history>
 				<url>https://bugs.freedesktop.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-reports-files/data/freedesktop/html/</path>
+				<path>/home/luiz/Workspace/bug-report-datasets/datasets/freedesktop/html/</path>
 				<mask>FREEDESKTOP-%d</mask>
 			</history>
 		</report>
@@ -64,7 +64,7 @@
 	<project>
 		<name>netbeans</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/bug-reports-files/datasets/</output>
+		<output>/home/luiz/Workspace/bug-report-datasets/datasets/</output>
 		<enable>true</enable>
 		<report>
 			<url>https://netbeans.org/bugzilla/show_bug.cgi?ctype=xml&amp;id=%d
@@ -72,12 +72,12 @@
 			<format>xml</format>
 			<first>1</first>
 			<last>530583</last>
-			<path>/home/luiz/Workspace/bug-reports-files/data/netbeans/xml/</path>
+			<path>/home/luiz/Workspace/bug-report-datasets/datasets/netbeans/xml/</path>
 			<mask>NETBEANS-%d</mask>
 			<history>
 				<url>https://netbeans.org/bugzilla/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-reports-files/data/netbeans/html/</path>
+				<path>/home/luiz/Workspace/bug-report-datasets/datasets/netbeans/html/</path>
 				<mask>NETBEANS-%d</mask>
 			</history>
 		</report>
@@ -85,7 +85,7 @@
 	<project>
 		<name>gnome</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/bug-reports-files/datasets/</output>
+		<output>/home/luiz/Workspace/bug-report-datasets/datasets/</output>
 		<enable>true</enable>
 		<report>
 			<url>https://bugzilla.gnome.org/show_bug.cgi?ctype=xml&amp;id=%d
@@ -93,12 +93,12 @@
 			<format>xml</format>
 			<first>1</first>
 			<last>530583</last>
-			<path>/home/luiz/Workspace/bug-reports-files/data/gnome/xml/</path>
+			<path>/home/luiz/Workspace/bug-report-datasets/datasets/gnome/xml/</path>
 			<mask>GNOME-%d</mask>
 			<history>
 				<url>https://bugzilla.gnome.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-reports-files/data/gnome/html/</path>
+				<path>/home/luiz/Workspace/bug-report-datasets/datasets/gnome/html/</path>
 				<mask>GNOME-%d</mask>
 			</history>
 		</report>
@@ -106,7 +106,7 @@
 	<project>
 		<name>gcc</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/bug-reports-files/datasets/</output>
+		<output>/home/luiz/Workspace/bug-report-datasets/datasets/</output>
 		<enable>true</enable>
 		<report>
 			<url>https://gcc.gnu.org/bugzilla/show_bug.cgi?ctype=xml&amp;id=%d
@@ -114,12 +114,12 @@
 			<format>xml</format>
 			<first>1</first>
 			<last>84157</last>
-			<path>/home/luiz/Workspace/bug-reports-files/data/gcc/xml/</path>
+			<path>/home/luiz/Workspace/bug-report-datasets/datasets/gcc/xml/</path>
 			<mask>GCC-%d</mask>
 			<history>
 				<url>https://gcc.gnu.org/bugzilla/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-reports-files/data/gcc/html/</path>
+				<path>/home/luiz/Workspace/bug-report-datasets/datasets/gcc/html/</path>
 				<mask>GCC-%d</mask>
 			</history>
 		</report>
@@ -127,19 +127,19 @@
 	<project>
 		<name>libreoffice</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/bug-reports-files/datasets/</output>
-		<enable>false</enable>
+		<output>/home/luiz/Workspace/bug-report-datasets/datasets/</output>
+		<enable>true</enable>
 		<report>
 			<url>https://bugs.documentfoundation.org/?ctype=xml&amp;id=%d</url>
 			<format>xml</format>
 			<first>1</first>
 			<last>530583</last>
-			<path>/home/luiz/Workspace/bug-reports-files/data/ooo/xml/</path>
+			<path>/home/luiz/Workspace/bug-report-datasets/datasets/ooo/xml/</path>
 			<mask>LIBREOFFICE-%d</mask>
 			<history>
 				<url>https://bugs.documentfoundation.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-reports-files/data/ooo/html/</path>
+				<path>/home/luiz/Workspace/bug-report-datasets/datasets/ooo/html/</path>
 				<mask>LIBREOFFICE-%d</mask>
 			</history>
 		</report>
@@ -147,7 +147,7 @@
 	<project>
 		<name>mozilla</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/bug-reports-files/datasets/</output>
+		<output>/home/luiz/Workspace/bug-report-datasets/datasets/</output>
 		<enable>true</enable>
 		<report>
 			<url>https://bugzilla.mozilla.org/show_bug.cgi?ctype=xml&amp;id=%d
@@ -155,12 +155,12 @@
 			<format>xml</format>
 			<first>1</first>
 			<last>530583</last>
-			<path>/home/luiz/Workspace/bug-reports-files/data/mozilla/xml/</path>
+			<path>/home/luiz/Workspace/bug-report-datasets/datasets/mozilla/xml/</path>
 			<mask>MOZILLA-%d</mask>
 			<history>
 				<url>https://bugzilla.mozilla.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-reports-files/data/mozilla/html/</path>
+				<path>/home/luiz/Workspace/bug-report-datasets/datasets/mozilla/html/</path>
 				<mask>MOZILLA-%d</mask>
 			</history>
 		</report>
@@ -168,7 +168,7 @@
 	<project>
 		<name>kernel</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/bug-reports-files/datasets/</output>
+		<output>/home/luiz/Workspace/bug-report-datasets/datasets/</output>
 		<enable>true</enable>
 		<report>
 			<url>https://bugzilla.kernel.org/show_bug.cgi?ctype=xml&amp;id=%d
@@ -176,12 +176,12 @@
 			<format>xml</format>
 			<first>1</first>
 			<last>530583</last>
-			<path>/home/luiz/Workspace/bug-reports-files/data/kernel/xml/</path>
+			<path>/home/luiz/Workspace/bug-report-datasets/datasets/kernel/xml/</path>
 			<mask>KERNEL-%d</mask>
 			<history>
 				<url>https://bugzilla.kernel.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-reports-files/data/kernel/html/</path>
+				<path>/home/luiz/Workspace/bug-report-datasets/datasets/kernel/html/</path>
 				<mask>KERNEL-%d</mask>
 			</history>
 		</report>
@@ -189,7 +189,7 @@
 	<project>
 		<name>hhh</name>
 		<bts>jira</bts>
-		<output>/home/luiz/Workspace/bug-reports-files/datasets/</output>
+		<output>/home/luiz/Workspace/bug-report-datasets/datasets/</output>
 		<enable>false</enable>
 		<report>
 			<url>https://hibernate.atlassian.net/si/jira.issueviews:issue-xml/%s/%s.xml
@@ -197,13 +197,13 @@
 			<format>xml</format>
 			<first>1</first>
 			<last>12129</last>
-			<path>/home/luiz/Workspace/bug-reports-files/data/hibernate/xml/</path>
+			<path>/home/luiz/Workspace/bug-report-datasets/datasets/hibernate/xml/</path>
 			<mask>HHH-%d</mask>
 			<history>
 				<url>https://hibernate.atlassian.net/browse/%s?page=com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel
 				</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-reports-files/data/hibernate/html/</path>
+				<path>/home/luiz/Workspace/bug-report-datasets/datasets/hibernate/html/</path>
 				<mask>HHH-%d</mask>
 			</history>
 		</report>
