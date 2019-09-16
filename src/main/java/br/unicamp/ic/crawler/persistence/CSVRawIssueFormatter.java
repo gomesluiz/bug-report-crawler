@@ -37,7 +37,7 @@ public class CSVRawIssueFormatter implements CSVOutputFormatter {
 					, "quantity_of_votes"
 					, "quantity_of_comments"
 					, "resolution_date"
-					, "days_to_resolve"
+					, "bug_fix_time"
 					, "severity_category"
 					, "severity_code"
 					));

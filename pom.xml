@@ -141,7 +141,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>br.unicamp.ic.crawler.ui.console.BugReportDownloader</mainClass>
+							<mainClass>br.unicamp.ic.crawler.ui.console.BugReportCrawler</mainClass>
 						</manifest>
 						<manifestEntries>
 							<Class-Path>.</Class-Path>
