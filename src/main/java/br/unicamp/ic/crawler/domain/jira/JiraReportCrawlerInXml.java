@@ -46,10 +46,8 @@ public class JiraReportCrawlerInXml extends ReportCrawler {
   }
 
   @Override
-  public List<Report> search(ReportFilter filter) {
-    return new ArrayList<Report>();
-
-  }
+  public void search(ReportFilter filter) {
+    }
 
   @Override
   public String downloadFrom(String url) {

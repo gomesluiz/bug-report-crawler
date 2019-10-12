@@ -1,8 +1,5 @@
 package br.unicamp.ic.crawler.domain.core.filters;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import br.unicamp.ic.crawler.domain.core.Report;
 
 /**
@@ -23,13 +20,8 @@ public abstract class ReportFilter {
 	 * @param issues
 	 * @return
 	 */
-	public List<Report> filter(List<Report> issues) {
-		List<Report> result = new ArrayList<Report>();
-		for(Report issue: issues) {
-			if (evaluate(issue) == true) {
-				result.add(issue);
-			}
-		}
-		return result;
+	public Boolean filter(Report issue) {
+		return evaluate(issue);
+		
 	}
 }

@@ -11,6 +11,7 @@ import br.unicamp.ic.crawler.domain.core.IssueActivityEntry;
 import br.unicamp.ic.crawler.domain.core.IssueEntry;
 import br.unicamp.ic.crawler.domain.core.Report;
 import br.unicamp.ic.crawler.domain.core.ReportPasser;
+import br.unicamp.ic.crawler.domain.core.filters.ReportFilter;
 import br.unicamp.ic.crawler.persistence.ReportRepository;
 
 public class ReportRepositoryFromMemory implements ReportRepository {
@@ -3395,7 +3396,7 @@ public class ReportRepositoryFromMemory implements ReportRepository {
 	}
 
 	@Override
-	public List<Report> findAll() {
+	public List<Report> findAll(int max, List<ReportFilter> filters) {
 		return issues;
 	}
 

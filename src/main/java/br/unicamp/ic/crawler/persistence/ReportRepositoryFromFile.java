@@ -14,6 +14,7 @@ import br.unicamp.ic.crawler.domain.core.ReportPasser;
 import br.unicamp.ic.crawler.domain.core.LoggerObserver;
 import br.unicamp.ic.crawler.domain.core.Report;
 import br.unicamp.ic.crawler.domain.core.Subject;
+import br.unicamp.ic.crawler.domain.core.filters.ReportFilter;
 import br.unicamp.ic.crawler.domain.meta.Project;
 
 public class ReportRepositoryFromFile implements ReportRepository {
@@ -32,13 +33,41 @@ public class ReportRepositoryFromFile implements ReportRepository {
 	}
 
 	@Override
-	public List<Report> findAll() {
+	public List<Report> findAll(int max, List<ReportFilter> filters) {
 		List<Report> reports = new ArrayList<Report>();
 		File[] files = getReportFiles();
-		for (File file : files) {
-			subject.setMessage(file.getName());
-			IssueEntry entry = convertFrom(file);
-			reports.add(new Report(entry));
+		IssueEntry entry;
+		for (File reportFile : files) {
+			try{
+				entry = convertFrom(reportFile);
+			} catch(RuntimeException e){
+				subject.setMessage(reportFile.getName()+ " Converting Error.");
+				continue;
+			}
+			Boolean filtered = true;
+			Report report    = new Report(entry);
+			
+			for (ReportFilter filter:filters) 
+				filtered = filtered && filter.filter(report);
+			
+			
+			if (filtered) {
+				subject.setMessage(reportFile.getName()+ " Included!");
+				reports.add(new Report(entry));
+				if (reports.size() >= max) break;
+			} else {
+				// clean up unnecessary files.
+				String key   = report.getKey();
+				int position = key.lastIndexOf('-'); 
+				int number   = Integer.parseInt(key.substring(position+1));
+				File historyFile = new File(project.formatLocalIssueHistoryFileName(number));
+				
+				if(historyFile.delete())
+					subject.setMessage(historyFile.getName()+ " Removed ! ");
+				
+				if (reportFile.delete())
+					subject.setMessage(reportFile.getName()+ " Removed ! ");
+			}
 		}
 		return reports;
 	}

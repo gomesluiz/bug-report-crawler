@@ -1,6 +1,7 @@
 package br.unicamp.ic.crawler.domain.core;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -26,6 +27,7 @@ public abstract class ReportCrawler {
 	protected List<Report> reports;
 	protected ReportRepository repository;
 	protected Subject subject;
+	protected List<ReportFilter> filters;
 
 	public abstract String downloadFrom(String url);
 
@@ -33,12 +35,13 @@ public abstract class ReportCrawler {
 
 	public abstract String formatRemoteReportHistoryUrl(int key);
 
-	public abstract List<Report> search(ReportFilter filter);
+	public abstract void search(ReportFilter filter);
 
 	/**
 	 * Class constructor.
 	 */
 	public ReportCrawler() {
+		filters = new ArrayList<ReportFilter>();
 		subject = new Subject();
 		new LoggerObserver(subject);
 	}
@@ -138,8 +141,8 @@ public abstract class ReportCrawler {
 	/**
 	 * 
 	 */
-	public final void load() {
-		reports = repository.findAll();
+	public final void load(int max) {
+		reports = repository.findAll(max, filters);
 	}
 
 	/**

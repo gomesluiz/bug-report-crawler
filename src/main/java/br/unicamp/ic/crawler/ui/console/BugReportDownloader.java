@@ -46,7 +46,7 @@ public class BugReportDownloader {
 					@Override
 					public void run() {
 						ReportCrawler crawler = CrawlerFactory.getInstance(project);
-						crawler.getAll(25);
+						crawler.getAll(40);
 					}
 				});
 				th.start();

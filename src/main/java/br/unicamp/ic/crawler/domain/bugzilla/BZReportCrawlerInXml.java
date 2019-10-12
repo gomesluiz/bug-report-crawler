@@ -63,9 +63,9 @@ public class BZReportCrawlerInXml extends ReportCrawler {
 	}
 
 	@Override
-	public List<Report> search(ReportFilter filter) {
-		reports = filter.filter(reports);
-		return reports;
+	public void search(ReportFilter filter) {
+		filters.add(filter);
+		return;
 	}
 
 }

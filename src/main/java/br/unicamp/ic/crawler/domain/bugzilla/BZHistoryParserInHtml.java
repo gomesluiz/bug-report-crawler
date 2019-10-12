@@ -15,7 +15,7 @@ public class BZHistoryParserInHtml implements HistoryParser {
 
 	@Override
 	public List<IssueActivityEntry> parse(String contents) {
-		List<IssueActivityEntry> activities = new ArrayList<IssueActivityEntry>();
+		List<IssueActivityEntry> activities = new ArrayList<>();
 		Document doc = Jsoup.parse(contents);
 
 		Elements tables = doc.select("table:has(th:contains(Who))");

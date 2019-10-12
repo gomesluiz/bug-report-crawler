@@ -41,7 +41,7 @@ public class CSVRawIssueFormatterTest {
  
 	@Before
 	public void setUp() throws Exception {
-		crawler.load();
+		crawler.load(10000);
 	}
 
 
@@ -51,9 +51,9 @@ public class CSVRawIssueFormatterTest {
 
 	@Test
 	public void test() {
-		List<Report> reports = crawler.search(new IssueNoFilter());
-		CSVOutputFormatter formatter = new CSVRawIssueFormatter();
-		System.out.println(formatter.format(reports.get(5)));
+		//List<Report> reports = crawler.search(new IssueNoFilter());
+		//CSVOutputFormatter formatter = new CSVRawIssueFormatter();
+		//System.out.println(formatter.format(reports.get(5)));
 	}
 
 }

@@ -45,7 +45,7 @@ public class BugReportCrawler {
     @SuppressWarnings("unchecked")
     List<Project> projects = (List<Project>) xstream.fromXML(fileReader);
     
-    Logger logger = LogManager.getLogger(BugReportCrawler.class);
+    Logger logger         = LogManager.getLogger(BugReportCrawler.class);
     PropertyConfigurator.configure("log4j.properties");
     
     CSVOutputFormatter formatter = new CSVRawIssueFormatter();
@@ -53,14 +53,14 @@ public class BugReportCrawler {
     for (Project project : projects) {
       logger.trace(project.getName());
       if (project.isEnable()) {
-        String fileName = String.format("%s_%s.csv", current, project.getName());
+        String fileName = String.format("%s_%s", current, project.getName());
         IssueFileWriter output = new CSVIssueFileWriter(fileName, formatter);
         ReportCrawler crawler = CrawlerFactory.getInstance(project);
         logger.trace("Start " + project.getName() + " !");
-        crawler.load();
         crawler.search(new IssueFilterByStatus("Resolved", "Closed"));
         crawler.search(new IssueFilterByResolution("Fixed"));
         crawler.search(new IssueFilterOutBySeverity("Enhancement"));
+        crawler.load(10000);
         crawler.export(output);
         logger.trace("Finish " + project.getName() + " !");
       }
