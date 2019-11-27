@@ -40,7 +40,7 @@ public class BugReportCrawler {
     });
     
     xstream.alias("projects", List.class);
-    xstream.alias("project", Project.class);
+    xstream.alias("project",  Project.class);
     xstream.autodetectAnnotations(true);
     @SuppressWarnings("unchecked")
     List<Project> projects = (List<Project>) xstream.fromXML(fileReader);
@@ -52,7 +52,7 @@ public class BugReportCrawler {
     String current = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
     for (Project project : projects) {
       logger.trace(project.getName());
-      if (project.isEnable()) {
+      if (project.isEnable()) {  
         String fileName = String.format("%s_%s", current, project.getName());
         IssueFileWriter output = new CSVIssueFileWriter(fileName, formatter);
         ReportCrawler crawler = CrawlerFactory.getInstance(project);
