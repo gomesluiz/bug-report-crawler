@@ -18,7 +18,13 @@
 	</properties>
 
 	<dependencies>
-	
+
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>4.1</version>
+		</dependency>
+
 		<!-- http://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -70,14 +76,15 @@
 
 		<!-- https://mvnrepository.com/artifact/net.sourceforge.htmlunit/htmlunit -->
 		<dependency>
-		    <groupId>net.sourceforge.htmlunit</groupId>
-		    <artifactId>htmlunit</artifactId>
-		    <version>2.37.0</version>
+			<groupId>net.sourceforge.htmlunit</groupId>
+			<artifactId>htmlunit</artifactId>
+			<version>2.37.0</version>
 		</dependency>
 
 	</dependencies>
 
 	<build>
+		
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -141,7 +148,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>br.unicamp.ic.crawler.ui.console.BugReportDownloader</mainClass>
+							<mainClass>br.unicamp.ic.crawler.ui.console.BugReportCrawler</mainClass>
 						</manifest>
 						<manifestEntries>
 							<Class-Path>.</Class-Path>
@@ -152,7 +159,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 	<reporting>
 		<plugins>
 			<plugin>

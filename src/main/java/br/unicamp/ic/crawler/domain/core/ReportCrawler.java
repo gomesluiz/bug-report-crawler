@@ -144,6 +144,11 @@ public abstract class ReportCrawler {
 	public final void load(int max) {
 		reports = repository.findAll(max, filters);
 	}
+	
+	public final void load(String from) {
+		
+		reports = repository.findAll(from, filters);
+	}
 
 	/**
 	 * 

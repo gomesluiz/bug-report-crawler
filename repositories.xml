@@ -3,19 +3,19 @@
 	<project>
 		<name>eclipse</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
+		<output>/home/gomes/Workspace/doctorate/projects/long-lived-bug-prediction/machine-learning/source/datasets/</output>
 		<enable>false</enable>
 		<report>
 			<url>https://bugs.eclipse.org/bugs/show_bug.cgi?ctype=xml&amp;id=%d</url>
 			<format>xml</format>
 			<first>1</first>
 			<last>530583</last>
-			<path>/home/luiz/Workspace/bug-report-datasets/eclipse/xml/</path>
+			<path>/home/gomes/Workspace/doctorate/data/eclipse/xml/</path>
 			<mask>ECLIPSE-%d</mask>
 			<history>
 				<url>https://bugs.eclipse.org/bugs/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-report-datasets/eclipse/html/</path>
+				<path>/home/gomes/Workspace/doctorate/data/eclipse/html/</path>
 				<mask>ECLIPSE-%d</mask>
 			</history>
 		</report>
@@ -23,19 +23,19 @@
 	<project>
 		<name>winehq</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
+		<output>/home/gomes/Workspace/doctorate/projects/long-lived-bug-prediction/machine-learning/source/datasets/</output>
 		<enable>false</enable>
 		<report>
 			<url>https://bugs.winehq.org/show_bug.cgi?ctype=xml&amp;id=%d</url>
 			<format>xml</format>
 			<first>1</first>
 			<last>45000</last>
-			<path>/home/luiz/Workspace/bug-report-datasets/winehq/xml/</path>
+			<path>/home/gomes/Workspace/doctorate/data/winehq/xml/</path>
 			<mask>WINEHQ-%d</mask>
 			<history>
 				<url>https://bugs.winehq.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-report-datasets/winehq/html/</path>
+				<path>/home/gomes/Workspace/doctorate/data/winehq/html/</path>
 				<mask>WINEHQ-%d</mask>
 			</history>
 		</report>
@@ -43,20 +43,20 @@
 	<project>
 		<name>freedesktop</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
-		<enable>true</enable>
+		<output>/home/gomes/Workspace/doctorate/projects/long-lived-bug-prediction/machine-learning/source/datasets/</output>
+		<enable>false</enable>
 		<report>
 			<url>https://bugs.freedesktop.org/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>
 			<format>xml</format>
 			<first>1</first>
 			<last>530583</last>
-			<path>/home/luiz/Workspace/bug-report-datasets/freedesktop/xml/</path>
+			<path>/home/gomes/Workspace/doctorate/data/freedesktop/xml/</path>
 			<mask>FREEDESKTOP-%d</mask>
 			<history>
 				<url>https://bugs.freedesktop.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-report-datasets/freedesktop/html/</path>
+				<path>/home/gomes/Workspace/doctorate/data/freedesktop/html/</path>
 				<mask>FREEDESKTOP-%d</mask>
 			</history>
 		</report>
@@ -85,20 +85,20 @@
 	<project>
 		<name>gnome</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
-		<enable>true</enable>
+		<output>/home/gomes/Workspace/doctorate/projects/long-lived-bug-prediction/machine-learning/source/datasets/</output>
+		<enable>false</enable>
 		<report>
 			<url>https://bugzilla.gnome.org/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>
 			<format>xml</format>
 			<first>1</first>
 			<last>530583</last>
-			<path>/home/luiz/Workspace/bug-report-datasets/gnome/xml/</path>
+			<path>/home/gomes/Workspace/doctorate/data/gnome/xml/</path>
 			<mask>GNOME-%d</mask>
 			<history>
 				<url>https://bugzilla.gnome.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-report-datasets/gnome/html/</path>
+				<path>/home/gomes/Workspace/doctorate/data/gnome/html/</path>
 				<mask>GNOME-%d</mask>
 			</history>
 		</report>
@@ -106,20 +106,20 @@
 	<project>
 		<name>gcc</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
-		<enable>true</enable>
+		<output>/home/gomes/Workspace/doctorate/projects/long-lived-bug-prediction/machine-learning/source/datasets/</output>
+		<enable>false</enable>
 		<report>
 			<url>https://gcc.gnu.org/bugzilla/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>
 			<format>xml</format>
 			<first>1</first>
-			<last>84157</last>
-			<path>/home/luiz/Workspace/bug-report-datasets/gcc/xml/</path>
+			<last>85000</last>
+			<path>/home/gomes/Workspace/doctorate/data/gcc/xml/</path>
 			<mask>GCC-%d</mask>
 			<history>
 				<url>https://gcc.gnu.org/bugzilla/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-report-datasets/gcc/html/</path>
+				<path>/home/gomes/Workspace/doctorate/data/gcc/html/</path>
 				<mask>GCC-%d</mask>
 			</history>
 		</report>
@@ -128,7 +128,7 @@
 		<name>libreoffice</name>
 		<bts>bugzilla</bts>
 		<output>/home/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
-		<enable>true</enable>
+		<enable>false</enable>
 		<report>
 			<url>https://bugs.documentfoundation.org/show_bug.cgi?ctype=xml&amp;id=%d</url>
 			<format>xml</format>
@@ -147,7 +147,7 @@
 	<project>
 		<name>mozilla</name>
 		<bts>bugzilla</bts>
-		<output>/home/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
+		<output>/home/gomes/Workspace/doctorate/projects/long-lived-bug-prediction/machine-learning/source/datasets/</output>
 		<enable>true</enable>
 		<report>
 			<url>https://bugzilla.mozilla.org/show_bug.cgi?ctype=xml&amp;id=%d
@@ -155,12 +155,12 @@
 			<format>xml</format>
 			<first>1</first>
 			<last>530583</last>
-			<path>/home/luiz/Workspace/bug-report-datasets/mozilla/xml/</path>
+			<path>/home/gomes/Workspace/doctorate/data/mozilla/xml/</path>
 			<mask>MOZILLA-%d</mask>
 			<history>
 				<url>https://bugzilla.mozilla.org/show_activity.cgi?id=%d</url>
 				<format>html</format>
-				<path>/home/luiz/Workspace/bug-report-datasets/mozilla/html/</path>
+				<path>/home/gomes/Workspace/doctorate/data/mozilla/html/</path>
 				<mask>MOZILLA-%d</mask>
 			</history>
 		</report>
@@ -169,7 +169,7 @@
 		<name>kernel</name>
 		<bts>bugzilla</bts>
 		<output>/home/luiz/Workspace/doctorate/long-lived-bug-prediction/notebooks/datasets/</output>
-		<enable>true</enable>
+		<enable>false</enable>
 		<report>
 			<url>https://bugzilla.kernel.org/show_bug.cgi?ctype=xml&amp;id=%d
 			</url>

@@ -2,17 +2,27 @@ package br.unicamp.ic.crawler.persistence;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
+
+import com.opencsv.CSVReader;
 
 import br.unicamp.ic.crawler.domain.core.HistoryParser;
 import br.unicamp.ic.crawler.domain.core.IssueActivityEntry;
 import br.unicamp.ic.crawler.domain.core.IssueEntry;
-import br.unicamp.ic.crawler.domain.core.ReportPasser;
 import br.unicamp.ic.crawler.domain.core.LoggerObserver;
 import br.unicamp.ic.crawler.domain.core.Report;
+import br.unicamp.ic.crawler.domain.core.ReportPasser;
 import br.unicamp.ic.crawler.domain.core.Subject;
 import br.unicamp.ic.crawler.domain.core.filters.ReportFilter;
 import br.unicamp.ic.crawler.domain.meta.Project;
@@ -38,35 +48,35 @@ public class ReportRepositoryFromFile implements ReportRepository {
 		File[] files = getReportFiles();
 		IssueEntry entry;
 		for (File reportFile : files) {
-			try{
+			try {
 				entry = convertFrom(reportFile);
-			} catch(RuntimeException e){
-				subject.setMessage(reportFile.getName()+ " Converting Error.");
+			} catch (RuntimeException e) {
+				subject.setMessage(reportFile.getName() + " Converting Error.");
 				continue;
 			}
 			Boolean filtered = true;
-			Report report    = new Report(entry);
-			
-			for (ReportFilter filter:filters) 
+			Report report = new Report(entry);
+
+			for (ReportFilter filter : filters)
 				filtered = filtered && filter.filter(report);
-			
-			
+
 			if (filtered) {
-				subject.setMessage(reportFile.getName()+ " Included!");
+				subject.setMessage(reportFile.getName() + " Included!");
 				reports.add(new Report(entry));
-				if (reports.size() >= max) break;
+				if (reports.size() >= max)
+					break;
 			} else {
 				// clean up unnecessary files.
-				String key   = report.getKey();
-				int position = key.lastIndexOf('-'); 
-				int number   = Integer.parseInt(key.substring(position+1));
+				String key = report.getKey();
+				int position = key.lastIndexOf('-');
+				int number = Integer.parseInt(key.substring(position + 1));
 				File historyFile = new File(project.formatLocalIssueHistoryFileName(number));
-				
-				if(historyFile.delete())
-					subject.setMessage(historyFile.getName()+ " Removed ! ");
-				
+
+				if (historyFile.delete())
+					subject.setMessage(historyFile.getName() + " Removed ! ");
+
 				if (reportFile.delete())
-					subject.setMessage(reportFile.getName()+ " Removed ! ");
+					subject.setMessage(reportFile.getName() + " Removed ! ");
 			}
 		}
 		return reports;
@@ -129,8 +139,7 @@ public class ReportRepositoryFromFile implements ReportRepository {
 
 			activities = historyParser.parse(contents);
 		} catch (Exception e) {
-			System.err.println("FileResource: cannot access :" 
-				+ project.formatLocalIssueHistoryFileName(key));
+			System.err.println("FileResource: cannot access :" + project.formatLocalIssueHistoryFileName(key));
 		}
 		return activities;
 	}
@@ -148,6 +157,52 @@ public class ReportRepositoryFromFile implements ReportRepository {
 	public int count() {
 		File files[] = getReportFiles();
 		return files.length;
+	}
+
+	@Override
+	public List<Report> findAll(String from, List<ReportFilter> filters) {
+		List<Report> reports = new ArrayList<Report>();
+		List<String> keys = new ArrayList<String>();
+		File[] files = getReportFiles();
+
+		IssueEntry entry;
+
+		try (Reader reader = Files.newBufferedReader(Paths.get(from));
+				CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);) {
+			for (CSVRecord csvRecord : csvParser) {
+				String key = csvRecord.get(0).replaceAll("\\D+", "");
+				if (key.isEmpty()) continue;
+				String name = project.getNameWithKey(Integer.parseInt(key));
+				keys.add(name);
+				System.out.println("Key [code= " + key + "] > [ " + name + " ]");
+			}
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		for (File reportFile : files) {
+			try {
+				entry = convertFrom(reportFile);
+			} catch (RuntimeException e) {
+				subject.setMessage(reportFile.getName() + " Converting Error.");
+				continue;
+			}
+			Boolean filtered = true;
+			Report report = new Report(entry);
+
+			for (ReportFilter filter : filters)
+				filtered = filtered && filter.filter(report);
+
+			if (filtered) {
+				String baseName = reportFile.getName().replaceAll("\\.[^.]*$", "");
+				if (keys.contains(baseName)) {
+					subject.setMessage(reportFile.getName() + " Included!");
+					reports.add(new Report(entry));
+				}
+			}
+		}
+		return reports;
 	}
 
 }

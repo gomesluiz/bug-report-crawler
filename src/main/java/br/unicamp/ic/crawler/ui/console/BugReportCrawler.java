@@ -60,7 +60,8 @@ public class BugReportCrawler {
         crawler.search(new IssueFilterByStatus("Resolved", "Closed"));
         crawler.search(new IssueFilterByResolution("Fixed"));
         crawler.search(new IssueFilterOutBySeverity("Enhancement"));
-        crawler.load(10000);
+        String name = String.format("/home/gomes/Workspace/doctorate/projects/long-lived-bug-prediction/machine-learning/source/datasets/20190917_%s_bug_report_data.csv", project.getName().toLowerCase());
+        crawler.load(name);
         crawler.export(output);
         logger.trace("Finish " + project.getName() + " !");
       }

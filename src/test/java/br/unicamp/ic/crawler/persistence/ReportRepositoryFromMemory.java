@@ -1748,10 +1748,308 @@ public class ReportRepositoryFromMemory implements ReportRepository {
 					"\n" + 
 					"    </bug>\n" + 
 					"\n" + 
-					"</bugzilla>\n" 
+					"</bugzilla>\n" ,
+					
+					"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\n" + 
+					"<!DOCTYPE bugzilla SYSTEM \"https://gcc.gnu.org/bugzilla/page.cgi?id=bugzilla.dtd\">\n" + 
+					"\n" + 
+					"<bugzilla version=\"5.0.4+\"\n" + 
+					"          urlbase=\"https://gcc.gnu.org/bugzilla/\"\n" + 
+					"          \n" + 
+					"          maintainer=\"gcc-bugzilla-account-request@gcc.gnu.org\"\n" + 
+					">\n" + 
+					"\n" + 
+					"    <bug>\n" + 
+					"          <bug_id>9</bug_id>\n" + 
+					"          \n" + 
+					"          <creation_ts>2000-02-29 02:06:00 +0000</creation_ts>\n" + 
+					"          <short_desc>local class and -O1</short_desc>\n" + 
+					"          <delta_ts>2019-01-18 00:55:11 +0000</delta_ts>\n" + 
+					"          <reporter_accessible>1</reporter_accessible>\n" + 
+					"          <cclist_accessible>1</cclist_accessible>\n" + 
+					"          <classification_id>1</classification_id>\n" + 
+					"          <classification>Unclassified</classification>\n" + 
+					"          <product>gcc</product>\n" + 
+					"          <component>c++</component>\n" + 
+					"          <version>unknown</version>\n" + 
+					"          <rep_platform>All</rep_platform>\n" + 
+					"          <op_sys>All</op_sys>\n" + 
+					"          <bug_status>RESOLVED</bug_status>\n" + 
+					"          <resolution>FIXED</resolution>\n" + 
+					"          \n" + 
+					"          \n" + 
+					"          <bug_file_loc></bug_file_loc>\n" + 
+					"          <status_whiteboard></status_whiteboard>\n" + 
+					"          <keywords>rejects-valid</keywords>\n" + 
+					"          <priority>P3</priority>\n" + 
+					"          <bug_severity>normal</bug_severity>\n" + 
+					"          <target_milestone>3.0.x</target_milestone>\n" + 
+					"          \n" + 
+					"          \n" + 
+					"          <everconfirmed>1</everconfirmed>\n" + 
+					"          <reporter>martin</reporter>\n" + 
+					"          <assigned_to name=\"Jason Merrill\">jason</assigned_to>\n" + 
+					"          <cc>gcc-bugs</cc>\n" + 
+					"    \n" + 
+					"    <cc>loewis</cc>\n" + 
+					"    \n" + 
+					"    <cc>neil</cc>\n" + 
+					"          \n" + 
+					"          <cf_gcchost></cf_gcchost>\n" + 
+					"          <cf_gcctarget></cf_gcctarget>\n" + 
+					"          <cf_gccbuild></cf_gccbuild>\n" + 
+					"          <cf_known_to_work></cf_known_to_work>\n" + 
+					"          <cf_known_to_fail></cf_known_to_fail>\n" + 
+					"          \n" + 
+					"\n" + 
+					"      \n" + 
+					"\n" + 
+					"      \n" + 
+					"\n" + 
+					"      \n" + 
+					"\n" + 
+					"          <comment_sort_order>oldest_to_newest</comment_sort_order>  \n" + 
+					"          <long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>13091</commentid>\n" + 
+					"    <comment_count>0</comment_count>\n" + 
+					"    <who name=\"\">martin</who>\n" + 
+					"    <bug_when>2000-02-29 02:06:00 +0000</bug_when>\n" + 
+					"    <thetext>[Original report in &lt;38B5D906.B3544CB9@mbox337.swipnet.se&gt;]\n" + 
+					"I&apos;m not sure if this a bug, but g++ with -O0 accept it but fail to link\n" + 
+					"with -O1.\n" + 
+					"\n" + 
+					"g++ --verbose -O1 prog.cc\n" + 
+					"Reading specs from /usr/local/lib/gcc-lib/i686-pc-linux-gnu/2.95.1/specs\n" + 
+					"gcc version 2.95.1 19990816 (release)\n" + 
+					" /usr/local/lib/gcc-lib/i686-pc-linux-gnu/2.95.1/cpp -lang-c++ -v\n" + 
+					"-D__GNUC__=2 -D__GNUG__=2 -D__GNUC_MINOR__=95 -D__cplusplus -D__ELF__\n" + 
+					"-Dunix -D__i386__ -Dlinux -D__ELF__ -D__unix__ -D__i386__ -D__linux__\n" + 
+					"-D__unix -D__linux -Asystem(posix) -D__EXCEPTIONS -D__OPTIMIZE__\n" + 
+					"-Acpu(i386) -Amachine(i386) -Di386 -D__i386 -D__i386__ -Di686\n" + 
+					"-Dpentiumpro -D__i686 -D__i686__ -D__pentiumpro -D__pentiumpro__ prog.cc\n" + 
+					"/tmp/cc1V6mke.ii\n" + 
+					"GNU CPP version 2.95.1 19990816 (release) (i386 Linux/ELF)\n" + 
+					"#include &quot;...&quot; search starts here:\n" + 
+					"#include &lt;...&gt; search starts here:\n" + 
+					"\n" + 
+					"/usr/local/lib/gcc-lib/i686-pc-linux-gnu/2.95.1/../../../../include/g++-3\n" + 
+					" /usr/local/include\n" + 
+					"\n" + 
+					"/usr/local/lib/gcc-lib/i686-pc-linux-gnu/2.95.1/../../../../i686-pc-linux-gnu/include\n" + 
+					" /usr/local/lib/gcc-lib/i686-pc-linux-gnu/2.95.1/include\n" + 
+					" /usr/include\n" + 
+					"End of search list.\n" + 
+					"The following default directories have been omitted from the search\n" + 
+					"path:\n" + 
+					"End of omitted list.\n" + 
+					" /usr/local/lib/gcc-lib/i686-pc-linux-gnu/2.95.1/cc1plus\n" + 
+					"/tmp/cc1V6mke.ii -quiet -dumpbase prog.cc -O1 -version -o\n" + 
+					"/tmp/cc9xhG3f.s\n" + 
+					"GNU C++ version 2.95.1 19990816 (release) (i686-pc-linux-gnu) compiled\n" + 
+					"by GNU C version 2.95.1 19990816 (release).\n" + 
+					" as -V -Qy -o /tmp/ccMLXzsi.o /tmp/cc9xhG3f.s\n" + 
+					"GNU assembler version 2.9.1 (i386-redhat-linux), using BFD version\n" + 
+					"2.9.1.0.23\n" + 
+					" /usr/local/lib/gcc-lib/i686-pc-linux-gnu/2.95.1/collect2 -m elf_i386\n" + 
+					"-dynamic-linker /lib/ld-linux.so.2 /usr/lib/crt1.o /usr/lib/crti.o\n" + 
+					"/usr/local/lib/gcc-lib/i686-pc-linux-gnu/2.95.1/crtbegin.o\n" + 
+					"-L/usr/local/lib/gcc-lib/i686-pc-linux-gnu/2.95.1\n" + 
+					"-L/usr/local/i686-pc-linux-gnu/lib -L/usr/local/lib /tmp/ccMLXzsi.o\n" + 
+					"-lstdc++ -lm -lgcc -lc -lgcc\n" + 
+					"/usr/local/lib/gcc-lib/i686-pc-linux-gnu/2.95.1/crtend.o /usr/lib/crtn.o\n" + 
+					"/tmp/ccMLXzsi.o(.gnu.linkonce.d.__vt_Q29bar__Fv.0_1D+0x8): undefined\n" + 
+					"reference to `f__CQ29bar__Fv.0_1D.6&apos;\n" + 
+					"collect2: ld returned 1 exit status\n" + 
+					"\n" + 
+					"\n" + 
+					"gcc version 2.96 20000221 (experimental) gives the same result.\n" + 
+					"\n" + 
+					"Release:\n" + 
+					"unknown\n" + 
+					"\n" + 
+					"Environment:\n" + 
+					"System: Linux mira 2.3.48 #4 Sun Feb 27 23:26:02 CET 2000 i586 unknown\n" + 
+					"Architecture: i586\n" + 
+					"\n" + 
+					"How-To-Repeat:\n" + 
+					"class B\n" + 
+					"{\n" + 
+					"public:\n" + 
+					"    virtual void f() const = 0;\n" + 
+					"};\n" + 
+					"\n" + 
+					"void\n" + 
+					"foo(B const &amp;)\n" + 
+					"{\n" + 
+					"\n" + 
+					"}\n" + 
+					"\n" + 
+					"void\n" + 
+					"bar()\n" + 
+					"{\n" + 
+					"  class D : public B\n" + 
+					"  {\n" + 
+					"    void f() const\n" + 
+					"      {\n" + 
+					"\n" + 
+					"      }\n" + 
+					"  };\n" + 
+					" foo (D());\n" + 
+					"}\n" + 
+					"\n" + 
+					"int\n" + 
+					"main() \n" + 
+					"{\n" + 
+					"  bar();\n" + 
+					"  return 0;\n" + 
+					"}</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>13092</commentid>\n" + 
+					"    <comment_count>1</comment_count>\n" + 
+					"    <who name=\"Martin v. Loewis\">loewis</who>\n" + 
+					"    <bug_when>2000-03-08 23:02:06 +0000</bug_when>\n" + 
+					"    <thetext>State-Changed-From-To: open-&gt;analyzed\n" + 
+					"State-Changed-Why: Confirmed as a bug\n" + 
+					"</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>13093</commentid>\n" + 
+					"    <comment_count>2</comment_count>\n" + 
+					"    <who name=\"Martin v. Loewis\">loewis</who>\n" + 
+					"    <bug_when>2000-03-09 07:02:06 +0000</bug_when>\n" + 
+					"    <thetext>From: loewis@gcc.gnu.org\n" + 
+					"To: gcc-gnats@gcc.gnu.org, martin@loewis.home.cs.tu-berlin.de,\n" + 
+					"  nobody@gcc.gnu.org, ulf.larsson@mbox337.swipnet.se\n" + 
+					"Cc:  \n" + 
+					"Subject: Re: c++/9\n" + 
+					"Date: 9 Mar 2000 07:02:06 -0000\n" + 
+					"\n" + 
+					" Synopsis: local class and -O1\n" + 
+					" \n" + 
+					" State-Changed-From-To: open-&gt;analyzed\n" + 
+					" State-Changed-By: loewis\n" + 
+					" State-Changed-When: Wed Mar  8 23:02:06 2000\n" + 
+					" State-Changed-Why:\n" + 
+					"     Confirmed as a bug \n" + 
+					" \n" + 
+					" http://gcc.gnu.org/cgi-bin/gnatsweb.pl?cmd=view&amp;pr=9&amp;database=gcc\n" + 
+					"\n" + 
+					"</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>13094</commentid>\n" + 
+					"    <comment_count>3</comment_count>\n" + 
+					"    <who name=\"Jason Merrill\">jason</who>\n" + 
+					"    <bug_when>2000-07-11 12:37:38 +0000</bug_when>\n" + 
+					"    <thetext>Severity-Changed-From-To: critical-serious\n" + 
+					"Severity-Changed-Why: Can work around with -O0.\n" + 
+					"</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>13095</commentid>\n" + 
+					"    <comment_count>4</comment_count>\n" + 
+					"    <who name=\"Jason Merrill\">jason</who>\n" + 
+					"    <bug_when>2000-08-08 17:43:03 +0000</bug_when>\n" + 
+					"    <thetext>Responsible-Changed-From-To: unassigned-&gt;jason\n" + 
+					"Responsible-Changed-Why: \n" + 
+					"</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>13096</commentid>\n" + 
+					"    <comment_count>5</comment_count>\n" + 
+					"    <who name=\"Jason Merrill\">jason</who>\n" + 
+					"    <bug_when>2000-08-08 17:43:12 +0000</bug_when>\n" + 
+					"    <thetext>State-Changed-From-To: analyzed-feedback\n" + 
+					"State-Changed-Why: Fixed for gcc 3.0.\n" + 
+					"</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>13097</commentid>\n" + 
+					"    <comment_count>6</comment_count>\n" + 
+					"    <who name=\"Neil Booth\">neil</who>\n" + 
+					"    <bug_when>2000-11-25 07:25:01 +0000</bug_when>\n" + 
+					"    <thetext>State-Changed-From-To: feedback-&gt;closed\n" + 
+					"State-Changed-Why: Fixed in CVS.  No feedback is forthcoming; I don&apos;t think\n" + 
+					"    we need to wait for it (we don&apos;t for other fixes).\n" + 
+					"</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>13098</commentid>\n" + 
+					"    <comment_count>7</comment_count>\n" + 
+					"    <who name=\"Neil Booth\">neil</who>\n" + 
+					"    <bug_when>2000-11-25 15:25:01 +0000</bug_when>\n" + 
+					"    <thetext>From: neil@gcc.gnu.org\n" + 
+					"To: gcc-gnats@gcc.gnu.org, jason@gcc.gnu.org,\n" + 
+					"  martin@loewis.home.cs.tu-berlin.de, ulf.larsson@mbox337.swipnet.se\n" + 
+					"Cc:  \n" + 
+					"Subject: Re: c++/9\n" + 
+					"Date: 25 Nov 2000 15:25:01 -0000\n" + 
+					"\n" + 
+					" Synopsis: local class and -O1\n" + 
+					" \n" + 
+					" State-Changed-From-To: feedback-&gt;closed\n" + 
+					" State-Changed-By: neil\n" + 
+					" State-Changed-When: Sat Nov 25 07:25:01 2000\n" + 
+					" State-Changed-Why:\n" + 
+					"     Fixed in CVS.  No feedback is forthcoming; I don&apos;t think\n" + 
+					"     we need to wait for it (we don&apos;t for other fixes).\n" + 
+					" \n" + 
+					" http://gcc.gnu.org/cgi-bin/gnatsweb.pl?cmd=view&amp;pr=9&amp;database=gcc</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>594077</commentid>\n" + 
+					"    <comment_count>8</comment_count>\n" + 
+					"    <who name=\"Steve Kargl\">sgk</who>\n" + 
+					"    <bug_when>2019-01-18 00:01:53 +0000</bug_when>\n" + 
+					"    <thetext>On Thu, Jan 17, 2019 at 11:55:38PM +0000, sje at gcc dot gnu.org wrote:\n" + 
+					"&gt; \n" + 
+					"&gt; --- Comment #4 from Steve Ellcey &lt;sje at gcc dot gnu.org&gt; ---\n" + 
+					"&gt; I think this is my fault.  My patch shouldn&apos;t have affected x86 at all but I\n" + 
+					"&gt; see my build/test on x86 only tested C and C++, I didn&apos;t have Fortran\n" + 
+					"&gt; configured in when I checked for regressions.\n" + 
+					"&gt; \n" + 
+					"\n" + 
+					"Thanks for the quick reply.  Your commit and Andrew&apos;s\n" + 
+					"came in about the same time.  I haven&apos;t had a chance\n" + 
+					"to backout different revisions to narrow down the\n" + 
+					"issue.</thetext>\n" + 
+					"  </long_desc><long_desc isprivate=\"0\" >\n" + 
+					"    <commentid>594083</commentid>\n" + 
+					"    <comment_count>9</comment_count>\n" + 
+					"    <who name=\"Steve Kargl\">sgk</who>\n" + 
+					"    <bug_when>2019-01-18 00:55:11 +0000</bug_when>\n" + 
+					"    <thetext>On Fri, Jan 18, 2019 at 12:42:12AM +0000, sje at gcc dot gnu.org wrote:\n" + 
+					"&gt; https://gcc.gnu.org/bugzilla/show_bug.cgi?id=88898\n" + 
+					"&gt; \n" + 
+					"&gt; --- Comment #6 from Steve Ellcey &lt;sje at gcc dot gnu.org&gt; ---\n" + 
+					"&gt; Author: sje\n" + 
+					"&gt; Date: Fri Jan 18 00:41:40 2019\n" + 
+					"&gt; New Revision: 268054\n" + 
+					"&gt; \n" + 
+					"&gt; URL: https://gcc.gnu.org/viewcvs?rev=268054&amp;root=gcc&amp;view=rev\n" + 
+					"&gt; Log:\n" + 
+					"&gt; 2018-01-17  Steve Ellcey  &lt;sellcey@cavium.com&gt;\n" + 
+					"&gt; \n" + 
+					"&gt;         PR fortran/88898\n" + 
+					"&gt;         * gfortran.dg/gomp/declare-simd-2.f90: Add aarch64 target specifier to\n" + 
+					"&gt;         warning checks.\n" + 
+					"&gt;         * gfortran.dg/gomp/pr79154-1.f90: Ditto.\n" + 
+					"&gt;         * gfortran.dg/gomp/pr83977.f90: Ditto.\n" + 
+					"&gt; \n" + 
+					"&gt; Modified:\n" + 
+					"&gt;     trunk/gcc/testsuite/ChangeLog\n" + 
+					"&gt;     trunk/gcc/testsuite/gfortran.dg/gomp/declare-simd-2.f90\n" + 
+					"&gt;     trunk/gcc/testsuite/gfortran.dg/gomp/pr79154-1.f90\n" + 
+					"&gt;     trunk/gcc/testsuite/gfortran.dg/gomp/pr83977.f90\n" + 
+					"&gt; \n" + 
+					"\n" + 
+					"I can confirm that the patch has fixed the regression.\n" + 
+					"Do you want to close the PR or would you rather have\n" + 
+					"me do it?</thetext>\n" + 
+					"  </long_desc>\n" + 
+					"      \n" + 
+					"      \n" + 
+					"\n" + 
+					"    </bug>\n" + 
+					"\n" + 
+					"</bugzilla>"
 					
 					
 					);
+	
 	public static List<String> histories = Arrays.asList(
 			"<!DOCTYPE html>\n" + "<html lang=\"en\">\n" + "  <head>\n"
 			+ "    <title>Changes made to bug 14582</title>\n" + "\n"
@@ -3374,7 +3672,356 @@ public class ReportRepositoryFromMemory implements ReportRepository {
 					"</div>\n" + 
 					"\n" + 
 					"</body>\n" + 
-					"</html>\n");
+					"</html>\n",
+					"<!DOCTYPE html>\n" + 
+					"<html lang=\"en\">\n" + 
+					"  <head>\n" + 
+					"    <title>Changes made to bug 9</title>\n" + 
+					"\n" + 
+					"      <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n" + 
+					"\n" + 
+					"<link href=\"data/assets/e221f2549e4cdda5fcb8a615afef19fd.css?1546049178\" rel=\"stylesheet\" type=\"text/css\">\n" + 
+					"\n" + 
+					"\n" + 
+					"\n" + 
+					"    \n" + 
+					"<script type=\"text/javascript\" src=\"data/assets/1b4e898422a669ab82b604a2c23edce5.js?1546048917\"></script>\n" + 
+					"\n" + 
+					"    <script type=\"text/javascript\">\n" + 
+					"    <!--\n" + 
+					"        YAHOO.namespace('bugzilla');\n" + 
+					"        YAHOO.util.Event.addListener = function (el, sType, fn, obj, overrideContext) {\n" + 
+					"               if ( (\"onpagehide\" in window || YAHOO.env.ua.gecko) && sType === \"unload\") { sType = \"pagehide\"; };\n" + 
+					"               var capture = ((sType == \"focusin\" || sType == \"focusout\") && !YAHOO.env.ua.ie) ? true : false;\n" + 
+					"               return this._addListener(el, this._getType(sType), fn, obj, overrideContext, capture);\n" + 
+					"         };\n" + 
+					"        if ( \"onpagehide\" in window || YAHOO.env.ua.gecko) {\n" + 
+					"            YAHOO.util.Event._simpleRemove(window, \"unload\", \n" + 
+					"                                           YAHOO.util.Event._unload);\n" + 
+					"        }\n" + 
+					"        \n" + 
+					"        function unhide_language_selector() { \n" + 
+					"            YAHOO.util.Dom.removeClass(\n" + 
+					"                'lang_links_container', 'bz_default_hidden'\n" + 
+					"            ); \n" + 
+					"        } \n" + 
+					"        YAHOO.util.Event.onDOMReady(unhide_language_selector);\n" + 
+					"\n" + 
+					"        \n" + 
+					"        var BUGZILLA = {\n" + 
+					"            param: {\n" + 
+					"                cookiepath: '\\/bugzilla\\/',\n" + 
+					"                maxusermatches: 1000\n" + 
+					"            },\n" + 
+					"            constant: {\n" + 
+					"                COMMENT_COLS: 80\n" + 
+					"            },\n" + 
+					"            string: {\n" + 
+					"                \n" + 
+					"\n" + 
+					"                attach_desc_required:\n" + 
+					"                    \"You must enter a Description for this attachment.\",\n" + 
+					"                component_required:\n" + 
+					"                    \"You must select a Component for this bug.\",\n" + 
+					"                description_required:\n" + 
+					"                    \"You must enter a Description for this bug.\",\n" + 
+					"                short_desc_required:\n" + 
+					"                    \"You must enter a Summary for this bug.\",\n" + 
+					"                version_required:\n" + 
+					"                    \"You must select a Version for this bug.\"\n" + 
+					"            }\n" + 
+					"        };\n" + 
+					"\n" + 
+					"    // -->\n" + 
+					"    </script>\n" + 
+					"<script type=\"text/javascript\" src=\"data/assets/d41d8cd98f00b204e9800998ecf8427e.js?1546049178\"></script>\n" + 
+					"\n" + 
+					"    \n" + 
+					"\n" + 
+					"    \n" + 
+					"    <link rel=\"search\" type=\"application/opensearchdescription+xml\"\n" + 
+					"                       title=\"GCC Bugzilla\" href=\"./search_plugin.cgi\">\n" + 
+					"    <link rel=\"shortcut icon\" href=\"https://gcc.gnu.org/favicon.ico\">\n" + 
+					"  </head>\n" + 
+					"\n" + 
+					"  <body \n" + 
+					"        class=\"gcc-gnu-org-bugzilla yui-skin-sam\">\n" + 
+					"\n" + 
+					"  <div id=\"header\"><div id=\"banner\">\n" + 
+					"  </div>\n" + 
+					"\n" + 
+					"    <div id=\"titles\">\n" + 
+					"      <span id=\"title\">GCC Bugzilla &ndash; Activity log for bug 9: local class and -O1</span>\n" + 
+					"\n" + 
+					"\n" + 
+					"    </div>\n" + 
+					"\n" + 
+					"\n" + 
+					"    <div id=\"common_links\"><ul class=\"links\">\n" + 
+					"  <li><a href=\"./\">Home</a></li>\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"enter_bug.cgi\">New</a></li>\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"describecomponents.cgi\">Browse</a></li>\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"query.cgi\">Search</a></li>\n" + 
+					"\n" + 
+					"  <li class=\"form\">\n" + 
+					"    <span class=\"separator\">| </span>\n" + 
+					"    <form action=\"buglist.cgi\" method=\"get\"\n" + 
+					"        onsubmit=\"if (this.quicksearch.value == '')\n" + 
+					"                  { alert('Please enter one or more search terms first.');\n" + 
+					"                    return false; } return true;\">\n" + 
+					"    <input type=\"hidden\" id=\"no_redirect_top\" name=\"no_redirect\" value=\"0\">\n" + 
+					"    <script type=\"text/javascript\">\n" + 
+					"      if (history && history.replaceState) {\n" + 
+					"        var no_redirect = document.getElementById(\"no_redirect_top\");\n" + 
+					"        no_redirect.value = 1;\n" + 
+					"      }\n" + 
+					"    </script>\n" + 
+					"    <input class=\"txt\" type=\"text\" id=\"quicksearch_top\" name=\"quicksearch\" \n" + 
+					"           title=\"Quick Search\" value=\"\">\n" + 
+					"    <input class=\"btn\" type=\"submit\" value=\"Search\" \n" + 
+					"           id=\"find_top\"></form>\n" + 
+					"  <a href=\"page.cgi?id=quicksearch.html\" title=\"Quicksearch Help\">[?]</a></li>\n" + 
+					"\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"report.cgi\">Reports</a></li>\n" + 
+					"\n" + 
+					"  <li></li>\n" + 
+					"\n" + 
+					"\n" + 
+					"  \n" + 
+					"    \n" + 
+					"      <li id=\"new_account_container_top\">\n" + 
+					"        <span class=\"separator\">| </span>\n" + 
+					"        <a href=\"createaccount.cgi\">New&nbsp;Account</a>\n" + 
+					"      </li>\n" + 
+					"\n" + 
+					"    <li id=\"mini_login_container_top\">\n" + 
+					"  <span class=\"separator\">| </span>\n" + 
+					"  <a id=\"login_link_top\" href=\"show_activity.cgi?id=9&amp;GoAheadAndLogIn=1\"\n" + 
+					"     onclick=\"return show_mini_login_form('_top')\">Log In</a>\n" + 
+					"\n" + 
+					"  <form action=\"show_activity.cgi?id=9\" method=\"POST\"\n" + 
+					"        class=\"mini_login bz_default_hidden\"\n" + 
+					"        id=\"mini_login_top\">\n" + 
+					"    <input id=\"Bugzilla_login_top\" required\n" + 
+					"           name=\"Bugzilla_login\" class=\"bz_login\"\n" + 
+					"        type=\"email\" placeholder=\"Email Address\">\n" + 
+					"    <input class=\"bz_password\" name=\"Bugzilla_password\" type=\"password\"\n" + 
+					"           id=\"Bugzilla_password_top\" required\n" + 
+					"           placeholder=\"Password\">\n" + 
+					"      <input type=\"checkbox\" id=\"Bugzilla_remember_top\" \n" + 
+					"             name=\"Bugzilla_remember\" value=\"on\" class=\"bz_remember\"\n" + 
+					"             checked>\n" + 
+					"      <label for=\"Bugzilla_remember_top\">Remember</label>\n" + 
+					"    <input type=\"hidden\" name=\"Bugzilla_login_token\"\n" + 
+					"           value=\"\">\n" + 
+					"    <input type=\"submit\" name=\"GoAheadAndLogIn\" value=\"Log in\"\n" + 
+					"            id=\"log_in_top\">\n" + 
+					"    <a href=\"#\" onclick=\"return hide_mini_login_form('_top')\">[x]</a>\n" + 
+					"  </form>\n" + 
+					"</li>\n" + 
+					"\n" + 
+					"\n" + 
+					"  <li id=\"forgot_container_top\">\n" + 
+					"    <span class=\"separator\">| </span>\n" + 
+					"    <a id=\"forgot_link_top\" href=\"show_activity.cgi?id=9&amp;GoAheadAndLogIn=1#forgot\"\n" + 
+					"       onclick=\"return show_forgot_form('_top')\">Forgot Password</a>\n" + 
+					"    <form action=\"token.cgi\" method=\"post\" id=\"forgot_form_top\"\n" + 
+					"          class=\"mini_forgot bz_default_hidden\">\n" + 
+					"      <label for=\"login_top\">Login:</label>\n" + 
+					"      <input name=\"loginname\" size=\"20\" id=\"login_top\" required\n" + 
+					"          type=\"email\" placeholder=\"Your Email Address\">\n" + 
+					"      <input id=\"forgot_button_top\" value=\"Reset Password\" type=\"submit\">\n" + 
+					"      <input type=\"hidden\" name=\"a\" value=\"reqpw\">\n" + 
+					"      <input type=\"hidden\" id=\"token_top\" name=\"token\"\n" + 
+					"             value=\"1565963331-VLt15WZS9pPhRQRfPOb7I5xUUrJxgWJDuZXEgWNL8FU\">\n" + 
+					"      <a href=\"#\" onclick=\"return hide_forgot_form('_top')\">[x]</a>\n" + 
+					"    </form>\n" + 
+					"  </li>\n" + 
+					"</ul>\n" + 
+					"    </div>\n" + 
+					"  </div>\n" + 
+					"\n" + 
+					"  <div id=\"bugzilla-body\">\n" + 
+					"\n" + 
+					"<p>\n" + 
+					"  Back to <a class=\"bz_bug_link \n" + 
+					"          bz_status_RESOLVED  bz_closed\"\n" + 
+					"   title=\"RESOLVED FIXED - local class and -O1\"\n" + 
+					"   href=\"show_bug.cgi?id=9\">bug 9</a>\n" + 
+					"</p>\n" + 
+					"<table id=\"bug_activity\">\n" + 
+					"    <tr class=\"column_header\">\n" + 
+					"      <th>Who</th>\n" + 
+					"      <th>When</th>\n" + 
+					"      <th>What</th>\n" + 
+					"      <th>Removed</th>\n" + 
+					"      <th>Added</th>\n" + 
+					"    </tr>\n" + 
+					"\n" + 
+					"      <tr>\n" + 
+					"        <td rowspan=\"1\">loewis\n" + 
+					"        </td>\n" + 
+					"        <td rowspan=\"1\">2000-03-08 23:02:06 UTC\n" + 
+					"        </td>\n" + 
+					"            <td>\n" + 
+					"                Status\n" + 
+					"            </td><td>ASSIGNED\n" + 
+					"  </td><td>ASSIGNED\n" + 
+					"  </td>\n" + 
+					"      </tr>\n" + 
+					"      <tr>\n" + 
+					"        <td rowspan=\"1\">jason\n" + 
+					"        </td>\n" + 
+					"        <td rowspan=\"1\">2000-08-08 17:43:03 UTC\n" + 
+					"        </td>\n" + 
+					"            <td>\n" + 
+					"                Assignee\n" + 
+					"            </td><td>nobody\n" + 
+					"  </td><td>jason\n" + 
+					"  </td>\n" + 
+					"      </tr>\n" + 
+					"      <tr>\n" + 
+					"        <td rowspan=\"1\">jason\n" + 
+					"        </td>\n" + 
+					"        <td rowspan=\"1\">2000-08-08 17:43:12 UTC\n" + 
+					"        </td>\n" + 
+					"            <td>\n" + 
+					"                Status\n" + 
+					"            </td><td>ASSIGNED\n" + 
+					"  </td><td>WAITING\n" + 
+					"  </td>\n" + 
+					"      </tr>\n" + 
+					"      <tr>\n" + 
+					"        <td rowspan=\"1\">neil\n" + 
+					"        </td>\n" + 
+					"        <td rowspan=\"1\">2000-11-25 07:25:01 UTC\n" + 
+					"        </td>\n" + 
+					"            <td>\n" + 
+					"                Status\n" + 
+					"            </td><td>WAITING\n" + 
+					"  </td><td>CLOSED\n" + 
+					"  </td>\n" + 
+					"      </tr>\n" + 
+					"      <tr>\n" + 
+					"        <td rowspan=\"1\">pinskia\n" + 
+					"        </td>\n" + 
+					"        <td rowspan=\"1\">2005-06-05 08:06:55 UTC\n" + 
+					"        </td>\n" + 
+					"            <td>\n" + 
+					"                Target Milestone\n" + 
+					"            </td><td>---\n" + 
+					"  </td><td>3.0.x\n" + 
+					"  </td>\n" + 
+					"      </tr>\n" + 
+					"  </table>\n" + 
+					"\n" + 
+					"  <p>\n" + 
+					"    Back to <a class=\"bz_bug_link \n" + 
+					"          bz_status_RESOLVED  bz_closed\"\n" + 
+					"   title=\"RESOLVED FIXED - local class and -O1\"\n" + 
+					"   href=\"show_bug.cgi?id=9\">bug 9</a>\n" + 
+					"  </p>\n" + 
+					"</div>\n" + 
+					"\n" + 
+					"    <div id=\"footer\">\n" + 
+					"      <div class=\"intro\"></div>\n" + 
+					"<ul id=\"useful-links\">\n" + 
+					"  <li id=\"links-actions\"><ul class=\"links\">\n" + 
+					"  <li><a href=\"./\">Home</a></li>\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"enter_bug.cgi\">New</a></li>\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"describecomponents.cgi\">Browse</a></li>\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"query.cgi\">Search</a></li>\n" + 
+					"\n" + 
+					"  <li class=\"form\">\n" + 
+					"    <span class=\"separator\">| </span>\n" + 
+					"    <form action=\"buglist.cgi\" method=\"get\"\n" + 
+					"        onsubmit=\"if (this.quicksearch.value == '')\n" + 
+					"                  { alert('Please enter one or more search terms first.');\n" + 
+					"                    return false; } return true;\">\n" + 
+					"    <input type=\"hidden\" id=\"no_redirect_bottom\" name=\"no_redirect\" value=\"0\">\n" + 
+					"    <script type=\"text/javascript\">\n" + 
+					"      if (history && history.replaceState) {\n" + 
+					"        var no_redirect = document.getElementById(\"no_redirect_bottom\");\n" + 
+					"        no_redirect.value = 1;\n" + 
+					"      }\n" + 
+					"    </script>\n" + 
+					"    <input class=\"txt\" type=\"text\" id=\"quicksearch_bottom\" name=\"quicksearch\" \n" + 
+					"           title=\"Quick Search\" value=\"\">\n" + 
+					"    <input class=\"btn\" type=\"submit\" value=\"Search\" \n" + 
+					"           id=\"find_bottom\"></form>\n" + 
+					"  <a href=\"page.cgi?id=quicksearch.html\" title=\"Quicksearch Help\">[?]</a></li>\n" + 
+					"\n" + 
+					"  <li><span class=\"separator\">| </span><a href=\"report.cgi\">Reports</a></li>\n" + 
+					"\n" + 
+					"  <li></li>\n" + 
+					"\n" + 
+					"\n" + 
+					"  \n" + 
+					"    \n" + 
+					"      <li id=\"new_account_container_bottom\">\n" + 
+					"        <span class=\"separator\">| </span>\n" + 
+					"        <a href=\"createaccount.cgi\">New&nbsp;Account</a>\n" + 
+					"      </li>\n" + 
+					"\n" + 
+					"    <li id=\"mini_login_container_bottom\">\n" + 
+					"  <span class=\"separator\">| </span>\n" + 
+					"  <a id=\"login_link_bottom\" href=\"show_activity.cgi?id=9&amp;GoAheadAndLogIn=1\"\n" + 
+					"     onclick=\"return show_mini_login_form('_bottom')\">Log In</a>\n" + 
+					"\n" + 
+					"  <form action=\"show_activity.cgi?id=9\" method=\"POST\"\n" + 
+					"        class=\"mini_login bz_default_hidden\"\n" + 
+					"        id=\"mini_login_bottom\">\n" + 
+					"    <input id=\"Bugzilla_login_bottom\" required\n" + 
+					"           name=\"Bugzilla_login\" class=\"bz_login\"\n" + 
+					"        type=\"email\" placeholder=\"Email Address\">\n" + 
+					"    <input class=\"bz_password\" name=\"Bugzilla_password\" type=\"password\"\n" + 
+					"           id=\"Bugzilla_password_bottom\" required\n" + 
+					"           placeholder=\"Password\">\n" + 
+					"      <input type=\"checkbox\" id=\"Bugzilla_remember_bottom\" \n" + 
+					"             name=\"Bugzilla_remember\" value=\"on\" class=\"bz_remember\"\n" + 
+					"             checked>\n" + 
+					"      <label for=\"Bugzilla_remember_bottom\">Remember</label>\n" + 
+					"    <input type=\"hidden\" name=\"Bugzilla_login_token\"\n" + 
+					"           value=\"\">\n" + 
+					"    <input type=\"submit\" name=\"GoAheadAndLogIn\" value=\"Log in\"\n" + 
+					"            id=\"log_in_bottom\">\n" + 
+					"    <a href=\"#\" onclick=\"return hide_mini_login_form('_bottom')\">[x]</a>\n" + 
+					"  </form>\n" + 
+					"</li>\n" + 
+					"\n" + 
+					"\n" + 
+					"  <li id=\"forgot_container_bottom\">\n" + 
+					"    <span class=\"separator\">| </span>\n" + 
+					"    <a id=\"forgot_link_bottom\" href=\"show_activity.cgi?id=9&amp;GoAheadAndLogIn=1#forgot\"\n" + 
+					"       onclick=\"return show_forgot_form('_bottom')\">Forgot Password</a>\n" + 
+					"    <form action=\"token.cgi\" method=\"post\" id=\"forgot_form_bottom\"\n" + 
+					"          class=\"mini_forgot bz_default_hidden\">\n" + 
+					"      <label for=\"login_bottom\">Login:</label>\n" + 
+					"      <input name=\"loginname\" size=\"20\" id=\"login_bottom\" required\n" + 
+					"          type=\"email\" placeholder=\"Your Email Address\">\n" + 
+					"      <input id=\"forgot_button_bottom\" value=\"Reset Password\" type=\"submit\">\n" + 
+					"      <input type=\"hidden\" name=\"a\" value=\"reqpw\">\n" + 
+					"      <input type=\"hidden\" id=\"token_bottom\" name=\"token\"\n" + 
+					"             value=\"1565963331-VLt15WZS9pPhRQRfPOb7I5xUUrJxgWJDuZXEgWNL8FU\">\n" + 
+					"      <a href=\"#\" onclick=\"return hide_forgot_form('_bottom')\">[x]</a>\n" + 
+					"    </form>\n" + 
+					"  </li>\n" + 
+					"</ul>\n" + 
+					"  </li>\n" + 
+					"\n" + 
+					"  \n" + 
+					"\n" + 
+					"\n" + 
+					"\n" + 
+					"\n" + 
+					"  \n" + 
+					"</ul>\n" + 
+					"\n" + 
+					"      <div class=\"outro\"></div>\n" + 
+					"    </div>\n" + 
+					"\n" + 
+					"  </body>\n" + 
+					"</html>");
 
 	private static ArrayList<Report> issues = new ArrayList<Report>();
 
@@ -3423,6 +4070,12 @@ public class ReportRepositoryFromMemory implements ReportRepository {
 	@Override
 	public int count() {
 		return reports.size();
+	}
+
+	@Override
+	public List<Report> findAll(String from, List<ReportFilter> filters) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

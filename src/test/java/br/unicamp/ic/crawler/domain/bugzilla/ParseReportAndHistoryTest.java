@@ -48,6 +48,77 @@ public class ParseReportAndHistoryTest {
 	@After
 	public void tearDown() throws Exception {
 	}
+	
+	@Test
+	public final void parseAnIssue6FromBugzillaXmlValidFormat() {
+		String xml = ReportRepositoryFromMemory.reports.get(6);	
+		ReportPasser parser = new BZReportParserInXml();
+		IssueEntry entry = (IssueEntry) parser.parse(xml);
+		
+		
+		
+		String html = ReportRepositoryFromMemory.histories.get(6);
+		BZHistoryParserInHtml parserHistory = new BZHistoryParserInHtml();
+		List<IssueActivityEntry> activities = parserHistory.parse(html);
+		assertEquals(5, activities.size());
+		
+		IssueActivityEntry anActivity = activities.get(0);
+		assertEquals("loewis", anActivity.getWho());
+		assertEquals("2000-03-08", anActivity.getWhen());
+		assertEquals("status", anActivity.getWhat());
+		assertEquals("assigned", anActivity.getRemoved());
+		assertEquals("assigned", anActivity.getAdded());
+		entry.registerActivity(anActivity);
+		
+		anActivity = activities.get(1);
+		assertEquals("jason", anActivity.getWho());
+		assertEquals("2000-08-08", anActivity.getWhen());
+		assertEquals("assignee", anActivity.getWhat());
+		assertEquals("nobody", anActivity.getRemoved());
+		assertEquals("jason", anActivity.getAdded());
+		entry.registerActivity(anActivity);
+		
+		anActivity = activities.get(2);
+		assertEquals("jason", anActivity.getWho());
+		assertEquals("2000-08-08", anActivity.getWhen());
+		assertEquals("status", anActivity.getWhat());
+		assertEquals("assigned", anActivity.getRemoved());
+		assertEquals("waiting", anActivity.getAdded());
+		entry.registerActivity(anActivity);
+		
+		anActivity = activities.get(3);
+		assertEquals("neil", anActivity.getWho());
+		assertEquals("2000-11-25", anActivity.getWhen());
+		assertEquals("status", anActivity.getWhat());
+		assertEquals("waiting", anActivity.getRemoved());
+		assertEquals("closed", anActivity.getAdded());
+		entry.registerActivity(anActivity);
+		
+		anActivity = activities.get(4);
+		assertEquals("pinskia", anActivity.getWho());
+		assertEquals("2005-06-05", anActivity.getWhen());
+		assertEquals("target milestone", anActivity.getWhat());
+		assertEquals("---", anActivity.getRemoved());
+		assertEquals("3.0.x", anActivity.getAdded());
+		entry.registerActivity(anActivity);
+		
+		assertEquals("GCC-9", entry.getKey());
+		assertEquals("2000-02-29", entry.getCreated());
+		assertEquals("2019-01-18", entry.getUpdated());
+		assertEquals("2000-11-25", entry.getResolved());
+		assertEquals(270, entry.getDaysToResolve());
+		assertEquals("", entry.getType());
+		assertEquals("normal", entry.getSeverity());
+		assertEquals("RESOLVED", entry.getStatus());
+		assertEquals("martin", entry.getReporter());
+		assertEquals("jason", entry.getAssignee());
+		
+		assertEquals("c++", entry.getComponent());
+		assertEquals("GCC", entry.getProduct());
+		
+		assertEquals(10, entry.getComments().size());
+		
+	}
 
 	@Test
 	public final void parseAnIssue5FromBugzillaXmlValidFormat() {

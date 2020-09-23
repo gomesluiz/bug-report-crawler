@@ -17,261 +17,283 @@ import br.unicamp.ic.crawler.domain.core.IssueEntry;
 @XStreamAlias("bugzilla")
 public class BZIssueEntry implements IssueEntry {
 
-  private Bug bug;
-  private List<IssueActivityEntry> history;
+	private Bug bug;
+	private List<IssueActivityEntry> history;
 
-  @Override
-  public String getDescription() {
-    String description = ISSUE_ENTRY_NA;
-    List<BZIssueComment> comments = bug.getComments();
+	@Override
+	public String getDescription() {
+		String description = ISSUE_ENTRY_NA;
+		List<BZIssueComment> comments = bug.getComments();
 
-    if (comments != null) {
-      if (comments.size() > 0)
-        description = comments.get(0).getMessage();
-    }
-    return description;
-  }
+		if (comments != null) {
+			if (comments.size() > 0)
+				description = comments.get(0).getMessage();
+		}
+		return description;
+	}
 
-  @Override
-  public String getKey() {
-    StringBuilder key = new StringBuilder(bug.getProduct());
-    key.append("-");
-    key.append(bug.getBugId());
-    return key.toString();
-  }
+	@Override
+	public String getKey() {
+		StringBuilder key = new StringBuilder(bug.getProduct());
+		key.append("-");
+		key.append(bug.getBugId());
+		return key.toString();
+	}
 
-  @Override
-  public int getKeySequential() {
-    if (bug.getBugId().equals(""))
-      return -1;
+	@Override
+	public int getKeySequential() {
+		if (bug.getBugId().equals(""))
+			return -1;
 
-    return Integer.parseInt(bug.getBugId());
-  }
+		return Integer.parseInt(bug.getBugId());
+	}
 
-  @Override
-  public String getType() {
-    return bug.getCfBugType();
-  }
+	@Override
+	public String getType() {
+		return bug.getCfBugType();
+	}
 
-  @Override
-  public String getCreated() {
-    String result = bug.getCreationTs();
-    if (result != null) {
-      result = result.substring(0, 10);
-    }
-    return result;
-  }
+	@Override
+	public String getCreated() {
+		String result = bug.getCreationTs();
+		if (result != null) {
+			result = result.substring(0, 10);
+		}
+		return result;
+	}
 
-  @Override
-  public String getUpdated() {
-    String result = bug.getDeltaTs();
-    if (result != null) {
-      result = result.substring(0, 10);
-    }
-    return result;
-  }
+	@Override
+	public String getUpdated() {
+		String result = bug.getDeltaTs();
+		if (result != null) {
+			result = result.substring(0, 10);
+		}
+		return result;
+	}
 
-  @Override
-  public String getResolved() {
-    String result = this.getUpdated();
+	@Override
+	public String getResolved() {
+		String result = this.getUpdated();
+		boolean found = false;
+		
+		if (history != null) {
+			for (IssueActivityEntry activity : history) {
+				if (activity.getAdded().equals(ISSUE_STATUS_RESOLVED)) {
+					result = activity.getWhen().substring(0, 10);
+					found = true;
+				}
+			}
 
-    if (history != null) {
-      for (IssueActivityEntry activity : history) {
-        if (activity.getAdded().equals(ISSUE_STATUS_RESOLVED)) {
-          result = activity.getWhen().substring(0, 10);
-        }
-      }
-    }
-    return result != null ? result : "0000-00-00";
-  }
+			if (found)
+				return result;
 
-  @Override
-  public String getSeverity() {
-    return bug.getBugSeverity().toLowerCase();
-  }
+			for (IssueActivityEntry activity : history) {
+				if (activity.getAdded().equals("closed")) {
+					result = activity.getWhen().substring(0, 10);
+					found = true;
+				}
+			}
 
-  @Override
-  public String getResolution() {
-    return bug.getResolution();
-  }
+			if (found) return result;
 
-  @Override
-  public String getStatus() {
-    return bug.getBugStatus();
-  }
+			for (IssueActivityEntry activity : history) {
+				if (activity.getAdded().equals("fixed")) {
+					result = activity.getWhen().substring(0, 10);
+					found = true;
+				}
+			}
 
-  @Override
-  public List<IssueComment> getComments() {
-    if (bug.getComments() != null)
-      return new ArrayList<IssueComment>(bug.getComments());
-    else
-      return new ArrayList<IssueComment>();
-  }
+		}
+		return result != null ? result : "0000-00-00";
+	}
 
-  @Override
-  public String getAssignee() {
-    return bug.getAssigneeTo();
-  }
+	@Override
+	public String getSeverity() {
+		return bug.getBugSeverity().toLowerCase();
+	}
 
-  @Override
-  public String getSummary() {
-    return bug.getShortDesc();
-  }
+	@Override
+	public String getResolution() {
+		return bug.getResolution();
+	}
 
-  @Override
-  public String getVotes() {
-    return bug.getVotes() == ""? "0":bug.getVotes();
-  }
+	@Override
+	public String getStatus() {
+		return bug.getBugStatus();
+	}
 
-  @Override
-  public int getDaysToResolve() {
+	@Override
+	public List<IssueComment> getComments() {
+		if (bug.getComments() != null)
+			return new ArrayList<IssueComment>(bug.getComments());
+		else
+			return new ArrayList<IssueComment>();
+	}
 
-    if (this.getResolved().equals("0000-00-00"))
-      return -1;
+	@Override
+	public String getAssignee() {
+		return bug.getAssigneeTo();
+	}
 
-    DateTimeFormatter formatter = DateTimeFormat.forPattern("yyyy-MM-dd");
-    LocalDate startDate = LocalDate.parse(this.getCreated(), formatter);
-    LocalDate endDate = LocalDate.parse(this.getResolved(), formatter);
-    Days days = Days.daysBetween(startDate, endDate);
+	@Override
+	public String getSummary() {
+		return bug.getShortDesc();
+	}
 
-    return days.getDays();
-  }
+	@Override
+	public String getVotes() {
+		return bug.getVotes() == "" ? "0" : bug.getVotes();
+	}
 
-  @Override
-  public String convertSeverityToCode() {
-    String result;
-    String value = this.getSeverity();
+	@Override
+	public int getDaysToResolve() {
 
-    switch (value) {
-    case "blocker":
-      result = "6";
-      break;
-    case "critical":
-      result = "5";
-      break;
-    case "major":
-      result = "4";
-      break;
-    case "normal":
-      result = "3";
-    case "minor":
-      result = "2";
-      break;
-    case "trivial":
-      result = "1";
-      break;
-    case "enhancement":
-      result = "7";
-      break;
-    default:
-      result = "0";
-    }
-    return result;
-  }
+		if (this.getResolved().equals("0000-00-00"))
+			return -1;
 
-  @Override
-  public String convertResolutionToCode() {
-    String result;
-    String value = bug.getResolution().toLowerCase();
+		DateTimeFormatter formatter = DateTimeFormat.forPattern("yyyy-MM-dd");
+		LocalDate startDate = LocalDate.parse(this.getCreated(), formatter);
+		LocalDate endDate = LocalDate.parse(this.getResolved(), formatter);
+		Days days = Days.daysBetween(startDate, endDate);
 
-    switch (value) {
-    case "fixed":
-      result = "1";
-      break;
-    case "invalid":
-      result = "2";
-      break;
-    case "wontfix":
-      result = "3";
-      break;
-    case "duplicate":
-      result = "4";
-      break;
-    case "worksforme ":
-      result = "5";
-      break;
-    default:
-      result = "0";
-      break;
-    }
-    return result;
-  }
+		return days.getDays();
+	}
 
-  @Override
-  public String convertTypeToCode() {
-    String result;
-    String value = bug.getResolution().toLowerCase();
+	@Override
+	public String convertSeverityToCode() {
+		String result;
+		String value = this.getSeverity();
 
-    switch (value) {
-    case "defect":
-      result = "1";
-      break;
-    default:
-      result = "0";
-      break;
-    }
-    return result;
+		switch (value) {
+		case "blocker":
+			result = "6";
+			break;
+		case "critical":
+			result = "5";
+			break;
+		case "major":
+			result = "4";
+			break;
+		case "normal":
+			result = "3";
+		case "minor":
+			result = "2";
+			break;
+		case "trivial":
+			result = "1";
+			break;
+		case "enhancement":
+			result = "7";
+			break;
+		default:
+			result = "0";
+		}
+		return result;
+	}
 
-  }
+	@Override
+	public String convertResolutionToCode() {
+		String result;
+		String value = bug.getResolution().toLowerCase();
 
-  @Override
-  public String converteStatusToCode() {
-    String result;
-    String value = bug.getBugStatus().toLowerCase();
+		switch (value) {
+		case "fixed":
+			result = "1";
+			break;
+		case "invalid":
+			result = "2";
+			break;
+		case "wontfix":
+			result = "3";
+			break;
+		case "duplicate":
+			result = "4";
+			break;
+		case "worksforme ":
+			result = "5";
+			break;
+		default:
+			result = "0";
+			break;
+		}
+		return result;
+	}
 
-    switch (value) {
-    case "unconfirmed":
-      result = "1";
-      break;
-    case "confirmed":
-      result = "2";
-      break;
-    case "in_progress":
-      result = "3";
-      break;
-    case "resolved":
-      result = "4";
-      break;
-    case "verified":
-      result = "5";
-      break;
-    case "closed":
-      result = "6";
-      break;
-    default:
-      result = "0";
-      break;
-    }
-    return result;
+	@Override
+	public String convertTypeToCode() {
+		String result;
+		String value = bug.getResolution().toLowerCase();
 
-  }
+		switch (value) {
+		case "defect":
+			result = "1";
+			break;
+		default:
+			result = "0";
+			break;
+		}
+		return result;
 
-  @Override
-  public void registerActivity(IssueActivityEntry activity) {
-    if (history == null) {
-      history = new ArrayList<IssueActivityEntry>();
-    }
-    this.history.add(activity);
-  }
+	}
 
-  @Override
-  public List<IssueActivityEntry> getActivities() {
-    return history;
-  }
+	@Override
+	public String converteStatusToCode() {
+		String result;
+		String value = bug.getBugStatus().toLowerCase();
 
-  @Override
-  public String getReporter() {
-    return bug.getReporter();
-  }
+		switch (value) {
+		case "unconfirmed":
+			result = "1";
+			break;
+		case "confirmed":
+			result = "2";
+			break;
+		case "in_progress":
+			result = "3";
+			break;
+		case "resolved":
+			result = "4";
+			break;
+		case "verified":
+			result = "5";
+			break;
+		case "closed":
+			result = "6";
+			break;
+		default:
+			result = "0";
+			break;
+		}
+		return result;
 
-  @Override
-  public String getProduct() {
-    return bug.getProduct();
-  }
+	}
 
-  @Override
-  public String getComponent() {
-    return bug.getComponent();
-  }
+	@Override
+	public void registerActivity(IssueActivityEntry activity) {
+		if (history == null) {
+			history = new ArrayList<IssueActivityEntry>();
+		}
+		this.history.add(activity);
+	}
+
+	@Override
+	public List<IssueActivityEntry> getActivities() {
+		return history;
+	}
+
+	@Override
+	public String getReporter() {
+		return bug.getReporter();
+	}
+
+	@Override
+	public String getProduct() {
+		return bug.getProduct();
+	}
+
+	@Override
+	public String getComponent() {
+		return bug.getComponent();
+	}
 
 }
