@@ -1,4 +1,4 @@
-/*package br.unicamp.ic.crawler.ui.console;
+package br.unicamp.ic.crawler.ui.console;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -13,7 +13,7 @@ import com.thoughtworks.xstream.XStream;
 import br.unicamp.ic.crawler.domain.core.CrawlerFactory;
 import br.unicamp.ic.crawler.domain.core.ReportCrawler;
 import br.unicamp.ic.crawler.domain.meta.Project;
-*/
+
 /**
  * Application main class.
  *
@@ -21,7 +21,6 @@ import br.unicamp.ic.crawler.domain.meta.Project;
  * @since 2016-01-02
  * 
  */
-/*
 public class BugReportDownloader {
 
 	public static void main(final String[] args) throws FileNotFoundException {
@@ -56,4 +55,3 @@ public class BugReportDownloader {
 		logger.trace("Finish downloading !");
 	}
 }
-*/
