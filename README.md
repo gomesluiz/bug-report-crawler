@@ -14,7 +14,7 @@ mvn install
 ## Usage
 
 ```bash 
-java target/bin/bug-report-crawler
+java -jar target/product/bug-report-crawler.jar
 ```
   
 ## Contributing
