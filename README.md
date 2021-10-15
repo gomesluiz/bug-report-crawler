@@ -6,15 +6,15 @@ A crawler for bug extraction information from many issue tracking systems. Curre
 Use the package manager [maven](https://maven.apache.org/download.cgi) to install bug-report-crawler.
 
 ```bash
-git clone https://github.com/gomesluiz/bug-report-crawler.git
-cd bug-report-crawler
-mvn install
+$ git clone https://github.com/gomesluiz/bug-report-crawler.git
+$ cd bug-report-crawler
+$ mvn install
 ```
 
 ## Usage
 
 ```bash 
-java -jar target/product/bug-report-crawler.jar
+$ java -jar target/product/bug-report-crawler.jar
 ```
   
 ## Contributing
