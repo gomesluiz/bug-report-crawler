@@ -1,5 +1,5 @@
 # Bug Report Crawler
-A crawler for bug extraction information from many issue tracking systems. Currently, the crawler supports the extraction from Bugzilla bug tracking repositories.
+A Java Crawler to extract bug reports information from many issue tracking systems. Currently, the crawler only supports the extraction from Bugzilla bug tracking repositories.
 
 ## Installation
 
